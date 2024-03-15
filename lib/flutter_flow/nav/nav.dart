@@ -1,13 +1,20 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
+import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/lat_lng.dart';
+import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -72,124 +79,124 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const HomePageProfesorWidget() : const LoginWidget(),
+          appStateNotifier.loggedIn ? HomePageProfesorWidget() : LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
-              ? const HomePageProfesorWidget()
-              : const LoginWidget(),
+              ? HomePageProfesorWidget()
+              : LoginWidget(),
         ),
         FFRoute(
           name: 'Inicio',
           path: '/inicio',
-          builder: (context, params) => const InicioWidget(),
+          builder: (context, params) => InicioWidget(),
         ),
         FFRoute(
           name: 'Login',
           path: '/login',
-          builder: (context, params) => const LoginWidget(),
+          builder: (context, params) => LoginWidget(),
         ),
         FFRoute(
           name: 'HomePageProfesor',
           path: '/homePageProfesor',
-          builder: (context, params) => const HomePageProfesorWidget(),
+          builder: (context, params) => HomePageProfesorWidget(),
         ),
         FFRoute(
           name: 'RegistroUsuarios',
           path: '/registroUsuarios',
-          builder: (context, params) => const RegistroUsuariosWidget(),
+          builder: (context, params) => RegistroUsuariosWidget(),
         ),
         FFRoute(
-          name: 'Misgrupos',
-          path: '/misgrupos',
-          builder: (context, params) => const MisgruposWidget(),
+          name: 'MisgruposProfesor',
+          path: '/misgruposProfesor',
+          builder: (context, params) => MisgruposProfesorWidget(),
         ),
         FFRoute(
           name: 'ListarUsuarios',
           path: '/listarUsuarios',
-          builder: (context, params) => const ListarUsuariosWidget(),
+          builder: (context, params) => ListarUsuariosWidget(),
         ),
         FFRoute(
           name: 'EditarUsuarios',
           path: '/editarUsuarios',
-          builder: (context, params) => const EditarUsuariosWidget(),
+          builder: (context, params) => EditarUsuariosWidget(),
         ),
         FFRoute(
           name: 'HomePageEstudiante',
           path: '/homePageEstudiante',
-          builder: (context, params) => const HomePageEstudianteWidget(),
+          builder: (context, params) => HomePageEstudianteWidget(),
         ),
         FFRoute(
           name: 'Anuncios',
           path: '/anuncios',
-          builder: (context, params) => const AnunciosWidget(),
+          builder: (context, params) => AnunciosWidget(),
         ),
         FFRoute(
           name: 'TareasProfesor',
           path: '/tareasProfesor',
-          builder: (context, params) => const TareasProfesorWidget(),
+          builder: (context, params) => TareasProfesorWidget(),
         ),
         FFRoute(
           name: 'CrearAnuncios',
           path: '/crearAnuncios',
-          builder: (context, params) => const CrearAnunciosWidget(),
+          builder: (context, params) => CrearAnunciosWidget(),
         ),
         FFRoute(
           name: 'AdminVisualizarAnuncios',
           path: '/adminVisualizarAnuncios',
-          builder: (context, params) => const AdminVisualizarAnunciosWidget(),
+          builder: (context, params) => AdminVisualizarAnunciosWidget(),
         ),
         FFRoute(
           name: 'EliminarAnuncio',
           path: '/eliminarAnuncio',
-          builder: (context, params) => const EliminarAnuncioWidget(),
+          builder: (context, params) => EliminarAnuncioWidget(),
         ),
         FFRoute(
           name: 'ModificarAnuncio',
           path: '/modificarAnuncio',
-          builder: (context, params) => const ModificarAnuncioWidget(),
+          builder: (context, params) => ModificarAnuncioWidget(),
         ),
         FFRoute(
           name: 'CrearGrupos',
           path: '/crearGrupos',
-          builder: (context, params) => const CrearGruposWidget(),
+          builder: (context, params) => CrearGruposWidget(),
         ),
         FFRoute(
           name: 'CrearTareaProfesor',
           path: '/crearTareaProfesor',
-          builder: (context, params) => const CrearTareaProfesorWidget(),
+          builder: (context, params) => CrearTareaProfesorWidget(),
         ),
         FFRoute(
           name: 'EditarTareaProfesor',
           path: '/editarTareaProfesor',
-          builder: (context, params) => const EditarTareaProfesorWidget(),
+          builder: (context, params) => EditarTareaProfesorWidget(),
         ),
         FFRoute(
           name: 'ListarAlumnos',
           path: '/listarAlumnos',
-          builder: (context, params) => const ListarAlumnosWidget(),
+          builder: (context, params) => ListarAlumnosWidget(),
         ),
         FFRoute(
-          name: 'PerfilProfesor',
-          path: '/perfilProfesor',
-          builder: (context, params) => const PerfilProfesorWidget(),
+          name: 'Perfil',
+          path: '/perfil',
+          builder: (context, params) => PerfilWidget(),
         ),
         FFRoute(
           name: 'EditarGrupos',
           path: '/editarGrupos',
-          builder: (context, params) => const EditarGruposWidget(),
+          builder: (context, params) => EditarGruposWidget(),
         ),
         FFRoute(
           name: 'EliminarGrupos',
           path: '/eliminarGrupos',
-          builder: (context, params) => const EliminarGruposWidget(),
+          builder: (context, params) => EliminarGruposWidget(),
         ),
         FFRoute(
           name: 'ListarGrupo',
           path: '/listarGrupo',
-          builder: (context, params) => const ListarGrupoWidget(),
+          builder: (context, params) => ListarGrupoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -423,7 +430,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {
