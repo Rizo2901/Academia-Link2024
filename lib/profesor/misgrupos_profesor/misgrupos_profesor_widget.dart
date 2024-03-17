@@ -44,6 +44,99 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
         body: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Container(
+                  width: MediaQuery.sizeOf(context).width * 1.0,
+                  height: 177.0,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        const Color(0xFF94C0F2),
+                        FlutterFlowTheme.of(context).primaryBackground
+                      ],
+                      stops: const [0.0, 1.0],
+                      begin: const AlignmentDirectional(0.0, -1.0),
+                      end: const AlignmentDirectional(0, 1.0),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              15.0, 15.0, 15.0, 0.0),
+                          child: Container(
+                            width: MediaQuery.sizeOf(context).width * 0.9,
+                            height: 62.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              boxShadow: const [
+                                BoxShadow(
+                                  blurRadius: 0.0,
+                                  color: Color(0x33717171),
+                                  offset: Offset(0.0, 2.0),
+                                  spreadRadius: 0.0,
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(15.0),
+                              shape: BoxShape.rectangle,
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Icon(
+                                  Icons.chevron_left_rounded,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
+                                  size: 45.0,
+                                ),
+                                Align(
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        45.0, 16.0, 52.0, 10.0),
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'ojtvg647' /* Mis Grupos
+ */
+                                        ,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'PT Sans',
+                                            fontSize: 20.0,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      10.0, 10.0, 10.0, 10.0),
+                                  child: Icon(
+                                    Icons.menu,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    size: 31.0,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
             Expanded(
               child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 15.0, 0.0),
@@ -51,6 +144,59 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              24.0, 0.0, 0.0, 0.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              '8gff6n8o' /* Grupos */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  fontSize: 22.0,
+                                ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 18.0, 0.0),
+                          child: FFButtonWidget(
+                            onPressed: () async {
+                              context.pushNamed('Creargrupos');
+                            },
+                            text: FFLocalizations.of(context).getText(
+                              'j3d1hufr' /* Crear grupo */,
+                            ),
+                            options: FFButtonOptions(
+                              height: 40.0,
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  24.0, 0.0, 24.0, 0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: const Color(0xFF3965D2),
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Colors.white,
+                                  ),
+                              elevation: 3.0,
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                                width: 1.0,
+                              ),
+                              borderRadius: BorderRadius.circular(24.0),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                     Padding(
                       padding: const EdgeInsetsDirectional.fromSTEB(
                           15.0, 15.0, 15.0, 15.0),

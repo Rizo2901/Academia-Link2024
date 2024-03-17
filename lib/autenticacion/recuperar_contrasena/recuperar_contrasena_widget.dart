@@ -213,7 +213,7 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
                                   children: [
-                                    Expanded(
+                                    Flexible(
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             11.0, 0.0, 11.0, 0.0),
@@ -246,10 +246,8 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
                                             size: 15.0,
                                           ),
                                           options: FFButtonOptions(
-                                            width: 166.0,
-                                            height: MediaQuery.sizeOf(context)
-                                                    .height *
-                                                0.05,
+                                            width: 300.0,
+                                            height: 50.0,
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
@@ -286,7 +284,7 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
                                   children: [
-                                    Expanded(
+                                    Flexible(
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             11.0, 0.0, 11.0, 0.0),
@@ -316,10 +314,8 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
                                             size: 15.0,
                                           ),
                                           options: FFButtonOptions(
-                                            width: 166.0,
-                                            height: MediaQuery.sizeOf(context)
-                                                    .height *
-                                                0.05,
+                                            width: 300.0,
+                                            height: 50.0,
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),

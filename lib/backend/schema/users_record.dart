@@ -45,6 +45,21 @@ class UsersRecord extends FirestoreRecord {
   String get phoneNumber => _phoneNumber ?? '';
   bool hasPhoneNumber() => _phoneNumber != null;
 
+  // "rol" field.
+  String? _rol;
+  String get rol => _rol ?? '';
+  bool hasRol() => _rol != null;
+
+  // "apellido1" field.
+  String? _apellido1;
+  String get apellido1 => _apellido1 ?? '';
+  bool hasApellido1() => _apellido1 != null;
+
+  // "apellido2" field.
+  String? _apellido2;
+  String get apellido2 => _apellido2 ?? '';
+  bool hasApellido2() => _apellido2 != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -52,6 +67,9 @@ class UsersRecord extends FirestoreRecord {
     _uid = snapshotData['uid'] as String?;
     _createdTime = snapshotData['created_time'] as DateTime?;
     _phoneNumber = snapshotData['phone_number'] as String?;
+    _rol = snapshotData['rol'] as String?;
+    _apellido1 = snapshotData['apellido1'] as String?;
+    _apellido2 = snapshotData['apellido2'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -94,6 +112,9 @@ Map<String, dynamic> createUsersRecordData({
   String? uid,
   DateTime? createdTime,
   String? phoneNumber,
+  String? rol,
+  String? apellido1,
+  String? apellido2,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -103,6 +124,9 @@ Map<String, dynamic> createUsersRecordData({
       'uid': uid,
       'created_time': createdTime,
       'phone_number': phoneNumber,
+      'rol': rol,
+      'apellido1': apellido1,
+      'apellido2': apellido2,
     }.withoutNulls,
   );
 
@@ -119,7 +143,10 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.photoUrl == e2?.photoUrl &&
         e1?.uid == e2?.uid &&
         e1?.createdTime == e2?.createdTime &&
-        e1?.phoneNumber == e2?.phoneNumber;
+        e1?.phoneNumber == e2?.phoneNumber &&
+        e1?.rol == e2?.rol &&
+        e1?.apellido1 == e2?.apellido1 &&
+        e1?.apellido2 == e2?.apellido2;
   }
 
   @override
@@ -129,7 +156,10 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.photoUrl,
         e?.uid,
         e?.createdTime,
-        e?.phoneNumber
+        e?.phoneNumber,
+        e?.rol,
+        e?.apellido1,
+        e?.apellido2
       ]);
 
   @override

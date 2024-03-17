@@ -97,9 +97,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const HomePageProfesorWidget(),
         ),
         FFRoute(
-          name: 'RegistroUsuarios',
-          path: '/registroUsuarios',
-          builder: (context, params) => const RegistroUsuariosWidget(),
+          name: 'CrearUsuarios',
+          path: '/crearUsuarios',
+          builder: (context, params) => const CrearUsuariosWidget(),
         ),
         FFRoute(
           name: 'MisgruposProfesor',

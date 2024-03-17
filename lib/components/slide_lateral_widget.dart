@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -92,24 +93,22 @@ class _SlideLateralWidgetState extends State<SlideLateralWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            FFLocalizations.of(context).getText(
-                              'h0036761' /* Randy Peterson */,
+                          AuthUserStreamWidget(
+                            builder: (context) => Text(
+                              currentUserDisplayName,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontWeight: FontWeight.bold,
+                                  ),
                             ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  fontWeight: FontWeight.bold,
-                                ),
                           ),
                           Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 0.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'nsihr1j9' /* randy.p@domainname.com */,
-                              ),
+                              currentUserEmail,
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
@@ -315,11 +314,24 @@ class _SlideLateralWidgetState extends State<SlideLateralWidget> {
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                'm8n3bary' /* Log out */,
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                GoRouter.of(context).prepareAuthEvent();
+                                await authManager.signOut();
+                                GoRouter.of(context).clearRedirectLocation();
+
+                                context.goNamedAuth('Inicio', context.mounted);
+                              },
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  'm8n3bary' /* Log out */,
+                                ),
+                                style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
                             ),
                           ),
                         ),

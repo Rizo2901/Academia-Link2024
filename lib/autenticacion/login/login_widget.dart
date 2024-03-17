@@ -270,7 +270,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
                                 children: [
-                                  Expanded(
+                                  Flexible(
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           11.0, 0.0, 11.0, 0.0),
@@ -290,9 +290,18 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             return;
                                           }
 
-                                          context.goNamedAuth(
-                                              'HomePageProfesor',
-                                              context.mounted);
+                                          if (valueOrDefault(
+                                                  currentUserDocument?.rol,
+                                                  '') ==
+                                              'Estudiante') {
+                                            context.pushNamedAuth(
+                                                'HomePageEstudiante',
+                                                context.mounted);
+                                          } else {
+                                            context.pushNamedAuth(
+                                                'HomePageProfesor',
+                                                context.mounted);
+                                          }
                                         },
                                         text:
                                             FFLocalizations.of(context).getText(
@@ -303,10 +312,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           size: 15.0,
                                         ),
                                         options: FFButtonOptions(
-                                          width: 166.0,
-                                          height: MediaQuery.sizeOf(context)
-                                                  .height *
-                                              0.05,
+                                          width: 300.0,
+                                          height: 50.0,
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   24.0, 0.0, 24.0, 0.0),

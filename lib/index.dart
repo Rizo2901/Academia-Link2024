@@ -3,8 +3,8 @@ export '/autenticacion/inicio/inicio_widget.dart' show InicioWidget;
 export '/autenticacion/login/login_widget.dart' show LoginWidget;
 export '/profesor/home_page_profesor/home_page_profesor_widget.dart'
     show HomePageProfesorWidget;
-export '/profesor/registro_usuarios/registro_usuarios_widget.dart'
-    show RegistroUsuariosWidget;
+export '/profesor/crear_usuarios/crear_usuarios_widget.dart'
+    show CrearUsuariosWidget;
 export '/profesor/misgrupos_profesor/misgrupos_profesor_widget.dart'
     show MisgruposProfesorWidget;
 export '/profesor/listar_usuarios/listar_usuarios_widget.dart'

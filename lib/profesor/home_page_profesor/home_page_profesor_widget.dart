@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/components/slide_lateral_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -79,7 +80,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                       ),
                       Text(
                         FFLocalizations.of(context).getText(
-                          '76fkc81y' /* ¡Bienvenido, Saul! */,
+                          '76fkc81y' /* Bienvenido, */,
                         ),
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -88,6 +89,19 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                               fontSize: 25.0,
                               fontWeight: FontWeight.w600,
                             ),
+                      ),
+                      AuthUserStreamWidget(
+                        builder: (context) => Text(
+                          currentUserDisplayName,
+                          textAlign: TextAlign.start,
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'PT Sans',
+                                    color: Colors.black,
+                                    fontSize: 25.0,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(

@@ -162,7 +162,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // HomePageProfesor
   {
     '76fkc81y': {
-      'es': '¡Bienvenido, Saul!',
+      'es': 'Bienvenido,',
       'en': 'Welcome, Saul!',
     },
     'koz4tbzp': {
@@ -190,7 +190,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'home',
     },
   },
-  // RegistroUsuarios
+  // CrearUsuarios
   {
     'm7230ohf': {
       'es': 'Academia Link',
@@ -224,25 +224,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Correo Electrónico',
       'en': 'Email',
     },
-    '9dukvljz': {
-      'es': 'Profesor',
-      'en': 'Teacher',
-    },
-    '6qutjji5': {
-      'es': 'Estudiante',
-      'en': 'Student',
+    'zbnxfths': {
+      'es': 'Contraseña',
+      'en': 'Email',
     },
     'aymhcll0': {
-      'es': 'Rol',
+      'es': 'Seleccione una opción',
       'en': 'Role',
     },
     'x0ac9fwh': {
       'es': 'Search for an item...',
       'en': 'Search for an item...',
     },
-    'iafi4bcr': {
-      'es': '¡Registrar!',
-      'en': 'To register!',
+    'altpamw4': {
+      'es': 'Continuar',
+      'en': 'Continue',
     },
     'uhk4uofo': {
       'es': 'Home',
@@ -251,6 +247,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // MisgruposProfesor
   {
+    'ojtvg647': {
+      'es': 'Mis Grupos\n',
+      'en': 'Roll Call',
+    },
+    '8gff6n8o': {
+      'es': 'Grupos',
+      'en': '',
+    },
+    'j3d1hufr': {
+      'es': 'Crear grupo',
+      'en': '',
+    },
     'fqy9ve4x': {
       'es': 'Sección:5-1',
       'en': 'Section:5-1',
@@ -1245,6 +1253,38 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Creación de grupo\n',
       'en': 'Roll Call',
     },
+    'rpe4g3hp': {
+      'es': 'Hello World',
+      'en': '',
+    },
+    'pkgod5hj': {
+      'es': 'Label here...',
+      'en': '',
+    },
+    'cmvg0dtm': {
+      'es': 'Hello World',
+      'en': '',
+    },
+    'tke5hxdm': {
+      'es': 'Option 1',
+      'en': '',
+    },
+    'doce0uht': {
+      'es': 'Please select...',
+      'en': '',
+    },
+    'jrw5e4e2': {
+      'es': 'Search for an item...',
+      'en': '',
+    },
+    'tqu7t3ec': {
+      'es': 'Hello World',
+      'en': '',
+    },
+    'hyi7xsk7': {
+      'es': 'Label here...',
+      'en': '',
+    },
     'ug8qmusg': {
       'es': 'Home',
       'en': 'home',
@@ -1255,14 +1295,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5ppzx77q': {
       'es': 'Account Options',
       'en': 'Account Options',
-    },
-    'h0036761': {
-      'es': 'Randy Peterson',
-      'en': 'Randy Peterson',
-    },
-    'nsihr1j9': {
-      'es': 'randy.p@domainname.com',
-      'en': 'randy.p@domainname.com',
     },
     'iikabzt7': {
       'es': 'My Account',
