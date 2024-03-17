@@ -50,6 +50,7 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
             padding: const EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
                   padding:
@@ -236,6 +237,39 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
                                                   .txtFCorreoController.text,
                                               context: context,
                                             );
+
+                                            context.pushNamed(
+                                              'Login',
+                                              extra: <String, dynamic>{
+                                                kTransitionInfoKey:
+                                                    const TransitionInfo(
+                                                  hasTransition: true,
+                                                  transitionType:
+                                                      PageTransitionType
+                                                          .leftToRight,
+                                                  duration: Duration(
+                                                      milliseconds: 300),
+                                                ),
+                                              },
+                                            );
+
+                                            ScaffoldMessenger.of(context)
+                                                .clearSnackBars();
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(
+                                              const SnackBar(
+                                                content: Text(
+                                                  'Correo electrónico enviado!',
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                                duration: Duration(
+                                                    milliseconds: 4000),
+                                                backgroundColor:
+                                                    Color(0xFF070D59),
+                                              ),
+                                            );
                                           },
                                           text: FFLocalizations.of(context)
                                               .getText(
@@ -278,7 +312,7 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
                               ),
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
-                                    15.0, 10.0, 15.0, 0.0),
+                                    15.0, 20.0, 15.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
@@ -308,10 +342,6 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
                                           text: FFLocalizations.of(context)
                                               .getText(
                                             '9ye3vprz' /* Regresar */,
-                                          ),
-                                          icon: const Icon(
-                                            Icons.arrow_back_rounded,
-                                            size: 15.0,
                                           ),
                                           options: FFButtonOptions(
                                             width: 300.0,

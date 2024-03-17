@@ -224,17 +224,85 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Correo Electrónico',
       'en': 'Email',
     },
-    'zbnxfths': {
+    'ipvkfh2w': {
       'es': 'Contraseña',
-      'en': 'Email',
+      'en': '',
     },
-    'aymhcll0': {
-      'es': 'Seleccione una opción',
-      'en': 'Role',
+    '0y179rvc': {
+      'es': 'Option 1',
+      'en': '',
+    },
+    '64qgjqlc': {
+      'es': 'Seleccione un rol',
+      'en': '',
     },
     'x0ac9fwh': {
       'es': 'Search for an item...',
       'en': 'Search for an item...',
+    },
+    'v8mscy59': {
+      'es': 'Por favor ingrese la cédula',
+      'en': '',
+    },
+    '50e1w0gk': {
+      'es': 'El mínimo de caractéres es 9',
+      'en': '',
+    },
+    '2g4qi8a7': {
+      'es': 'El máximo de caracéres es 11',
+      'en': '',
+    },
+    '8btq8unt': {
+      'es': 'Formato inválido',
+      'en': '',
+    },
+    '86cvzpki': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '27tiwtd2': {
+      'es': 'Por favor ingrese el nombre',
+      'en': '',
+    },
+    'vlhjucw6': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '8pcprswr': {
+      'es': 'Por favor ingrese el primer apellido',
+      'en': '',
+    },
+    'cddsew4s': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '2hy5rxns': {
+      'es': 'Por favor ingrese el segundo apellido',
+      'en': '',
+    },
+    'huxf168d': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '12uwhvrw': {
+      'es': 'Por favor ingrese un correo electrónico',
+      'en': '',
+    },
+    '66r7owji': {
+      'es': 'Formato inválido',
+      'en': '',
+    },
+    '5kubbb5o': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '5h8os7qo': {
+      'es': 'Por favor ingrese una contraseña',
+      'en': '',
+    },
+    'b5evinag': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
     },
     'altpamw4': {
       'es': 'Continuar',

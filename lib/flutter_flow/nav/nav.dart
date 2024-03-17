@@ -71,15 +71,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const HomePageProfesorWidget() : const InicioWidget(),
+      errorBuilder: (context, state) => appStateNotifier.loggedIn
+          ? const HomePageProfesorWidget()
+          : const CrearUsuariosWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
               ? const HomePageProfesorWidget()
-              : const InicioWidget(),
+              : const CrearUsuariosWidget(),
         ),
         FFRoute(
           name: 'Inicio',
@@ -361,7 +362,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/inicio';
+            return '/crearUsuarios';
           }
           return null;
         },
