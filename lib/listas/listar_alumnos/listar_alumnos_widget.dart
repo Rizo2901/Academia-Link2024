@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'listar_alumnos_model.dart';
 export 'listar_alumnos_model.dart';
 
@@ -51,13 +48,13 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
           children: [
             Expanded(
               child: Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: double.infinity,
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     maxWidth: 970.0,
                   ),
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -77,13 +74,13 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                     decoration: BoxDecoration(
                                       gradient: LinearGradient(
                                         colors: [
-                                          Color(0xFF7C89FF),
+                                          const Color(0xFF7C89FF),
                                           FlutterFlowTheme.of(context)
                                               .secondaryBackground
                                         ],
-                                        stops: [0.0, 1.0],
-                                        begin: AlignmentDirectional(0.0, 1.0),
-                                        end: AlignmentDirectional(0, -1.0),
+                                        stops: const [0.0, 1.0],
+                                        begin: const AlignmentDirectional(0.0, 1.0),
+                                        end: const AlignmentDirectional(0, -1.0),
                                       ),
                                     ),
                                     child: Row(
@@ -92,7 +89,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                         Flexible(
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 10.0, 15.0, 0.0),
                                             child: Container(
                                               width: MediaQuery.sizeOf(context)
@@ -103,7 +100,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 0.0,
                                                     color: Color(0x33717171),
@@ -123,7 +120,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(7.0, 8.0,
                                                                 10.0, 3.0),
                                                     child: ClipRRect(
@@ -140,18 +137,22 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             -1.0, 0.0),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   45.0,
                                                                   10.0,
                                                                   91.0,
                                                                   10.0),
                                                       child: Text(
-                                                        'Alumnos',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          '3je7jaka' /* Alumnos */,
+                                                        ),
                                                         style: FlutterFlowTheme
                                                                 .of(context)
                                                             .bodyMedium
@@ -168,7 +169,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 10.0,
                                                                 10.0,
@@ -202,27 +203,31 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                               Container(
                                 width: double.infinity,
                                 height: 24.0,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 0.0, 4.0),
                               child: Text(
-                                'Alumnos de la institución',
+                                FFLocalizations.of(context).getText(
+                                  'r94wa7ha' /* Alumnos de la institución */,
+                                ),
                                 style:
                                     FlutterFlowTheme.of(context).headlineMedium,
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 0.0, 0.0),
                               child: Text(
-                                'Debajo encontrará una lista para poder observar a todos los alumnos ingresados en el sistema.',
+                                FFLocalizations.of(context).getText(
+                                  's5l2iuej' /* Debajo encontrará una lista pa... */,
+                                ),
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 8.0, 16.0, 20.0),
                               child: TextFormField(
                                 controller: _model.textController,
@@ -230,7 +235,10 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                 autofocus: true,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'Buscar alumno...',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    'h48ht98a' /* Buscar alumno... */,
+                                  ),
                                   labelStyle:
                                       FlutterFlowTheme.of(context).labelMedium,
                                   hintStyle:
@@ -266,7 +274,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
+                                      const EdgeInsetsDirectional.fromSTEB(
                                           20.0, 0.0, 0.0, 0.0),
                                   suffixIcon: Icon(
                                     Icons.search_rounded,
@@ -282,7 +290,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
                               child: Container(
                                 width: double.infinity,
@@ -292,7 +300,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                       .primaryBackground,
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -301,25 +309,27 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                       phone: false,
                                     ))
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 20.0, 0.0, 0.0),
                                         child: Container(
                                           width: 40.0,
                                           height: 100.0,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                         ),
                                       ),
                                     Expanded(
                                       flex: 4,
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(-1.0, 0.0),
+                                            const AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            'Nombre',
+                                            FFLocalizations.of(context).getText(
+                                              'lzgd32wd' /* Nombre */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .labelSmall,
                                           ),
@@ -334,9 +344,11 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                         flex: 2,
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(-1.0, 0.0),
+                                              const AlignmentDirectional(-1.0, 0.0),
                                           child: Text(
-                                            'Cedula',
+                                            FFLocalizations.of(context).getText(
+                                              'xl25j1nl' /* Cedula */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .labelSmall,
                                           ),
@@ -351,10 +363,13 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                         children: [
                                           Expanded(
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Text(
-                                                'Grado',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'toe55snl' /* Grado */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelSmall,
@@ -369,7 +384,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                               ),
                             ),
                             ListView(
-                              padding: EdgeInsets.fromLTRB(
+                              padding: const EdgeInsets.fromLTRB(
                                 0,
                                 0,
                                 0,
@@ -388,12 +403,12 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        offset: Offset(0.0, 1.0),
+                                        offset: const Offset(0.0, 1.0),
                                       )
                                     ],
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 12.0, 16.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -414,7 +429,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(2.0),
+                                            padding: const EdgeInsets.all(2.0),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
@@ -431,7 +446,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                           flex: 4,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -441,17 +456,23 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'Saúl Hernández',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'fjxocov8' /* Saúl Hernández */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyLarge,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 12.0, 0.0),
                                                   child: Text(
-                                                    'saulhernandez@gmail.com',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'pvjoxw87' /* saulhernandez@gmail.com */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall
@@ -464,7 +485,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 4.0)),
+                                              ].divide(const SizedBox(height: 4.0)),
                                             ),
                                           ),
                                         ),
@@ -475,11 +496,14 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                           Expanded(
                                             flex: 2,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Text(
-                                                '12837612',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'zeeu8mb9' /* 12837612 */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium,
@@ -511,15 +535,19 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 4.0,
                                                                 8.0, 4.0),
                                                     child: Text(
-                                                      'Sexto',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'wkvcjo8f' /* Sexto */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -545,12 +573,12 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        offset: Offset(0.0, 1.0),
+                                        offset: const Offset(0.0, 1.0),
                                       )
                                     ],
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 12.0, 16.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -571,7 +599,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(2.0),
+                                            padding: const EdgeInsets.all(2.0),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
@@ -588,7 +616,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                           flex: 4,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -598,17 +626,23 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'Andrés León',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'tuki0p3l' /* Andrés León */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyLarge,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 12.0, 0.0),
                                                   child: Text(
-                                                    'andresleon@gmail.com',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '51r7n4f5' /* andresleon@gmail.com */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall
@@ -621,7 +655,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 4.0)),
+                                              ].divide(const SizedBox(height: 4.0)),
                                             ),
                                           ),
                                         ),
@@ -632,11 +666,14 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                           Expanded(
                                             flex: 2,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Text(
-                                                '219387129',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'tdsa6228' /* 219387129 */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium,
@@ -668,15 +705,19 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 4.0,
                                                                 8.0, 4.0),
                                                     child: Text(
-                                                      'Quinto',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'lfkqc6c3' /* Quinto */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -702,12 +743,12 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        offset: Offset(0.0, 1.0),
+                                        offset: const Offset(0.0, 1.0),
                                       )
                                     ],
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 12.0, 16.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -728,7 +769,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(2.0),
+                                            padding: const EdgeInsets.all(2.0),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
@@ -745,7 +786,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                           flex: 4,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -755,17 +796,23 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'Ian Rizo',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'vfjdlxl5' /* Ian Rizo */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyLarge,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 12.0, 0.0),
                                                   child: Text(
-                                                    'ianrizo@gmail.com',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'zbxxwhne' /* ianrizo@gmail.com */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall
@@ -778,7 +825,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 4.0)),
+                                              ].divide(const SizedBox(height: 4.0)),
                                             ),
                                           ),
                                         ),
@@ -789,11 +836,14 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                           Expanded(
                                             flex: 2,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Text(
-                                                '21376512',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'vaqs3jq8' /* 21376512 */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium,
@@ -825,15 +875,19 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 4.0,
                                                                 8.0, 4.0),
                                                     child: Text(
-                                                      'Sexto',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'z1qj8p1z' /* Sexto */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -859,12 +913,12 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        offset: Offset(0.0, 1.0),
+                                        offset: const Offset(0.0, 1.0),
                                       )
                                     ],
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 12.0, 16.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -885,7 +939,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(2.0),
+                                            padding: const EdgeInsets.all(2.0),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(10.0),
@@ -902,7 +956,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                           flex: 4,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -912,17 +966,23 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'Luis Pérez',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'i11dbwes' /* Luis Pérez */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyLarge,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 12.0, 0.0),
                                                   child: Text(
-                                                    'luisperez@gmail.com',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'k58zjogp' /* luisperez@gmail.com */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall
@@ -935,7 +995,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 4.0)),
+                                              ].divide(const SizedBox(height: 4.0)),
                                             ),
                                           ),
                                         ),
@@ -946,11 +1006,14 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                           Expanded(
                                             flex: 2,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Text(
-                                                '1927837290',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  's37rnkbq' /* 1927837290 */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium,
@@ -982,15 +1045,19 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 4.0,
                                                                 8.0, 4.0),
                                                     child: Text(
-                                                      'Cuarto',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'ppliom0l' /* Cuarto */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1016,12 +1083,12 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        offset: Offset(0.0, 1.0),
+                                        offset: const Offset(0.0, 1.0),
                                       )
                                     ],
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 12.0, 16.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1042,7 +1109,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(2.0),
+                                            padding: const EdgeInsets.all(2.0),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(8.0),
@@ -1059,7 +1126,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                           flex: 4,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 0.0, 0.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -1069,17 +1136,23 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'Ariel Ramos',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'f8x2d1tg' /* Ariel Ramos */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyLarge,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 12.0, 0.0),
                                                   child: Text(
-                                                    'arielramos@gmail.com',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'jszni9qx' /* arielramos@gmail.com */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall
@@ -1092,7 +1165,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 4.0)),
+                                              ].divide(const SizedBox(height: 4.0)),
                                             ),
                                           ),
                                         ),
@@ -1103,11 +1176,14 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                           Expanded(
                                             flex: 2,
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Text(
-                                                '41929182',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '30z6bucc' /* 41929182 */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium,
@@ -1139,15 +1215,19 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 4.0,
                                                                 8.0, 4.0),
                                                     child: Text(
-                                                      'Sexto',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'z1e4o2z1' /* Sexto */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1163,19 +1243,19 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                     ),
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 1.0)),
+                              ].divide(const SizedBox(height: 1.0)),
                             ),
                           ],
                         ),
                       ),
-                      Expanded(
+                      const Expanded(
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [],
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: const AlignmentDirectional(0.0, 1.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -1190,7 +1270,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                       .secondaryBackground,
                                 ),
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:
@@ -1198,7 +1278,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
                                     children: [
-                                      Padding(
+                                      const Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             25.0, 0.0, 0.0, 0.0),
                                         child: FaIcon(
@@ -1207,7 +1287,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                           size: 26.0,
                                         ),
                                       ),
-                                      Icon(
+                                      const Icon(
                                         Icons.favorite,
                                         color: Color(0xFFFF0004),
                                         size: 26.0,
@@ -1218,7 +1298,7 @@ class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
                                             .secondaryText,
                                         size: 26.0,
                                       ),
-                                      Padding(
+                                      const Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 25.0, 0.0),
                                         child: FaIcon(

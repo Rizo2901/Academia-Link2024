@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'anuncios_model.dart';
 export 'anuncios_model.dart';
 
@@ -66,19 +63,19 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
-                            Color(0xFFAFCDEA),
+                            const Color(0xFFAFCDEA),
                             FlutterFlowTheme.of(context).secondaryBackground
                           ],
-                          stops: [0.0, 1.0],
-                          begin: AlignmentDirectional(0.0, 1.0),
-                          end: AlignmentDirectional(0, -1.0),
+                          stops: const [0.0, 1.0],
+                          begin: const AlignmentDirectional(0.0, 1.0),
+                          end: const AlignmentDirectional(0, -1.0),
                         ),
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 10.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -96,7 +93,7 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 30.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -104,16 +101,18 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       25.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Anuncios de la semana',
+                                    FFLocalizations.of(context).getText(
+                                      'yfec0vh5' /* Anuncios de la semana */,
+                                    ),
                                     textAlign: TextAlign.start,
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'PT Sans',
-                                          color: Color(0xFF222A72),
+                                          color: const Color(0xFF222A72),
                                           fontSize: 25.0,
                                           fontWeight: FontWeight.w600,
                                         ),
@@ -129,14 +128,14 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Expanded(
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                         child: Container(
                           width: 100.0,
                           height: 100.0,
@@ -151,10 +150,12 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                             children: [
                               Flexible(
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       5.0, 10.0, 10.0, 0.0),
                                   child: Text(
-                                    'Recuerda que este viernes es viernes de COLORES, todos los estudiantes podrán utilizar ropa particular. Atte: La dirección\n\nCosto: ₡200',
+                                    FFLocalizations.of(context).getText(
+                                      'j0tmp780' /* Recuerda que este viernes es v... */,
+                                    ),
                                     textAlign: TextAlign.justify,
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
@@ -162,9 +163,9 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, -1.0),
+                                alignment: const AlignmentDirectional(1.0, -1.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 5.0, 0.0),
                                   child: Icon(
                                     Icons.favorite_border,
@@ -174,7 +175,7 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, -1.0),
+                                alignment: const AlignmentDirectional(1.0, -1.0),
                                 child: Icon(
                                   Icons.settings_outlined,
                                   color: FlutterFlowTheme.of(context)
@@ -196,7 +197,7 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                   Expanded(
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
                       child: Container(
                         width: 100.0,
                         height: 100.0,
@@ -210,10 +211,12 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                           children: [
                             Flexible(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     5.0, 10.0, 10.0, 0.0),
                                 child: Text(
-                                  'El próximo 16 de Febrero del 2024 la Escuela se encontrará CERRADA de acuerdo al comunicado del MEP el pasado 10 de Febrero sobre el día de bienestar mental. Atte: La dirección',
+                                  FFLocalizations.of(context).getText(
+                                    '24da1euu' /* El próximo 16 de Febrero del 2... */,
+                                  ),
                                   textAlign: TextAlign.justify,
                                   style:
                                       FlutterFlowTheme.of(context).bodyMedium,
@@ -221,9 +224,9 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(1.0, -1.0),
+                              alignment: const AlignmentDirectional(1.0, -1.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 5.0, 0.0),
                                 child: Icon(
                                   Icons.favorite_border,
@@ -233,7 +236,7 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(1.0, -1.0),
+                              alignment: const AlignmentDirectional(1.0, -1.0),
                               child: Icon(
                                 Icons.settings_outlined,
                                 color:
@@ -249,7 +252,7 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -262,7 +265,7 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                               FlutterFlowTheme.of(context).secondaryBackground,
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               5.0, 10.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -270,10 +273,12 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                             children: [
                               Flexible(
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 10.0, 0.0),
                                   child: Text(
-                                    'Les recordamos que el próximo 20 de Febrero será la primera reunión de padres, esta se llevará a cabo en el aula respectiva de cada estudiante, NO utilizar la sala común para estos propósitos. Atte: La dirección',
+                                    FFLocalizations.of(context).getText(
+                                      'cjdd784u' /* Les recordamos que el próximo ... */,
+                                    ),
                                     textAlign: TextAlign.justify,
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
@@ -281,9 +286,9 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, -1.0),
+                                alignment: const AlignmentDirectional(1.0, -1.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 5.0, 0.0),
                                   child: Icon(
                                     Icons.favorite_border,
@@ -293,7 +298,7 @@ class _AnunciosWidgetState extends State<AnunciosWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, -1.0),
+                                alignment: const AlignmentDirectional(1.0, -1.0),
                                 child: Icon(
                                   Icons.settings_outlined,
                                   color: FlutterFlowTheme.of(context)

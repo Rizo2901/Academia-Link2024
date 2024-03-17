@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'listar_grupo_model.dart';
 export 'listar_grupo_model.dart';
 
@@ -53,12 +50,12 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
-                        Color(0xFF94C0F2),
+                        const Color(0xFF94C0F2),
                         FlutterFlowTheme.of(context).primaryBackground
                       ],
-                      stops: [0.0, 1.0],
-                      begin: AlignmentDirectional(0.0, -1.0),
-                      end: AlignmentDirectional(0, 1.0),
+                      stops: const [0.0, 1.0],
+                      begin: const AlignmentDirectional(0.0, -1.0),
+                      end: const AlignmentDirectional(0, 1.0),
                     ),
                   ),
                   child: Row(
@@ -67,7 +64,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                     children: [
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 15.0, 15.0, 0.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.9,
@@ -75,7 +72,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 0.0,
                                   color: Color(0x33717171),
@@ -97,12 +94,14 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                                   size: 45.0,
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         45.0, 10.0, 81.0, 10.0),
                                     child: Text(
-                                      'Pasar Lista',
+                                      FFLocalizations.of(context).getText(
+                                        '71e8lc7z' /* Pasar Lista */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -114,7 +113,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 10.0, 10.0, 10.0),
                                   child: Icon(
                                     Icons.menu,
@@ -134,7 +133,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
               ],
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10.0, 15.0, 10.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 15.0, 10.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -144,7 +143,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                     height: 100.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           blurRadius: 4.0,
                           color: Color(0x33000000),
@@ -153,7 +152,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                       ],
                       borderRadius: BorderRadius.circular(10.0),
                       border: Border.all(
-                        color: Color(0xFFE1E1E1),
+                        color: const Color(0xFFE1E1E1),
                         width: 1.0,
                       ),
                     ),
@@ -162,7 +161,9 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          'Lista de:Grupo 7-2',
+                          FFLocalizations.of(context).getText(
+                            '4l0tefbj' /* Lista de:Grupo 7-2 */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
@@ -177,7 +178,9 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Text(
-                                  'Fecha: 3/11/2024',
+                                  FFLocalizations.of(context).getText(
+                                    'r13sdf9t' /* Fecha: 3/11/2024 */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -186,7 +189,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                                       ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       5.0, 0.0, 0.0, 0.0),
                                   child: Icon(
                                     Icons.edit,
@@ -206,17 +209,19 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           45.0, 10.0, 91.0, 10.0),
                       child: Text(
-                        'Alumnos:',
+                        FFLocalizations.of(context).getText(
+                          'vojgmz9n' /* Alumnos: */,
+                        ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'PT Sans',
                               fontSize: 20.0,
@@ -230,9 +235,9 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
                 child: ListView(
-                  padding: EdgeInsets.symmetric(vertical: 10.0),
+                  padding: const EdgeInsets.symmetric(vertical: 10.0),
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
                   children: [
@@ -241,7 +246,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                       height: 100.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 4.0,
                             color: Color(0x33000000),
@@ -250,7 +255,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                         ],
                         borderRadius: BorderRadius.circular(10.0),
                         border: Border.all(
-                          color: Color(0xFFBFBFBF),
+                          color: const Color(0xFFBFBFBF),
                           width: 1.0,
                         ),
                       ),
@@ -259,7 +264,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                         children: [
                           Flexible(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -269,12 +274,16 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'Nombre:',
+                                        FFLocalizations.of(context).getText(
+                                          'z9aihxar' /* Nombre: */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        'Ian Rizo Zuñiga',
+                                        FFLocalizations.of(context).getText(
+                                          's6agtczj' /* Ian Rizo Zuñiga */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -284,12 +293,16 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'Cedúla:',
+                                        FFLocalizations.of(context).getText(
+                                          'mkta2dyu' /* Cedúla: */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        '1-1866-0462',
+                                        FFLocalizations.of(context).getText(
+                                          '68hzd0uv' /* 1-1866-0462 */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -329,7 +342,9 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                                 ),
                               ),
                               Text(
-                                'Presente',
+                                FFLocalizations.of(context).getText(
+                                  'f6l3rsf8' /* Presente */,
+                                ),
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                             ],
@@ -354,7 +369,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                       height: 100.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 4.0,
                             color: Color(0x33000000),
@@ -363,7 +378,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                         ],
                         borderRadius: BorderRadius.circular(10.0),
                         border: Border.all(
-                          color: Color(0xFFBFBFBF),
+                          color: const Color(0xFFBFBFBF),
                           width: 1.0,
                         ),
                       ),
@@ -372,7 +387,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                         children: [
                           Flexible(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -382,12 +397,16 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'Nombre:',
+                                        FFLocalizations.of(context).getText(
+                                          '1b2oevak' /* Nombre: */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        'Ian Rizo Zuñiga',
+                                        FFLocalizations.of(context).getText(
+                                          '74kptzj2' /* Ian Rizo Zuñiga */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -397,12 +416,16 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'Cedúla:',
+                                        FFLocalizations.of(context).getText(
+                                          'zrrmhfum' /* Cedúla: */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        '1-1866-0462',
+                                        FFLocalizations.of(context).getText(
+                                          '9ata9fjw' /* 1-1866-0462 */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -442,7 +465,9 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                                 ),
                               ),
                               Text(
-                                'Presente',
+                                FFLocalizations.of(context).getText(
+                                  'lqbsqwwn' /* Presente */,
+                                ),
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                             ],
@@ -467,7 +492,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                       height: 100.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 4.0,
                             color: Color(0x33000000),
@@ -476,7 +501,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                         ],
                         borderRadius: BorderRadius.circular(10.0),
                         border: Border.all(
-                          color: Color(0xFFBFBFBF),
+                          color: const Color(0xFFBFBFBF),
                           width: 1.0,
                         ),
                       ),
@@ -485,7 +510,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                         children: [
                           Flexible(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -495,12 +520,16 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'Nombre:',
+                                        FFLocalizations.of(context).getText(
+                                          'gniy3p46' /* Nombre: */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        'Ian Rizo Zuñiga',
+                                        FFLocalizations.of(context).getText(
+                                          '5thdysnz' /* Ian Rizo Zuñiga */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -510,12 +539,16 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        'Cedúla:',
+                                        FFLocalizations.of(context).getText(
+                                          'knm3d9ga' /* Cedúla: */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        '1-1866-0462',
+                                        FFLocalizations.of(context).getText(
+                                          'htyd2aw1' /* 1-1866-0462 */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -555,7 +588,9 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                                 ),
                               ),
                               Text(
-                                'Presente',
+                                FFLocalizations.of(context).getText(
+                                  'qyz2r91y' /* Presente */,
+                                ),
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                             ],
@@ -575,7 +610,7 @@ class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
                         ],
                       ),
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
             ),

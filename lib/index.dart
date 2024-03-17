@@ -24,7 +24,6 @@ export '/profesor/eliminar_anuncio/eliminar_anuncio_widget.dart'
     show EliminarAnuncioWidget;
 export '/profesor/modificar_anuncio/modificar_anuncio_widget.dart'
     show ModificarAnuncioWidget;
-export '/profesor/crear_grupos/crear_grupos_widget.dart' show CrearGruposWidget;
 export '/profesor/crear_tarea_profesor/crear_tarea_profesor_widget.dart'
     show CrearTareaProfesorWidget;
 export '/profesor/editar_tarea_profesor/editar_tarea_profesor_widget.dart'
@@ -37,3 +36,6 @@ export '/profesor/editar_grupos/editar_grupos_widget.dart'
 export '/profesor/eliminar_grupos/eliminar_grupos_widget.dart'
     show EliminarGruposWidget;
 export '/listas/listar_grupo/listar_grupo_widget.dart' show ListarGrupoWidget;
+export '/autenticacion/recuperar_contrasena/recuperar_contrasena_widget.dart'
+    show RecuperarContrasenaWidget;
+export '/profesor/creargrupos/creargrupos_widget.dart' show CreargruposWidget;

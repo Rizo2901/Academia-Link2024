@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'crear_anuncios_model.dart';
 export 'crear_anuncios_model.dart';
 
@@ -61,9 +59,11 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
             },
           ),
           title: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Text(
-              'Crear Anuncio',
+              FFLocalizations.of(context).getText(
+                '2zm9udh8' /* Crear Anuncio */,
+              ),
               style: FlutterFlowTheme.of(context).headlineMedium.override(
                     fontFamily: 'Outfit',
                     color: FlutterFlowTheme.of(context).primaryText,
@@ -90,19 +90,21 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Align(
-                  alignment: AlignmentDirectional(0.0, -1.0),
+                  alignment: const AlignmentDirectional(0.0, -1.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 70.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 70.0),
                     child: Text(
-                      'Nuevo Anuncio',
+                      FFLocalizations.of(context).getText(
+                        'v50819zs' /* Nuevo Anuncio */,
+                      ),
                       style:
                           FlutterFlowTheme.of(context).headlineLarge.override(
                                 fontFamily: 'Outfit',
@@ -112,15 +114,18 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: TextFormField(
                     controller: _model.textController,
                     focusNode: _model.textFieldFocusNode,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'Descripcion',
-                      hintText:
-                          'Escriba aca todos los detalles de el anuncio a publicar...',
+                      labelText: FFLocalizations.of(context).getText(
+                        '75mv3s4r' /* Descripcion */,
+                      ),
+                      hintText: FFLocalizations.of(context).getText(
+                        'k94g18o5' /* Escriba aca todos los detalles... */,
+                      ),
                       hintStyle: FlutterFlowTheme.of(context).labelSmall,
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
@@ -130,27 +135,27 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0x00000000),
                           width: 2.0,
                         ),
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0x00000000),
                           width: 2.0,
                         ),
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0x00000000),
                           width: 2.0,
                         ),
                         borderRadius: BorderRadius.circular(8.0),
                       ),
-                      contentPadding: EdgeInsetsDirectional.fromSTEB(
+                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
                           20.0, 32.0, 20.0, 12.0),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium,
@@ -160,19 +165,21 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () {
                       print('Button pressed ...');
                     },
-                    text: 'Publicar Anuncio',
+                    text: FFLocalizations.of(context).getText(
+                      '9ydmp47i' /* Publicar Anuncio */,
+                    ),
                     options: FFButtonOptions(
                       width: double.infinity,
                       height: 48.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleMedium.override(

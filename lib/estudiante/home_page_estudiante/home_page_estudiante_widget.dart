@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'home_page_estudiante_model.dart';
 export 'home_page_estudiante_model.dart';
 
@@ -56,12 +53,12 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          Color(0xFF7C89FF),
+                          const Color(0xFF7C89FF),
                           FlutterFlowTheme.of(context).secondaryBackground
                         ],
-                        stops: [0.0, 1.0],
-                        begin: AlignmentDirectional(0.0, 1.0),
-                        end: AlignmentDirectional(0, -1.0),
+                        stops: const [0.0, 1.0],
+                        begin: const AlignmentDirectional(0.0, 1.0),
+                        end: const AlignmentDirectional(0, -1.0),
                       ),
                     ),
                     child: Row(
@@ -71,7 +68,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              Expanded(
+                              const Expanded(
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
@@ -88,7 +85,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 10.0, 15.0, 0.0),
                                         child: Container(
                                           width:
@@ -98,7 +95,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 0.0,
                                                 color: Color(0x33717171),
@@ -116,7 +113,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         7.0, 8.0, 10.0, 3.0),
                                                 child: ClipRRect(
@@ -132,7 +129,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 10.0, 10.0),
                                                 child: Icon(
@@ -172,7 +169,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.35,
@@ -180,7 +177,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -198,7 +195,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                         children: [
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 10.0, 15.0, 0.0),
                                               child: ClipRRect(
@@ -232,7 +229,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                                   BorderRadius.circular(25.0),
                                             ),
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                           ),
                                         ),
                                       ],
@@ -249,7 +246,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.35,
@@ -257,7 +254,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -275,7 +272,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                         children: [
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 10.0, 15.0, 0.0),
                                               child: ClipRRect(
@@ -309,9 +306,12 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                                   BorderRadius.circular(25.0),
                                             ),
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              'Mis Notas',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'q5k3msva' /* Mis Notas */,
+                                              ),
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -339,7 +339,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.35,
@@ -347,7 +347,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -365,7 +365,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                         children: [
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 10.0, 15.0, 0.0),
                                               child: ClipRRect(
@@ -399,9 +399,12 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                                   BorderRadius.circular(25.0),
                                             ),
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              'Anuncios',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'jfsddhcx' /* Anuncios */,
+                                              ),
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -436,7 +439,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.35,
@@ -444,7 +447,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -462,7 +465,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                         children: [
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 10.0, 15.0, 0.0),
                                               child: ClipRRect(
@@ -480,7 +483,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                         ],
                                       ),
                                     ),
-                                    Row(
+                                    const Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [],
                                     ),
@@ -496,7 +499,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.35,
@@ -504,7 +507,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -522,7 +525,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                         children: [
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 10.0, 15.0, 0.0),
                                               child: ClipRRect(
@@ -556,9 +559,12 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                                   BorderRadius.circular(25.0),
                                             ),
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              'Tareas',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '205no9wa' /* Tareas */,
+                                              ),
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -581,7 +587,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                           ),
                         ],
                       ),
-                      Row(
+                      const Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [],
                       ),
@@ -591,9 +597,9 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
               ],
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 1.0),
+              alignment: const AlignmentDirectional(0.0, 1.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 45.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 45.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -608,12 +614,12 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                               FlutterFlowTheme.of(context).secondaryBackground,
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: const AlignmentDirectional(0.0, 1.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     25.0, 0.0, 0.0, 0.0),
                                 child: FaIcon(
@@ -622,7 +628,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                   size: 24.0,
                                 ),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.favorite,
                                 color: Color(0xFFFF0004),
                                 size: 24.0,
@@ -633,7 +639,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                     FlutterFlowTheme.of(context).secondaryText,
                                 size: 24.0,
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 25.0, 0.0),
                                 child: FaIcon(

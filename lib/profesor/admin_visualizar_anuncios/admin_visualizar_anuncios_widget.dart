@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'admin_visualizar_anuncios_model.dart';
 export 'admin_visualizar_anuncios_model.dart';
 
@@ -57,12 +55,12 @@ class _AdminVisualizarAnunciosWidgetState
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          Color(0xFF7C89FF),
+                          const Color(0xFF7C89FF),
                           FlutterFlowTheme.of(context).secondaryBackground
                         ],
-                        stops: [0.0, 1.0],
-                        begin: AlignmentDirectional(0.0, 1.0),
-                        end: AlignmentDirectional(0, -1.0),
+                        stops: const [0.0, 1.0],
+                        begin: const AlignmentDirectional(0.0, 1.0),
+                        end: const AlignmentDirectional(0, -1.0),
                       ),
                     ),
                     child: Row(
@@ -70,7 +68,7 @@ class _AdminVisualizarAnunciosWidgetState
                       children: [
                         Flexible(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 0.0),
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
@@ -78,7 +76,7 @@ class _AdminVisualizarAnunciosWidgetState
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0x33717171),
@@ -95,7 +93,7 @@ class _AdminVisualizarAnunciosWidgetState
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         7.0, 8.0, 10.0, 3.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
@@ -108,12 +106,14 @@ class _AdminVisualizarAnunciosWidgetState
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           45.0, 10.0, 91.0, 10.0),
                                       child: Text(
-                                        'Anuncios',
+                                        FFLocalizations.of(context).getText(
+                                          '0u41urly' /* Anuncios */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -125,7 +125,7 @@ class _AdminVisualizarAnunciosWidgetState
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         10.0, 10.0, 10.0, 10.0),
                                     child: Icon(
                                       Icons.menu,
@@ -150,25 +150,27 @@ class _AdminVisualizarAnunciosWidgetState
               children: [
                 Expanded(
                   child: Align(
-                    alignment: AlignmentDirectional(1.0, 0.0),
+                    alignment: const AlignmentDirectional(1.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () {
                           print('Button pressed ...');
                         },
-                        text: 'Nueva ',
-                        icon: Icon(
+                        text: FFLocalizations.of(context).getText(
+                          'nagpesk3' /* Nueva  */,
+                        ),
+                        icon: const Icon(
                           Icons.add_circle_outline,
                           size: 15.0,
                         ),
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 0.28,
                           height: 40.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 20.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).accent1,
                           textStyle:
@@ -178,7 +180,7 @@ class _AdminVisualizarAnunciosWidgetState
                                     fontSize: 18.0,
                                   ),
                           elevation: 3.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 1.0,
                           ),
@@ -196,7 +198,7 @@ class _AdminVisualizarAnunciosWidgetState
                 Expanded(
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 213.0,
@@ -205,7 +207,7 @@ class _AdminVisualizarAnunciosWidgetState
                         borderRadius: BorderRadius.circular(25.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             15.0, 10.0, 15.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -251,10 +253,14 @@ class _AdminVisualizarAnunciosWidgetState
                                                         Expanded(
                                                           child: Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, -1.0),
                                                             child: Text(
-                                                              'Anuncio 1 ',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'anuu03iv' /* Anuncio 1  */,
+                                                              ),
                                                               textAlign:
                                                                   TextAlign
                                                                       .start,
@@ -295,7 +301,10 @@ class _AdminVisualizarAnunciosWidgetState
                                                         .secondaryBackground,
                                                   ),
                                                   child: Text(
-                                                    'Recuerda que este viernes es viernes de COLORES, todos los estudiantes podrán utilizar ropa particular. Atte: La dirección\n\nCosto: ₡200',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'h0cq9dl1' /* Recuerda que este viernes es v... */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -311,7 +320,7 @@ class _AdminVisualizarAnunciosWidgetState
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -319,7 +328,7 @@ class _AdminVisualizarAnunciosWidgetState
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: FFButtonWidget(
@@ -328,7 +337,7 @@ class _AdminVisualizarAnunciosWidgetState
                                                             'Button pressed ...');
                                                       },
                                                       text: '',
-                                                      icon: FaIcon(
+                                                      icon: const FaIcon(
                                                         FontAwesomeIcons.edit,
                                                       ),
                                                       options: FFButtonOptions(
@@ -339,14 +348,14 @@ class _AdminVisualizarAnunciosWidgetState
                                                                 0.25,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -367,7 +376,7 @@ class _AdminVisualizarAnunciosWidgetState
                                                                       .white,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -382,7 +391,7 @@ class _AdminVisualizarAnunciosWidgetState
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: FFButtonWidget(
@@ -391,7 +400,7 @@ class _AdminVisualizarAnunciosWidgetState
                                                             'Button pressed ...');
                                                       },
                                                       text: '',
-                                                      icon: FaIcon(
+                                                      icon: const FaIcon(
                                                         FontAwesomeIcons
                                                             .solidTrashAlt,
                                                       ),
@@ -403,21 +412,21 @@ class _AdminVisualizarAnunciosWidgetState
                                                                 0.25,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
                                                         color:
-                                                            Color(0xFFCB1719),
+                                                            const Color(0xFFCB1719),
                                                         textStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -429,7 +438,7 @@ class _AdminVisualizarAnunciosWidgetState
                                                                       .white,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -465,7 +474,7 @@ class _AdminVisualizarAnunciosWidgetState
                 Expanded(
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 213.0,
@@ -474,7 +483,7 @@ class _AdminVisualizarAnunciosWidgetState
                         borderRadius: BorderRadius.circular(25.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             15.0, 10.0, 15.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -520,10 +529,14 @@ class _AdminVisualizarAnunciosWidgetState
                                                         Expanded(
                                                           child: Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, -1.0),
                                                             child: Text(
-                                                              'Anuncio 2 ',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'fmsk22yy' /* Anuncio 2  */,
+                                                              ),
                                                               textAlign:
                                                                   TextAlign
                                                                       .start,
@@ -564,7 +577,10 @@ class _AdminVisualizarAnunciosWidgetState
                                                         .secondaryBackground,
                                                   ),
                                                   child: Text(
-                                                    'Les recordamos que el próximo 20 de Febrero será la primera reunión de padres, esta se llevará a cabo en el aula respectiva de cada estudiante, NO utilizar la sala común para estos propósitos. \n\nAtte: La dirección',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'f1r5hx8x' /* Les recordamos que el próximo ... */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -580,7 +596,7 @@ class _AdminVisualizarAnunciosWidgetState
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -588,7 +604,7 @@ class _AdminVisualizarAnunciosWidgetState
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: FFButtonWidget(
@@ -597,7 +613,7 @@ class _AdminVisualizarAnunciosWidgetState
                                                             'Button pressed ...');
                                                       },
                                                       text: '',
-                                                      icon: FaIcon(
+                                                      icon: const FaIcon(
                                                         FontAwesomeIcons.edit,
                                                       ),
                                                       options: FFButtonOptions(
@@ -608,14 +624,14 @@ class _AdminVisualizarAnunciosWidgetState
                                                                 0.25,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -636,7 +652,7 @@ class _AdminVisualizarAnunciosWidgetState
                                                                       .white,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -651,7 +667,7 @@ class _AdminVisualizarAnunciosWidgetState
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: FFButtonWidget(
@@ -660,7 +676,7 @@ class _AdminVisualizarAnunciosWidgetState
                                                             'Button pressed ...');
                                                       },
                                                       text: '',
-                                                      icon: FaIcon(
+                                                      icon: const FaIcon(
                                                         FontAwesomeIcons
                                                             .solidTrashAlt,
                                                       ),
@@ -672,21 +688,21 @@ class _AdminVisualizarAnunciosWidgetState
                                                                 0.25,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
                                                         color:
-                                                            Color(0xFFCB1719),
+                                                            const Color(0xFFCB1719),
                                                         textStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -698,7 +714,7 @@ class _AdminVisualizarAnunciosWidgetState
                                                                       .white,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -729,9 +745,9 @@ class _AdminVisualizarAnunciosWidgetState
               ],
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 1.0),
+              alignment: const AlignmentDirectional(0.0, 1.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -746,13 +762,13 @@ class _AdminVisualizarAnunciosWidgetState
                               FlutterFlowTheme.of(context).secondaryBackground,
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     25.0, 0.0, 0.0, 0.0),
                                 child: FaIcon(
@@ -761,7 +777,7 @@ class _AdminVisualizarAnunciosWidgetState
                                   size: 26.0,
                                 ),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.favorite,
                                 color: Color(0xFFFF0004),
                                 size: 26.0,
@@ -772,7 +788,7 @@ class _AdminVisualizarAnunciosWidgetState
                                     FlutterFlowTheme.of(context).secondaryText,
                                 size: 26.0,
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 25.0, 0.0),
                                 child: FaIcon(

@@ -4,8 +4,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'registro_usuarios_model.dart';
 export 'registro_usuarios_model.dart';
 
@@ -57,14 +55,14 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFFAFCDEA),
+        backgroundColor: const Color(0xFFAFCDEA),
         body: SafeArea(
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 15.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 15.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -79,9 +77,11 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(8.0, 10.0, 8.0, 10.0),
+                          const EdgeInsetsDirectional.fromSTEB(8.0, 10.0, 8.0, 10.0),
                       child: Text(
-                        'Academia Link',
+                        FFLocalizations.of(context).getText(
+                          'm7230ohf' /* Academia Link */,
+                        ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Montserrat',
                               color: Colors.black,
@@ -96,17 +96,17 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
               Flexible(
                 child: Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(12.0, 15.0, 12.0, 5.0),
+                      const EdgeInsetsDirectional.fromSTEB(12.0, 15.0, 12.0, 5.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     height: MediaQuery.sizeOf(context).height * 0.6,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFAFCDEA),
                       shape: BoxShape.rectangle,
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(17.0, 13.0, 17.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(17.0, 13.0, 17.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -114,10 +114,12 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 12.0),
                                 child: Text(
-                                  'Registro de Usuarios',
+                                  FFLocalizations.of(context).getText(
+                                    'qjvufueg' /* Registro de Usuarios */,
+                                  ),
                                   textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -132,13 +134,15 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                             ],
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 11.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Text(
-                                  '¡Ingresa los datos de un nuevo usuario!',
+                                  FFLocalizations.of(context).getText(
+                                    '7m9p95gn' /* ¡Ingresa los datos de un nuevo... */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -151,7 +155,7 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 15.0, 8.0, 5.0),
                             child: TextFormField(
                               controller: _model.txtFCedulaController,
@@ -159,7 +163,9 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Cédula',
+                                labelText: FFLocalizations.of(context).getText(
+                                  '6j1vojhr' /* Cédula */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintStyle:
@@ -200,7 +206,7 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 15.0, 8.0, 5.0),
                             child: TextFormField(
                               controller: _model.txtFNombreController,
@@ -208,7 +214,9 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Nombre',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'szlnbj9t' /* Nombre */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintStyle:
@@ -249,7 +257,7 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 15.0, 8.0, 5.0),
                             child: TextFormField(
                               controller: _model.txtFPApellidoController,
@@ -257,7 +265,9 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Primer Apellido',
+                                labelText: FFLocalizations.of(context).getText(
+                                  '20telw6c' /* Primer Apellido */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintStyle:
@@ -298,7 +308,7 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 15.0, 8.0, 5.0),
                             child: TextFormField(
                               controller: _model.txtFSApellidoController,
@@ -306,7 +316,9 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Segundo Apellido',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'qbd9aowh' /* Segundo Apellido */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintStyle:
@@ -347,7 +359,7 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 15.0, 8.0, 5.0),
                             child: TextFormField(
                               controller: _model.txtFCorreoController,
@@ -355,7 +367,9 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Correo Electrónico',
+                                labelText: FFLocalizations.of(context).getText(
+                                  '7ojydtve' /* Correo Electrónico */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintStyle:
@@ -396,19 +410,28 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 15.0, 8.0, 5.0),
                             child: FlutterFlowDropDown<String>(
                               controller: _model.dropDownValueController ??=
                                   FormFieldController<String>(null),
-                              options: ['Profesor', 'Estudiante'],
+                              options: [
+                                FFLocalizations.of(context).getText(
+                                  '9dukvljz' /* Profesor */,
+                                ),
+                                FFLocalizations.of(context).getText(
+                                  '6qutjji5' /* Estudiante */,
+                                )
+                              ],
                               onChanged: (val) =>
                                   setState(() => _model.dropDownValue = val),
                               width: MediaQuery.sizeOf(context).width * 3.0,
                               height: 50.0,
                               textStyle:
                                   FlutterFlowTheme.of(context).bodyMedium,
-                              hintText: 'Rol',
+                              hintText: FFLocalizations.of(context).getText(
+                                'aymhcll0' /* Rol */,
+                              ),
                               icon: Icon(
                                 Icons.keyboard_arrow_down_rounded,
                                 color:
@@ -422,7 +445,7 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                                   FlutterFlowTheme.of(context).alternate,
                               borderWidth: 2.0,
                               borderRadius: 8.0,
-                              margin: EdgeInsetsDirectional.fromSTEB(
+                              margin: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 4.0, 16.0, 4.0),
                               hidesUnderline: true,
                               isOverButton: true,
@@ -437,10 +460,10 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 15.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 15.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -448,21 +471,23 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                     children: [
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               11.0, 0.0, 11.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () async {
                               context.pushNamed('Login');
                             },
-                            text: '¡Registrar!',
+                            text: FFLocalizations.of(context).getText(
+                              'iafi4bcr' /* ¡Registrar! */,
+                            ),
                             options: FFButtonOptions(
                               width: MediaQuery.sizeOf(context).width * 0.5,
                               height: MediaQuery.sizeOf(context).height * 0.05,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFF070D59),
+                              color: const Color(0xFF070D59),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -470,7 +495,7 @@ class _RegistroUsuariosWidgetState extends State<RegistroUsuariosWidget> {
                                     color: Colors.white,
                                   ),
                               elevation: 3.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),

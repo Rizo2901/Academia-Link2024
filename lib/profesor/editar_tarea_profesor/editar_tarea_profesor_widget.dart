@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'editar_tarea_profesor_model.dart';
 export 'editar_tarea_profesor_model.dart';
 
@@ -26,16 +24,23 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
     super.initState();
     _model = createModel(context, () => EditarTareaProfesorModel());
 
-    _model.textController1 ??= TextEditingController(text: 'Tarea 2 - Editada');
+    _model.textController1 ??= TextEditingController();
     _model.textFieldFocusNode1 ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController(
-        text:
-            'Deben realizar una investigación de los planetas del sistema solar y dar una referencia bibliografica de 3 fuentes con un resumen de su preferencia. El trabajo debe contar con portada, introducción, desarrollo y referencias. ');
+    _model.textController2 ??= TextEditingController();
     _model.textFieldFocusNode2 ??= FocusNode();
 
     _model.textController3 ??= TextEditingController();
     _model.textFieldFocusNode3 ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
+          _model.textController1?.text = FFLocalizations.of(context).getText(
+            'pk23ukla' /* Tarea 2 - Editada */,
+          );
+          _model.textController2?.text = FFLocalizations.of(context).getText(
+            'ca8ovjny' /* Deben realizar una investigaci... */,
+          );
+        }));
   }
 
   @override
@@ -67,12 +72,12 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          Color(0xFF7C89FF),
+                          const Color(0xFF7C89FF),
                           FlutterFlowTheme.of(context).secondaryBackground
                         ],
-                        stops: [0.0, 1.0],
-                        begin: AlignmentDirectional(0.0, 1.0),
-                        end: AlignmentDirectional(0, -1.0),
+                        stops: const [0.0, 1.0],
+                        begin: const AlignmentDirectional(0.0, 1.0),
+                        end: const AlignmentDirectional(0, -1.0),
                       ),
                     ),
                     child: Row(
@@ -80,7 +85,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                       children: [
                         Flexible(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 0.0),
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
@@ -88,7 +93,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0x33717171),
@@ -105,7 +110,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         7.0, 8.0, 10.0, 3.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
@@ -118,12 +123,14 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           45.0, 10.0, 91.0, 10.0),
                                       child: Text(
-                                        'Tareas',
+                                        FFLocalizations.of(context).getText(
+                                          '772yryrb' /* Tareas */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -135,7 +142,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         10.0, 10.0, 10.0, 10.0),
                                     child: Icon(
                                       Icons.menu,
@@ -161,7 +168,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                 Expanded(
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 420.0,
@@ -176,10 +183,12 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 0.0, 0.0),
                                 child: Text(
-                                  'Nombre de la tarea:',
+                                  FFLocalizations.of(context).getText(
+                                    'jmqg9i7y' /* Nombre de la tarea: */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -195,7 +204,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                             children: [
                               Expanded(
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 10.0, 20.0, 0.0),
                                   child: TextFormField(
                                     controller: _model.textController1,
@@ -257,10 +266,12 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 0.0, 0.0),
                                 child: Text(
-                                  'Descripción:',
+                                  FFLocalizations.of(context).getText(
+                                    'dbhhamlv' /* Descripción: */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -276,7 +287,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                             children: [
                               Expanded(
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 10.0, 20.0, 0.0),
                                   child: TextFormField(
                                     controller: _model.textController2,
@@ -341,10 +352,12 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 0.0, 0.0),
                                 child: Text(
-                                  'Fecha Límite:',
+                                  FFLocalizations.of(context).getText(
+                                    'ev4rjtpr' /* Fecha Límite: */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -360,7 +373,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                             children: [
                               Expanded(
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 20.0, 0.0),
                                   child: TextFormField(
                                     controller: _model.textController3,
@@ -368,7 +381,10 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                     autofocus: true,
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      labelText: '16/05/2024',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        '28j8i5ly' /* 16/05/2024 */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
                                       hintStyle: FlutterFlowTheme.of(context)
@@ -418,21 +434,23 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 10.0, 0.0, 0.0),
                                 child: FFButtonWidget(
                                   onPressed: () {
                                     print('Button pressed ...');
                                   },
-                                  text: 'Calendario',
-                                  icon: FaIcon(
+                                  text: FFLocalizations.of(context).getText(
+                                    'e0rjn190' /* Calendario */,
+                                  ),
+                                  icon: const FaIcon(
                                     FontAwesomeIcons.calendar,
                                   ),
                                   options: FFButtonOptions(
                                     height: 40.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -442,7 +460,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                           color: Colors.white,
                                         ),
                                     elevation: 3.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -456,10 +474,12 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 0.0, 0.0),
                                 child: Text(
-                                  'Estado:',
+                                  FFLocalizations.of(context).getText(
+                                    's0eq44ai' /* Estado: */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -470,17 +490,17 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                               ),
                               Expanded(
                                 child: Align(
-                                  alignment: AlignmentDirectional(1.0, 0.0),
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 20.0, 0.0),
                                     child: Switch.adaptive(
                                       value: _model.switchValue ??= true,
                                       onChanged: (newValue) async {
                                         setState(() =>
-                                            _model.switchValue = newValue!);
+                                            _model.switchValue = newValue);
                                       },
-                                      activeColor: Color(0xFF009650),
+                                      activeColor: const Color(0xFF009650),
                                       activeTrackColor:
                                           FlutterFlowTheme.of(context).accent1,
                                       inactiveTrackColor:
@@ -507,30 +527,32 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
               children: [
                 Expanded(
                   child: Align(
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () {
                           print('Button pressed ...');
                         },
-                        text: 'Cancelar',
+                        text: FFLocalizations.of(context).getText(
+                          'jqx8hhty' /* Cancelar */,
+                        ),
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 0.25,
                           height: 40.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 24.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: Color(0xFFCB1719),
+                          color: const Color(0xFFCB1719),
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Readex Pro',
                                     color: Colors.white,
                                   ),
                           elevation: 3.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 1.0,
                           ),
@@ -542,30 +564,32 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                 ),
                 Expanded(
                   child: Align(
-                    alignment: AlignmentDirectional(1.0, 0.0),
+                    alignment: const AlignmentDirectional(1.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () {
                           print('Button pressed ...');
                         },
-                        text: 'Guardar',
+                        text: FFLocalizations.of(context).getText(
+                          'hnvmt8sx' /* Guardar */,
+                        ),
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 0.25,
                           height: 40.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 24.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: Color(0xFF009650),
+                          color: const Color(0xFF009650),
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Readex Pro',
                                     color: Colors.white,
                                   ),
                           elevation: 3.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 1.0,
                           ),
@@ -577,16 +601,16 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                 ),
               ],
             ),
-            Expanded(
+            const Expanded(
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [],
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 1.0),
+              alignment: const AlignmentDirectional(0.0, 1.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -601,13 +625,13 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                               FlutterFlowTheme.of(context).secondaryBackground,
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     25.0, 0.0, 0.0, 0.0),
                                 child: FaIcon(
@@ -616,7 +640,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                   size: 26.0,
                                 ),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.favorite,
                                 color: Color(0xFFFF0004),
                                 size: 26.0,
@@ -627,7 +651,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                     FlutterFlowTheme.of(context).secondaryText,
                                 size: 26.0,
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 25.0, 0.0),
                                 child: FaIcon(

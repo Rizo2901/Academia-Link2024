@@ -1,11 +1,8 @@
 import '/components/slide_lateral_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'home_page_profesor_model.dart';
 export 'home_page_profesor_model.dart';
 
@@ -55,12 +52,12 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
-                        Color(0xFF94C0F2),
+                        const Color(0xFF94C0F2),
                         FlutterFlowTheme.of(context).primaryBackground
                       ],
-                      stops: [0.0, 1.0],
-                      begin: AlignmentDirectional(0.0, -1.0),
-                      end: AlignmentDirectional(0, 1.0),
+                      stops: const [0.0, 1.0],
+                      begin: const AlignmentDirectional(0.0, -1.0),
+                      end: const AlignmentDirectional(0, 1.0),
                     ),
                   ),
                   child: Row(
@@ -69,7 +66,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(7.0, 8.0, 0.0, 3.0),
+                            const EdgeInsetsDirectional.fromSTEB(7.0, 8.0, 0.0, 3.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
                           child: Image.asset(
@@ -81,7 +78,9 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                         ),
                       ),
                       Text(
-                        '¡Bienvenido, Saul!',
+                        FFLocalizations.of(context).getText(
+                          '76fkc81y' /* ¡Bienvenido, Saul! */,
+                        ),
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'PT Sans',
@@ -91,7 +90,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                             ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             29.0, 0.0, 20.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
@@ -112,11 +111,11 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                           : FocusScope.of(context).unfocus(),
                                   child: Padding(
                                     padding: MediaQuery.viewInsetsOf(context),
-                                    child: Container(
+                                    child: SizedBox(
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               0.5,
-                                      child: SlideLateralWidget(),
+                                      child: const SlideLateralWidget(),
                                     ),
                                   ),
                                 );
@@ -147,7 +146,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -158,7 +157,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                   context.pushNamed(
                                     'MisgruposProfesor',
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
+                                      kTransitionInfoKey: const TransitionInfo(
                                         hasTransition: true,
                                         transitionType:
                                             PageTransitionType.bottomToTop,
@@ -174,7 +173,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x33000000),
@@ -192,7 +191,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                           children: [
                                             Expanded(
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         15.0, 10.0, 15.0, 0.0),
                                                 child: ClipRRect(
@@ -226,10 +225,13 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                                 borderRadius:
                                                     BorderRadius.circular(25.0),
                                               ),
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Text(
-                                                'Mis Grupos',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'koz4tbzp' /* Mis Grupos */,
+                                                ),
                                                 textAlign: TextAlign.center,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -258,7 +260,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.35,
@@ -266,7 +268,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -284,7 +286,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                         children: [
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 10.0, 15.0, 0.0),
                                               child: ClipRRect(
@@ -318,9 +320,12 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                                   BorderRadius.circular(25.0),
                                             ),
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              'Notas',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'sfgof2wt' /* Notas */,
+                                              ),
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -348,7 +353,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.35,
@@ -356,7 +361,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -374,7 +379,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                         children: [
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 10.0, 15.0, 0.0),
                                               child: ClipRRect(
@@ -408,9 +413,12 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                                   BorderRadius.circular(25.0),
                                             ),
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              'Anuncios',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'h7b68dzp' /* Anuncios */,
+                                              ),
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -445,7 +453,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.35,
@@ -453,7 +461,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -471,7 +479,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                         children: [
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 10.0, 15.0, 0.0),
                                               child: ClipRRect(
@@ -505,9 +513,12 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                                   BorderRadius.circular(25.0),
                                             ),
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              'Estudiantes',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '769ysalm' /* Estudiantes */,
+                                              ),
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -535,7 +546,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.35,
@@ -543,7 +554,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -561,7 +572,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                         children: [
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 10.0, 15.0, 0.0),
                                               child: ClipRRect(
@@ -595,9 +606,12 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                                   BorderRadius.circular(25.0),
                                             ),
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              'Tareas',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '9dcmrvxv' /* Tareas */,
+                                              ),
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -627,7 +641,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                             child: Opacity(
                               opacity: 0.0,
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 20.0, 0.0),
                                 child: Container(
                                   width:
@@ -636,7 +650,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x33000000),
@@ -663,7 +677,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                                 borderRadius:
                                                     BorderRadius.circular(25.0),
                                               ),
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                             ),
                                           ),
@@ -683,9 +697,9 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
               ],
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 1.0),
+              alignment: const AlignmentDirectional(0.0, 1.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -700,13 +714,13 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                               FlutterFlowTheme.of(context).secondaryBackground,
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     25.0, 0.0, 0.0, 0.0),
                                 child: FaIcon(
@@ -715,7 +729,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                   size: 26.0,
                                 ),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.favorite,
                                 color: Color(0xFFFF0004),
                                 size: 26.0,
@@ -726,7 +740,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                     FlutterFlowTheme.of(context).secondaryText,
                                 size: 26.0,
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 25.0, 0.0),
                                 child: FaIcon(

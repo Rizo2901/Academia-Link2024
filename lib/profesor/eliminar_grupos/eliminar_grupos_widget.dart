@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'eliminar_grupos_model.dart';
 export 'eliminar_grupos_model.dart';
 
@@ -67,7 +65,7 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
               print('IconButton pressed ...');
             },
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -85,38 +83,46 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                       FlutterFlowTheme.of(context).primaryBackground,
                   automaticallyImplyLeading: false,
                   title: Align(
-                    alignment: AlignmentDirectional(0.0, -1.0),
+                    alignment: const AlignmentDirectional(0.0, -1.0),
                     child: Text(
-                      'Eliminar Grupo',
+                      FFLocalizations.of(context).getText(
+                        'y1h3ie8j' /* Eliminar Grupo */,
+                      ),
                       style: FlutterFlowTheme.of(context).headlineSmall,
                     ),
                   ),
-                  actions: [],
+                  actions: const [],
                   centerTitle: true,
                   elevation: 0.0,
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-1.0, -1.0),
+                alignment: const AlignmentDirectional(-1.0, -1.0),
                 child: Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 8.0, 16.0),
+                      const EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 8.0, 16.0),
                   child: Text(
-                    'Correo Electronico del Profesor',
+                    FFLocalizations.of(context).getText(
+                      'tfokl1lu' /* Correo Electronico del Profeso... */,
+                    ),
                     style: FlutterFlowTheme.of(context).labelLarge,
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 16.0, 8.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 16.0, 8.0, 16.0),
                 child: TextFormField(
                   controller: _model.textController1,
                   focusNode: _model.textFieldFocusNode1,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: 'Ingrese el correo electronico del profesor',
+                    labelText: FFLocalizations.of(context).getText(
+                      '0wej4nxa' /* Ingrese el correo electronico ... */,
+                    ),
                     labelStyle: FlutterFlowTheme.of(context).labelLarge,
-                    hintText: 'andresleon@gmail.com',
+                    hintText: FFLocalizations.of(context).getText(
+                      '8r3zfu1w' /* andresleon@gmail.com */,
+                    ),
                     hintStyle: FlutterFlowTheme.of(context).bodyLarge,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -126,21 +132,21 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0x00000000),
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0x00000000),
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     focusedErrorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0x00000000),
                         width: 2.0,
                       ),
@@ -154,23 +160,28 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 8.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 8.0, 16.0),
                 child: Text(
-                  'Correo de los estudiantes',
+                  FFLocalizations.of(context).getText(
+                    'xwidkpt6' /* Correo de los estudiantes */,
+                  ),
                   style: FlutterFlowTheme.of(context).labelLarge,
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 16.0, 8.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 16.0, 8.0, 16.0),
                 child: TextFormField(
                   controller: _model.textController2,
                   focusNode: _model.textFieldFocusNode2,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText:
-                        'Ingrese el correo electronico de los estudiantes',
+                    labelText: FFLocalizations.of(context).getText(
+                      'zpni738n' /* Ingrese el correo electronico ... */,
+                    ),
                     labelStyle: FlutterFlowTheme.of(context).labelLarge,
-                    hintText: 'ianrizo@gmail.com',
+                    hintText: FFLocalizations.of(context).getText(
+                      '01hvhrri' /* ianrizo@gmail.com */,
+                    ),
                     hintStyle: FlutterFlowTheme.of(context).bodyLarge,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -180,21 +191,21 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0x00000000),
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0x00000000),
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     focusedErrorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0x00000000),
                         width: 2.0,
                       ),
@@ -208,22 +219,28 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 8.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 8.0, 16.0),
                 child: Text(
-                  'Nombre de la clase',
+                  FFLocalizations.of(context).getText(
+                    'bu0edipn' /* Nombre de la clase */,
+                  ),
                   style: FlutterFlowTheme.of(context).labelLarge,
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 16.0, 8.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 16.0, 8.0, 16.0),
                 child: TextFormField(
                   controller: _model.textController3,
                   focusNode: _model.textFieldFocusNode3,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: 'Ingrese el nombre de la clase',
+                    labelText: FFLocalizations.of(context).getText(
+                      'wz943cp1' /* Ingrese el nombre de la clase */,
+                    ),
                     labelStyle: FlutterFlowTheme.of(context).labelLarge,
-                    hintText: 'Español Tercer Grado - Clase A',
+                    hintText: FFLocalizations.of(context).getText(
+                      'earvmy7y' /* Español Tercer Grado - Clase A */,
+                    ),
                     hintStyle: FlutterFlowTheme.of(context).bodyLarge,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -233,21 +250,21 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0x00000000),
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0x00000000),
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     focusedErrorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0x00000000),
                         width: 2.0,
                       ),
@@ -261,18 +278,20 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 8.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 8.0, 16.0),
                 child: FFButtonWidget(
                   onPressed: () {
                     print('Button pressed ...');
                   },
-                  text: 'Agregar más estudiantes',
+                  text: FFLocalizations.of(context).getText(
+                    'fc8bg4ic' /* Agregar más estudiantes */,
+                  ),
                   options: FFButtonOptions(
                     width: double.infinity,
                     height: 50.0,
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Readex Pro',
@@ -284,18 +303,20 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 24.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 24.0, 16.0),
                 child: FFButtonWidget(
                   onPressed: () {
                     print('Button pressed ...');
                   },
-                  text: 'Confirmar eliminación de grupo',
+                  text: FFLocalizations.of(context).getText(
+                    'e6585ox7' /* Confirmar eliminación de grupo */,
+                  ),
                   options: FFButtonOptions(
                     width: double.infinity,
                     height: 50.0,
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).error,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Readex Pro',
@@ -307,25 +328,27 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 8.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 8.0, 16.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed('HomePageProfesor');
                           },
-                          text: 'Cancelar',
+                          text: FFLocalizations.of(context).getText(
+                            '1i4egg27' /* Cancelar */,
+                          ),
                           options: FFButtonOptions(
                             width: 317.0,
                             height: 50.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).error,
                             textStyle: FlutterFlowTheme.of(context).titleSmall,

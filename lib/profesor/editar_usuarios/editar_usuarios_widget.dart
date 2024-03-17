@@ -4,8 +4,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'editar_usuarios_model.dart';
 export 'editar_usuarios_model.dart';
 
@@ -69,14 +67,14 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                 children: [
                   Expanded(
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: Container(
                         width: double.infinity,
                         height: MediaQuery.sizeOf(context).height * 0.3,
-                        constraints: BoxConstraints(
+                        constraints: const BoxConstraints(
                           maxWidth: 970.0,
                         ),
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                         ),
                         child: SingleChildScrollView(
@@ -85,7 +83,7 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 40.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -93,7 +91,9 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      'Cancelar',
+                                      FFLocalizations.of(context).getText(
+                                        '4oysvcsi' /* Cancelar */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .headlineMedium
                                           .override(
@@ -106,7 +106,9 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                                     Opacity(
                                       opacity: 0.5,
                                       child: Text(
-                                        'Editar Perfil',
+                                        FFLocalizations.of(context).getText(
+                                          '84u8ir6u' /* Editar Perfil */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .headlineMedium
                                             .override(
@@ -119,12 +121,14 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'Guardar',
+                                      FFLocalizations.of(context).getText(
+                                        'fmaya8f0' /* Guardar */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .headlineMedium
                                           .override(
                                             fontFamily: 'Outfit',
-                                            color: Color(0xFF222A72),
+                                            color: const Color(0xFF222A72),
                                             fontSize: 20.0,
                                           ),
                                     ),
@@ -137,7 +141,7 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                                 children: [
                                   Flexible(
                                     child: Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: ClipRRect(
                                         borderRadius:
                                             BorderRadius.circular(24.0),
@@ -162,7 +166,7 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
               ),
               Flexible(
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -170,10 +174,12 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                     children: [
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            'Cédula',
+                            FFLocalizations.of(context).getText(
+                              'lxa52eeo' /* Cédula */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -185,8 +191,8 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
-                        child: Container(
+                            const EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                        child: SizedBox(
                           width: MediaQuery.sizeOf(context).width * 0.6,
                           child: TextFormField(
                             controller: _model.txtFCedulaController1,
@@ -194,12 +200,14 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                             autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: '1-1624-0337',
+                              labelText: FFLocalizations.of(context).getText(
+                                'vz9gp7mm' /* 1-1624-0337 */,
+                              ),
                               labelStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF222A72),
+                                    color: const Color(0xFF222A72),
                                     fontSize: 18.0,
                                   ),
                               hintStyle:
@@ -251,7 +259,7 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
               ),
               Flexible(
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 15.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 15.0, 0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -259,10 +267,12 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                     children: [
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            'Nombre',
+                            FFLocalizations.of(context).getText(
+                              'sa4rhc44' /* Nombre */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -274,8 +284,8 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
-                        child: Container(
+                            const EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
+                        child: SizedBox(
                           width: MediaQuery.sizeOf(context).width * 0.6,
                           child: TextFormField(
                             controller: _model.txtFCedulaController2,
@@ -283,12 +293,14 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                             autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Luis Daniel',
+                              labelText: FFLocalizations.of(context).getText(
+                                '0djusxrk' /* Luis Daniel */,
+                              ),
                               labelStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF222A72),
+                                    color: const Color(0xFF222A72),
                                     fontSize: 18.0,
                                   ),
                               hintStyle:
@@ -340,7 +352,7 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
               ),
               Flexible(
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -348,10 +360,12 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                     children: [
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            'P. Apellido',
+                            FFLocalizations.of(context).getText(
+                              'd0xtwbn7' /* P. Apellido */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -363,8 +377,8 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
-                        child: Container(
+                            const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                        child: SizedBox(
                           width: MediaQuery.sizeOf(context).width * 0.6,
                           child: TextFormField(
                             controller: _model.txtFCedulaController3,
@@ -372,12 +386,14 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                             autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Pérez',
+                              labelText: FFLocalizations.of(context).getText(
+                                '0oenk9gh' /* Pérez */,
+                              ),
                               labelStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF222A72),
+                                    color: const Color(0xFF222A72),
                                     fontSize: 18.0,
                                   ),
                               hintStyle:
@@ -428,7 +444,7 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
               ),
               Flexible(
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -436,10 +452,12 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                     children: [
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            'S. Apellido',
+                            FFLocalizations.of(context).getText(
+                              'o6qwcflk' /* S. Apellido */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -451,8 +469,8 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
-                        child: Container(
+                            const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                        child: SizedBox(
                           width: MediaQuery.sizeOf(context).width * 0.6,
                           child: TextFormField(
                             controller: _model.txtFCedulaController4,
@@ -460,12 +478,14 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                             autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Sánchez',
+                              labelText: FFLocalizations.of(context).getText(
+                                'hwgg7evn' /* Sánchez */,
+                              ),
                               labelStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF222A72),
+                                    color: const Color(0xFF222A72),
                                     fontSize: 18.0,
                                   ),
                               hintStyle:
@@ -517,7 +537,7 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
               Flexible(
                 child: Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -525,10 +545,12 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                     children: [
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            'Correo E.',
+                            FFLocalizations.of(context).getText(
+                              'aa5h8r1c' /* Correo E. */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -540,8 +562,8 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
-                        child: Container(
+                            const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                        child: SizedBox(
                           width: MediaQuery.sizeOf(context).width * 0.6,
                           child: TextFormField(
                             controller: _model.txtFCedulaController5,
@@ -549,12 +571,14 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                             autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'ldperez.0711@gmail.com',
+                              labelText: FFLocalizations.of(context).getText(
+                                '5tczjpxd' /* ldperez.0711@gmail.com */,
+                              ),
                               labelStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF222A72),
+                                    color: const Color(0xFF222A72),
                                     fontSize: 18.0,
                                   ),
                               hintStyle:
@@ -606,16 +630,18 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
               Flexible(
                 child: Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 15.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 15.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            'Rol',
+                            FFLocalizations.of(context).getText(
+                              '650m0mlo' /* Rol */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -627,11 +653,18 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(80.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(80.0, 0.0, 0.0, 0.0),
                         child: FlutterFlowDropDown<String>(
                           controller: _model.dropDownValueController ??=
                               FormFieldController<String>(null),
-                          options: ['Profesor', 'Estudiante'],
+                          options: [
+                            FFLocalizations.of(context).getText(
+                              'ovwxzdmf' /* Profesor */,
+                            ),
+                            FFLocalizations.of(context).getText(
+                              'xl3fracl' /* Estudiante */,
+                            )
+                          ],
                           onChanged: (val) =>
                               setState(() => _model.dropDownValue = val),
                           width: MediaQuery.sizeOf(context).width * 0.5,
@@ -641,7 +674,9 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                                     fontFamily: 'Readex Pro',
                                     fontSize: 16.0,
                                   ),
-                          hintText: 'Profesor',
+                          hintText: FFLocalizations.of(context).getText(
+                            'chtcyd33' /* Profesor */,
+                          ),
                           icon: Icon(
                             Icons.keyboard_arrow_down_rounded,
                             color: FlutterFlowTheme.of(context).secondaryText,
@@ -653,7 +688,7 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                           borderColor: FlutterFlowTheme.of(context).alternate,
                           borderWidth: 2.0,
                           borderRadius: 8.0,
-                          margin: EdgeInsetsDirectional.fromSTEB(
+                          margin: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 4.0, 16.0, 4.0),
                           hidesUnderline: true,
                           isOverButton: true,
@@ -666,7 +701,7 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -675,21 +710,23 @@ class _EditarUsuariosWidgetState extends State<EditarUsuariosWidget> {
                       onPressed: () {
                         print('Button pressed ...');
                       },
-                      text: 'Eliminar Usuario',
+                      text: FFLocalizations.of(context).getText(
+                        'owv22lt1' /* Eliminar Usuario */,
+                      ),
                       options: FFButtonOptions(
                         height: 40.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: Color(0xFFFF0000),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: const Color(0xFFFF0000),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Readex Pro',
                                   color: Colors.white,
                                 ),
                         elevation: 3.0,
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),

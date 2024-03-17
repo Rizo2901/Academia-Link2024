@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'perfil_model.dart';
 export 'perfil_model.dart';
 
@@ -55,12 +52,12 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          Color(0xFF7C89FF),
+                          const Color(0xFF7C89FF),
                           FlutterFlowTheme.of(context).secondaryBackground
                         ],
-                        stops: [0.0, 1.0],
-                        begin: AlignmentDirectional(0.0, 1.0),
-                        end: AlignmentDirectional(0, -1.0),
+                        stops: const [0.0, 1.0],
+                        begin: const AlignmentDirectional(0.0, 1.0),
+                        end: const AlignmentDirectional(0, -1.0),
                       ),
                     ),
                     child: Row(
@@ -68,7 +65,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                       children: [
                         Flexible(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 0.0),
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
@@ -76,7 +73,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0x33717171),
@@ -93,7 +90,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         7.0, 8.0, 10.0, 3.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
@@ -106,12 +103,14 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           45.0, 10.0, 91.0, 10.0),
                                       child: Text(
-                                        'Perfil',
+                                        FFLocalizations.of(context).getText(
+                                          'cx3lza08' /* Perfil */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -123,7 +122,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         10.0, 10.0, 10.0, 10.0),
                                     child: Icon(
                                       Icons.menu,
@@ -145,7 +144,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
             ),
             Flexible(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -153,9 +152,11 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                   children: [
                     Flexible(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
-                          'Cédula:',
+                          FFLocalizations.of(context).getText(
+                            'iq23ej5i' /* Cédula: */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
@@ -166,14 +167,16 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                     ),
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
                         child: Text(
-                          '1-1624-0337',
+                          FFLocalizations.of(context).getText(
+                            '6sphabko' /* 1-1624-0337 */,
+                          ),
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF222A72),
+                                    color: const Color(0xFF222A72),
                                     fontSize: 18.0,
                                   ),
                         ),
@@ -185,7 +188,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
             ),
             Flexible(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -193,9 +196,11 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                   children: [
                     Flexible(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
-                          'Nombre:',
+                          FFLocalizations.of(context).getText(
+                            'zow6l3pf' /* Nombre: */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
@@ -206,14 +211,16 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                     ),
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
                         child: Text(
-                          'Saúl',
+                          FFLocalizations.of(context).getText(
+                            '9paf87hd' /* Saúl */,
+                          ),
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF222A72),
+                                    color: const Color(0xFF222A72),
                                     fontSize: 18.0,
                                   ),
                         ),
@@ -225,7 +232,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
             ),
             Flexible(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -233,9 +240,11 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                   children: [
                     Flexible(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
-                          'P. Apellido:',
+                          FFLocalizations.of(context).getText(
+                            '7u8rhoib' /* P. Apellido: */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
@@ -246,14 +255,16 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                     ),
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
                         child: Text(
-                          'Hernández',
+                          FFLocalizations.of(context).getText(
+                            '7ncfftfs' /* Hernández */,
+                          ),
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF222A72),
+                                    color: const Color(0xFF222A72),
                                     fontSize: 18.0,
                                   ),
                         ),
@@ -265,7 +276,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
             ),
             Flexible(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -273,9 +284,11 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                   children: [
                     Flexible(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
-                          'S. Apellido:',
+                          FFLocalizations.of(context).getText(
+                            'didwakcd' /* S. Apellido: */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
@@ -286,14 +299,16 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                     ),
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
                         child: Text(
-                          'Araya',
+                          FFLocalizations.of(context).getText(
+                            '2obh7da7' /* Araya */,
+                          ),
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF222A72),
+                                    color: const Color(0xFF222A72),
                                     fontSize: 18.0,
                                   ),
                         ),
@@ -305,7 +320,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
             ),
             Flexible(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -313,9 +328,11 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                   children: [
                     Flexible(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
-                          'Correo E.:',
+                          FFLocalizations.of(context).getText(
+                            'f3cc4lma' /* Correo E.: */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
@@ -326,14 +343,16 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                     ),
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
                         child: Text(
-                          'shernandez60228@ufide.ac.cr',
+                          FFLocalizations.of(context).getText(
+                            'gzvho65y' /* shernandez60228@ufide.ac.cr */,
+                          ),
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF222A72),
+                                    color: const Color(0xFF222A72),
                                     fontSize: 18.0,
                                   ),
                         ),
@@ -345,16 +364,18 @@ class _PerfilWidgetState extends State<PerfilWidget> {
             ),
             Flexible(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 15.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 15.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Flexible(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
-                          'Usuario:',
+                          FFLocalizations.of(context).getText(
+                            'vk5vb736' /* Usuario: */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
@@ -365,14 +386,16 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                     ),
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
                         child: Text(
-                          'Profesor',
+                          FFLocalizations.of(context).getText(
+                            'viffzz88' /* Profesor */,
+                          ),
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF222A72),
+                                    color: const Color(0xFF222A72),
                                     fontSize: 18.0,
                                   ),
                         ),
@@ -382,7 +405,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                 ),
               ),
             ),
-            Expanded(
+            const Expanded(
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [],
@@ -390,7 +413,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
             ),
             Expanded(
               child: Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: const AlignmentDirectional(0.0, 1.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -405,13 +428,13 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                               FlutterFlowTheme.of(context).secondaryBackground,
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     25.0, 0.0, 0.0, 0.0),
                                 child: FaIcon(
@@ -420,7 +443,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                   size: 26.0,
                                 ),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.favorite,
                                 color: Color(0xFFFF0004),
                                 size: 26.0,
@@ -431,7 +454,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                     FlutterFlowTheme.of(context).secondaryText,
                                 size: 26.0,
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 25.0, 0.0),
                                 child: FaIcon(

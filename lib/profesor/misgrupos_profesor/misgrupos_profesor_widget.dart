@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'misgrupos_profesor_model.dart';
 export 'misgrupos_profesor_model.dart';
 
@@ -48,13 +46,13 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
           children: [
             Expanded(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 15.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 15.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           15.0, 15.0, 15.0, 15.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.86,
@@ -62,7 +60,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 4.0,
                               color: Color(0x33000000),
@@ -76,13 +74,15 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 5.0, 10.0, 5.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    'Sección:5-1',
+                                    FFLocalizations.of(context).getText(
+                                      'fqy9ve4x' /* Sección:5-1 */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -93,7 +93,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 3.0, 15.0, 11.0),
                                       child: ClipRRect(
                                         borderRadius:
@@ -116,7 +116,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         23.0, 7.0, 33.0, 17.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -129,10 +129,12 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   7.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            ':25',
+                                            FFLocalizations.of(context).getText(
+                                              '40vflgv9' /* :25 */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -145,14 +147,16 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         11.0, 10.0, 11.0, 3.0),
                                     child: FFButtonWidget(
                                       onPressed: () {
                                         print('Button pressed ...');
                                       },
-                                      text: 'Pasar Lista',
-                                      icon: Icon(
+                                      text: FFLocalizations.of(context).getText(
+                                        'ocz937zn' /* Pasar Lista */,
+                                      ),
+                                      icon: const Icon(
                                         Icons.featured_play_list_outlined,
                                         size: 15.0,
                                       ),
@@ -161,11 +165,11 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                             MediaQuery.sizeOf(context).width *
                                                 0.588,
                                         height: 40.0,
-                                        padding: EdgeInsets.all(0.0),
+                                        padding: const EdgeInsets.all(0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFF72CFF5),
+                                        color: const Color(0xFF72CFF5),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -173,7 +177,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                               color: Colors.white,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -183,14 +187,16 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         11.0, 10.0, 11.0, 7.0),
                                     child: FFButtonWidget(
                                       onPressed: () {
                                         print('Button pressed ...');
                                       },
-                                      text: 'Ver Grupo',
-                                      icon: Icon(
+                                      text: FFLocalizations.of(context).getText(
+                                        'm16epqbx' /* Ver Grupo */,
+                                      ),
+                                      icon: const Icon(
                                         Icons.groups_sharp,
                                         size: 15.0,
                                       ),
@@ -199,11 +205,11 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                             MediaQuery.sizeOf(context).width *
                                                 0.588,
                                         height: 40.0,
-                                        padding: EdgeInsets.all(0.0),
+                                        padding: const EdgeInsets.all(0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFF72CFF5),
+                                        color: const Color(0xFF72CFF5),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -211,7 +217,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                               color: Colors.white,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -228,7 +234,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           15.0, 15.0, 15.0, 15.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.86,
@@ -236,7 +242,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 4.0,
                               color: Color(0x33000000),
@@ -250,13 +256,15 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 5.0, 10.0, 5.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    'Sección:7-3',
+                                    FFLocalizations.of(context).getText(
+                                      'jx3mvuf2' /* Sección:7-3 */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -267,7 +275,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 3.0, 15.0, 11.0),
                                       child: ClipRRect(
                                         borderRadius:
@@ -290,7 +298,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         23.0, 7.0, 33.0, 17.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -303,10 +311,12 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   7.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            ':21',
+                                            FFLocalizations.of(context).getText(
+                                              'ipy83ta5' /* :21 */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -319,14 +329,16 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         11.0, 10.0, 11.0, 3.0),
                                     child: FFButtonWidget(
                                       onPressed: () {
                                         print('Button pressed ...');
                                       },
-                                      text: 'Pasar Lista',
-                                      icon: Icon(
+                                      text: FFLocalizations.of(context).getText(
+                                        'sq01zpif' /* Pasar Lista */,
+                                      ),
+                                      icon: const Icon(
                                         Icons.featured_play_list_outlined,
                                         size: 15.0,
                                       ),
@@ -335,11 +347,11 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                             MediaQuery.sizeOf(context).width *
                                                 0.588,
                                         height: 40.0,
-                                        padding: EdgeInsets.all(0.0),
+                                        padding: const EdgeInsets.all(0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFF72CFF5),
+                                        color: const Color(0xFF72CFF5),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -347,7 +359,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                               color: Colors.white,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -357,14 +369,16 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         11.0, 10.0, 11.0, 7.0),
                                     child: FFButtonWidget(
                                       onPressed: () {
                                         print('Button pressed ...');
                                       },
-                                      text: 'Ver Grupo',
-                                      icon: Icon(
+                                      text: FFLocalizations.of(context).getText(
+                                        '3nzy3cek' /* Ver Grupo */,
+                                      ),
+                                      icon: const Icon(
                                         Icons.groups_sharp,
                                         size: 15.0,
                                       ),
@@ -373,11 +387,11 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                             MediaQuery.sizeOf(context).width *
                                                 0.588,
                                         height: 40.0,
-                                        padding: EdgeInsets.all(0.0),
+                                        padding: const EdgeInsets.all(0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFF72CFF5),
+                                        color: const Color(0xFF72CFF5),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -385,7 +399,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                               color: Colors.white,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -402,7 +416,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           15.0, 15.0, 15.0, 15.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.86,
@@ -410,7 +424,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 4.0,
                               color: Color(0x33000000),
@@ -424,13 +438,15 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 5.0, 10.0, 5.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    'Sección:7-2',
+                                    FFLocalizations.of(context).getText(
+                                      'q2govzap' /* Sección:7-2 */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -441,7 +457,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 3.0, 15.0, 11.0),
                                       child: ClipRRect(
                                         borderRadius:
@@ -464,7 +480,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         23.0, 7.0, 33.0, 17.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -477,10 +493,12 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   7.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            ':24',
+                                            FFLocalizations.of(context).getText(
+                                              'tfqbqp93' /* :24 */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -493,14 +511,16 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         11.0, 10.0, 11.0, 3.0),
                                     child: FFButtonWidget(
                                       onPressed: () {
                                         print('Button pressed ...');
                                       },
-                                      text: 'Pasar Lista',
-                                      icon: Icon(
+                                      text: FFLocalizations.of(context).getText(
+                                        'l4g8teh3' /* Pasar Lista */,
+                                      ),
+                                      icon: const Icon(
                                         Icons.featured_play_list_outlined,
                                         size: 15.0,
                                       ),
@@ -509,11 +529,11 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                             MediaQuery.sizeOf(context).width *
                                                 0.588,
                                         height: 40.0,
-                                        padding: EdgeInsets.all(0.0),
+                                        padding: const EdgeInsets.all(0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFF72CFF5),
+                                        color: const Color(0xFF72CFF5),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -521,7 +541,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                               color: Colors.white,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -531,14 +551,16 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         11.0, 10.0, 11.0, 7.0),
                                     child: FFButtonWidget(
                                       onPressed: () {
                                         print('Button pressed ...');
                                       },
-                                      text: 'Ver Grupo',
-                                      icon: Icon(
+                                      text: FFLocalizations.of(context).getText(
+                                        'a6hpimrj' /* Ver Grupo */,
+                                      ),
+                                      icon: const Icon(
                                         Icons.groups_sharp,
                                         size: 15.0,
                                       ),
@@ -547,11 +569,11 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                             MediaQuery.sizeOf(context).width *
                                                 0.588,
                                         height: 40.0,
-                                        padding: EdgeInsets.all(0.0),
+                                        padding: const EdgeInsets.all(0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFF72CFF5),
+                                        color: const Color(0xFF72CFF5),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -559,7 +581,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                               color: Colors.white,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -580,9 +602,9 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 1.0),
+              alignment: const AlignmentDirectional(0.0, 1.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -597,13 +619,13 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                               FlutterFlowTheme.of(context).secondaryBackground,
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     25.0, 0.0, 0.0, 0.0),
                                 child: FaIcon(
@@ -612,7 +634,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                   size: 26.0,
                                 ),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.favorite,
                                 color: Color(0xFFFF0004),
                                 size: 26.0,
@@ -623,7 +645,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                     FlutterFlowTheme.of(context).secondaryText,
                                 size: 26.0,
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 25.0, 0.0),
                                 child: FaIcon(

@@ -1,11 +1,8 @@
 import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'listar_usuarios_model.dart';
 export 'listar_usuarios_model.dart';
 
@@ -54,13 +51,13 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
             children: [
               Expanded(
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, -1.0),
+                  alignment: const AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 970.0,
                     ),
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -74,27 +71,31 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                             Container(
                               width: double.infinity,
                               height: 24.0,
-                              decoration: BoxDecoration(),
+                              decoration: const BoxDecoration(),
                             ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 0.0, 4.0),
                             child: Text(
-                              'Usuarios dentro del Sistema',
+                              FFLocalizations.of(context).getText(
+                                '7yvsww3v' /* Usuarios dentro del Sistema */,
+                              ),
                               style:
                                   FlutterFlowTheme.of(context).headlineMedium,
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Debajo encontrata una lista para poder observar a todos los ususarios ingresados en el sistema.',
+                              FFLocalizations.of(context).getText(
+                                'qaietj14' /* Debajo encontrata una lista pa... */,
+                              ),
                               style: FlutterFlowTheme.of(context).labelMedium,
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 8.0, 16.0, 0.0),
                             child: TextFormField(
                               controller: _model.textController,
@@ -102,7 +103,9 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Buscar usuarios...',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'avi9htf5' /* Buscar usuarios... */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintStyle:
@@ -136,7 +139,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                   ),
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
-                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
                                 suffixIcon: Icon(
                                   Icons.search_rounded,
@@ -156,14 +159,26 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 8.0, 0.0, 8.0),
                                   child: FlutterFlowChoiceChips(
                                     options: [
-                                      ChipData('All'),
-                                      ChipData('Estudiantes'),
-                                      ChipData('Profesores'),
-                                      ChipData('Administradores')
+                                      ChipData(
+                                          FFLocalizations.of(context).getText(
+                                        'pjdmkw5g' /* All */,
+                                      )),
+                                      ChipData(
+                                          FFLocalizations.of(context).getText(
+                                        '1gaosw3y' /* Estudiantes */,
+                                      )),
+                                      ChipData(
+                                          FFLocalizations.of(context).getText(
+                                        '8ru7ai61' /* Profesores */,
+                                      )),
+                                      ChipData(
+                                          FFLocalizations.of(context).getText(
+                                        'j28b4atz' /* Administradores */,
+                                      ))
                                     ],
                                     onChanged: (val) => setState(
                                         () => _model.choiceChipsValues = val),
@@ -215,18 +230,22 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                     controller:
                                         _model.choiceChipsValueController ??=
                                             FormFieldController<List<String>>(
-                                      ['All'],
+                                      [
+                                        FFLocalizations.of(context).getText(
+                                          '54ygb3uh' /* All */,
+                                        )
+                                      ],
                                     ),
                                     wrapped: true,
                                   ),
                                 ),
                               ]
-                                  .addToStart(SizedBox(width: 16.0))
-                                  .addToEnd(SizedBox(width: 16.0)),
+                                  .addToStart(const SizedBox(width: 16.0))
+                                  .addToEnd(const SizedBox(width: 16.0)),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Container(
                               width: double.infinity,
@@ -236,7 +255,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                     .primaryBackground,
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
-                              alignment: AlignmentDirectional(-1.0, 0.0),
+                              alignment: const AlignmentDirectional(-1.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -247,18 +266,20 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                     Container(
                                       width: 40.0,
                                       height: 100.0,
-                                      decoration: BoxDecoration(),
+                                      decoration: const BoxDecoration(),
                                     ),
                                   Expanded(
                                     flex: 4,
                                     child: Align(
                                       alignment:
-                                          AlignmentDirectional(-1.0, 0.0),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 0.0, 0.0),
                                         child: Text(
-                                          'Nombre',
+                                          FFLocalizations.of(context).getText(
+                                            'n6vffhlq' /* Nombre */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelSmall,
                                         ),
@@ -273,9 +294,11 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                       flex: 2,
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(-1.0, 0.0),
+                                            const AlignmentDirectional(-1.0, 0.0),
                                         child: Text(
-                                          'Cedula',
+                                          FFLocalizations.of(context).getText(
+                                            'blmyaeko' /* Cedula */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelSmall,
                                         ),
@@ -290,9 +313,11 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                       flex: 3,
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(-1.0, 0.0),
+                                            const AlignmentDirectional(-1.0, 0.0),
                                         child: Text(
-                                          'Titulo',
+                                          FFLocalizations.of(context).getText(
+                                            '6mjvcz8u' /* Titulo */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelSmall,
                                         ),
@@ -307,9 +332,11 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(1.0, 0.0),
+                                              const AlignmentDirectional(1.0, 0.0),
                                           child: Text(
-                                            'Estado',
+                                            FFLocalizations.of(context).getText(
+                                              'ovoo5dw1' /* Estado */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .labelSmall,
                                           ),
@@ -322,7 +349,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                             ),
                           ),
                           ListView(
-                            padding: EdgeInsets.fromLTRB(
+                            padding: const EdgeInsets.fromLTRB(
                               0,
                               0,
                               0,
@@ -341,12 +368,12 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                       blurRadius: 0.0,
                                       color: FlutterFlowTheme.of(context)
                                           .alternate,
-                                      offset: Offset(0.0, 1.0),
+                                      offset: const Offset(0.0, 1.0),
                                     )
                                   ],
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -366,7 +393,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           ),
                                         ),
                                         child: Padding(
-                                          padding: EdgeInsets.all(2.0),
+                                          padding: const EdgeInsets.all(2.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -383,7 +410,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                         flex: 4,
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -393,17 +420,23 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Saúl Hernández',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'kbcqfrd7' /* Saúl Hernández */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  'saulhernandez@gmail.com',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '8hzmwhpk' /* saulhernandez@gmail.com */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -417,7 +450,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                       ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 4.0)),
+                                            ].divide(const SizedBox(height: 4.0)),
                                           ),
                                         ),
                                       ),
@@ -429,10 +462,13 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           flex: 2,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              '12837612',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'alwz1cxd' /* 12837612 */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -448,9 +484,12 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           flex: 3,
                                           child: Align(
                                             alignment:
-                                                AlignmentDirectional(-1.0, 0.0),
+                                                const AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              'Profesor de Español',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '7t98f6q1' /* Profesor de Español */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -476,14 +515,17 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                 ),
                                               ),
                                               child: Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    'Activo',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '92s13b5j' /* Activo */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,
@@ -508,12 +550,12 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                       blurRadius: 0.0,
                                       color: FlutterFlowTheme.of(context)
                                           .alternate,
-                                      offset: Offset(0.0, 1.0),
+                                      offset: const Offset(0.0, 1.0),
                                     )
                                   ],
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -533,7 +575,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           ),
                                         ),
                                         child: Padding(
-                                          padding: EdgeInsets.all(2.0),
+                                          padding: const EdgeInsets.all(2.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -550,7 +592,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                         flex: 4,
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -560,17 +602,23 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Andrés León',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '2ya5rg8w' /* Andrés León */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  'andresleon@gmail.com',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'xusn6gxg' /* andresleon@gmail.com */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -584,7 +632,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                       ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 4.0)),
+                                            ].divide(const SizedBox(height: 4.0)),
                                           ),
                                         ),
                                       ),
@@ -596,10 +644,13 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           flex: 2,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              '219387129',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'lgbcx8u7' /* 219387129 */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -615,9 +666,12 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           flex: 3,
                                           child: Align(
                                             alignment:
-                                                AlignmentDirectional(-1.0, 0.0),
+                                                const AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              'Profesor de Ingles',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '8sp7qit5' /* Profesor de Ingles */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -643,14 +697,17 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                 ),
                                               ),
                                               child: Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    'Inactivo',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'kfw1j2yh' /* Inactivo */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,
@@ -675,12 +732,12 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                       blurRadius: 0.0,
                                       color: FlutterFlowTheme.of(context)
                                           .alternate,
-                                      offset: Offset(0.0, 1.0),
+                                      offset: const Offset(0.0, 1.0),
                                     )
                                   ],
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -700,7 +757,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           ),
                                         ),
                                         child: Padding(
-                                          padding: EdgeInsets.all(2.0),
+                                          padding: const EdgeInsets.all(2.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -717,7 +774,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                         flex: 4,
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -727,17 +784,23 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Ian Rizo',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'g8nkc0n5' /* Ian Rizo */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  'ianrizo@gmail.com',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '3kmpwyxo' /* ianrizo@gmail.com */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -751,7 +814,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                       ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 4.0)),
+                                            ].divide(const SizedBox(height: 4.0)),
                                           ),
                                         ),
                                       ),
@@ -763,10 +826,13 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           flex: 2,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              '21376512',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'keddcsri' /* 21376512 */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -782,9 +848,12 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           flex: 3,
                                           child: Align(
                                             alignment:
-                                                AlignmentDirectional(-1.0, 0.0),
+                                                const AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              'Estudiante',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '7dulgg2e' /* Estudiante */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -810,14 +879,17 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                 ),
                                               ),
                                               child: Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    'Inactivo',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'w2gzb1ok' /* Inactivo */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,
@@ -842,12 +914,12 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                       blurRadius: 0.0,
                                       color: FlutterFlowTheme.of(context)
                                           .alternate,
-                                      offset: Offset(0.0, 1.0),
+                                      offset: const Offset(0.0, 1.0),
                                     )
                                   ],
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -867,7 +939,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           ),
                                         ),
                                         child: Padding(
-                                          padding: EdgeInsets.all(2.0),
+                                          padding: const EdgeInsets.all(2.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(10.0),
@@ -884,7 +956,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                         flex: 4,
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -894,17 +966,23 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Luis Pérez',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '7tsvjuqi' /* Luis Pérez */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  'luisperez@gmail.com',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'qtsqtmt5' /* luisperez@gmail.com */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -918,7 +996,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                       ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 4.0)),
+                                            ].divide(const SizedBox(height: 4.0)),
                                           ),
                                         ),
                                       ),
@@ -930,10 +1008,13 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           flex: 2,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              '1927837290',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '0i5w0n88' /* 1927837290 */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -949,9 +1030,12 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           flex: 3,
                                           child: Align(
                                             alignment:
-                                                AlignmentDirectional(-1.0, 0.0),
+                                                const AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              'Estudiante',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '3ap2ivms' /* Estudiante */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -977,14 +1061,17 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                 ),
                                               ),
                                               child: Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    'Inactivo',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '367mh9g1' /* Inactivo */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,
@@ -1009,12 +1096,12 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                       blurRadius: 0.0,
                                       color: FlutterFlowTheme.of(context)
                                           .alternate,
-                                      offset: Offset(0.0, 1.0),
+                                      offset: const Offset(0.0, 1.0),
                                     )
                                   ],
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1034,7 +1121,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           ),
                                         ),
                                         child: Padding(
-                                          padding: EdgeInsets.all(2.0),
+                                          padding: const EdgeInsets.all(2.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -1051,7 +1138,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                         flex: 4,
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -1061,17 +1148,23 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Ariel Ramos',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'ljfcql2r' /* Ariel Ramos */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  'arielramos@gmail.com',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'g089f916' /* arielramos@gmail.com */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -1085,7 +1178,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                       ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 4.0)),
+                                            ].divide(const SizedBox(height: 4.0)),
                                           ),
                                         ),
                                       ),
@@ -1097,10 +1190,13 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           flex: 2,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              '41929182',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'kz1sct6t' /* 41929182 */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -1116,9 +1212,12 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                           flex: 3,
                                           child: Align(
                                             alignment:
-                                                AlignmentDirectional(-1.0, 0.0),
+                                                const AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              'Administrador',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '33nxgwss' /* Administrador */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -1144,14 +1243,17 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                                 ),
                                               ),
                                               child: Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    'Activo',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'oa3vhok6' /* Activo */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,
@@ -1166,7 +1268,7 @@ class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
                                   ),
                                 ),
                               ),
-                            ].divide(SizedBox(height: 1.0)),
+                            ].divide(const SizedBox(height: 1.0)),
                           ),
                         ],
                       ),
