@@ -1,9 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'crear_usuarios_widget.dart' show CrearUsuariosWidget;
+import 'crear_usuario_widget.dart' show CrearUsuarioWidget;
 import 'package:flutter/material.dart';
 
-class CrearUsuariosModel extends FlutterFlowModel<CrearUsuariosWidget> {
+class CrearUsuarioModel extends FlutterFlowModel<CrearUsuarioWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
@@ -31,7 +31,7 @@ class CrearUsuariosModel extends FlutterFlowModel<CrearUsuariosWidget> {
     }
     if (!RegExp('^[a-zA-Z0-9]+\$').hasMatch(val)) {
       return FFLocalizations.of(context).getText(
-        '8btq8unt' /* Formato inválido */,
+        'qgi8dhol' /* Formato inválido */,
       );
     }
     return null;

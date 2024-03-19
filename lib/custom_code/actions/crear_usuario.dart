@@ -10,8 +10,15 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-Future crearUsuario(String emailAddress, String name, String password,
-    String randomApp, String rol, String apellido1, String apellido2) async {
+Future crearUsuario(
+    String emailAddress,
+    String name,
+    String password,
+    String randomApp,
+    String rol,
+    String apellido1,
+    String apellido2,
+    String cedula) async {
   DateTime hoy = DateTime.now();
   FirebaseApp app = await Firebase.initializeApp(
       name: randomApp, options: Firebase.app().options);
@@ -31,6 +38,7 @@ Future crearUsuario(String emailAddress, String name, String password,
     'rol': rol,
     'apellido1': apellido1,
     'apellido2': apellido2,
+    'cedula': apellido2,
   });
 }
 

@@ -146,6 +146,30 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Escriba su contraseña...',
       'en': 'Enter your password...',
     },
+    'wsoxwt1e': {
+      'es': 'Digite el correo electrónico',
+      'en': '',
+    },
+    '8btq8unt': {
+      'es': 'Formato inválido',
+      'en': '',
+    },
+    'uvjmj1l4': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'ajlawe68': {
+      'es': 'Digite la contraseña',
+      'en': '',
+    },
+    '300e5jmn': {
+      'es': 'Formato inválido',
+      'en': '',
+    },
+    'j0kwn0rp': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
     'pxldxy1f': {
       'es': 'Iniciar sesión',
       'en': 'Log in',
@@ -190,19 +214,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'home',
     },
   },
-  // CrearUsuarios
+  // CrearUsuario
   {
-    'm7230ohf': {
-      'es': 'Academia Link',
-      'en': 'Link Academy',
-    },
-    'qjvufueg': {
-      'es': 'Registro de Usuarios',
-      'en': 'User Registration',
-    },
-    '7m9p95gn': {
-      'es': '¡Ingresa los datos de un nuevo usuario!',
-      'en': 'Enter the data of a new user!',
+    'la0vnnnf': {
+      'es': 'Registrar Usuario',
+      'en': 'Roll Call',
     },
     '6j1vojhr': {
       'es': 'Cédula',
@@ -252,7 +268,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'El máximo de caracéres es 11',
       'en': '',
     },
-    '8btq8unt': {
+    'qgi8dhol': {
       'es': 'Formato inválido',
       'en': '',
     },
@@ -380,7 +396,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'home',
     },
   },
-  // ListarUsuarios
+  // ListaUsuarios
   {
     '7yvsww3v': {
       'es': 'Usuarios dentro del Sistema',
@@ -541,89 +557,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'home',
     },
   },
-  // EditarUsuarios
-  {
-    '4oysvcsi': {
-      'es': 'Cancelar',
-      'en': 'Cancel',
-    },
-    '84u8ir6u': {
-      'es': 'Editar Perfil',
-      'en': 'Edit profile',
-    },
-    'fmaya8f0': {
-      'es': 'Guardar',
-      'en': 'Keep',
-    },
-    'lxa52eeo': {
-      'es': 'Cédula',
-      'en': 'Identification card',
-    },
-    'vz9gp7mm': {
-      'es': '1-1624-0337',
-      'en': '1-1624-0337',
-    },
-    'sa4rhc44': {
-      'es': 'Nombre',
-      'en': 'Name',
-    },
-    '0djusxrk': {
-      'es': 'Luis Daniel',
-      'en': 'Luis Daniel',
-    },
-    'd0xtwbn7': {
-      'es': 'P. Apellido',
-      'en': 'P. Last name',
-    },
-    '0oenk9gh': {
-      'es': 'Pérez',
-      'en': 'Perez',
-    },
-    'o6qwcflk': {
-      'es': 'S. Apellido',
-      'en': 'S. Surname',
-    },
-    'hwgg7evn': {
-      'es': 'Sánchez',
-      'en': 'Sanchez',
-    },
-    'aa5h8r1c': {
-      'es': 'Correo E.',
-      'en': 'E-mail',
-    },
-    '5tczjpxd': {
-      'es': 'ldperez.0711@gmail.com',
-      'en': 'ldperez.0711@gmail.com',
-    },
-    '650m0mlo': {
-      'es': 'Rol',
-      'en': 'Role',
-    },
-    'ovwxzdmf': {
-      'es': 'Profesor',
-      'en': 'Teacher',
-    },
-    'xl3fracl': {
-      'es': 'Estudiante',
-      'en': 'Student',
-    },
-    'chtcyd33': {
-      'es': 'Profesor',
-      'en': 'Teacher',
-    },
-    'gufksge5': {
-      'es': 'Search for an item...',
-      'en': 'Search for an item...',
-    },
-    'owv22lt1': {
-      'es': 'Eliminar Usuario',
-      'en': 'Delete User',
-    },
-    '4gy00qjp': {
-      'es': 'Home',
-      'en': 'home',
-    },
-  },
   // HomePageEstudiante
   {
     'q5k3msva': {
@@ -725,36 +658,36 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // CrearAnuncios
   {
-    'v50819zs': {
+    'r5ijjq19': {
+      'es': 'Crear Anuncio',
+      'en': 'Roll Call',
+    },
+    '4u754800': {
       'es': 'Nuevo Anuncio',
       'en': 'New Announcement',
     },
-    '75mv3s4r': {
+    'dbgzccb7': {
       'es': 'Descripcion',
       'en': 'Description',
     },
-    'k94g18o5': {
+    '5d8j4qme': {
       'es': 'Escriba aca todos los detalles de el anuncio a publicar...',
       'en':
           'Write here all the details of the advertisement to be published...',
     },
-    '9ydmp47i': {
-      'es': 'Publicar Anuncio',
-      'en': 'Post Ad',
-    },
-    '2zm9udh8': {
-      'es': 'Crear Anuncio',
-      'en': 'Create Ad',
+    '1rifljq0': {
+      'es': 'Publicar',
+      'en': 'Log in',
     },
   },
-  // AdminVisualizarAnuncios
+  // ListaAnuncios
   {
-    '0u41urly': {
+    'yl9un0p9': {
       'es': 'Anuncios',
-      'en': 'Advertisements',
+      'en': 'Roll Call',
     },
     'nagpesk3': {
-      'es': 'Nueva ',
+      'es': 'Nuevo',
       'en': 'New',
     },
     'anuu03iv': {
@@ -763,7 +696,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'h0cq9dl1': {
       'es':
-          'Recuerda que este viernes es viernes de COLORES, todos los estudiantes podrán utilizar ropa particular. Atte: La dirección\n\nCosto: ₡200',
+          'Recuerda que este viernes es viernes de COLORES, todos los estudiantes podrán utilizar ropa particular. \n\nAtte: La dirección\n\nCosto: ₡200',
       'en':
           'Remember that this Friday is COLORS Friday, all students will be able to wear private clothing. Atte: The address\n\nCost: ₡200',
     },
@@ -780,56 +713,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '38w9os49': {
       'es': 'Home',
       'en': 'home',
-    },
-  },
-  // EliminarAnuncio
-  {
-    'enyxhdqt': {
-      'es': 'Eliminar Anuncio',
-      'en': 'Delete Ad',
-    },
-    '48zk1b3f': {
-      'es': 'Descripcion',
-      'en': 'Description',
-    },
-    'bu580dav': {
-      'es':
-          'Recuerda que este viernes es viernes de COLORES, todos los estudiantes podrán utilizar ropa particular. Atte: La dirección\n\nCosto: ₡200',
-      'en':
-          'Remember that this Friday is COLORS Friday, all students will be able to wear private clothing. Atte: The address\n\nCost: ₡200',
-    },
-    'e5mantiv': {
-      'es': 'Eliminar Anuncio',
-      'en': 'Delete Ad',
-    },
-    '7t0lmqdl': {
-      'es': 'Eliminar Anuncio',
-      'en': 'Delete Ad',
-    },
-  },
-  // ModificarAnuncio
-  {
-    '39eh05my': {
-      'es': 'Modificar Anuncio',
-      'en': 'Modify Ad',
-    },
-    '83p7nyj9': {
-      'es': 'Descripcion',
-      'en': 'Description',
-    },
-    '3092a997': {
-      'es':
-          'Recuerda que este viernes es viernes de COLORES, todos los estudiantes podrán utilizar ropa particular. Atte: La dirección\n\nCosto: ₡200',
-      'en':
-          'Remember that this Friday is COLORS Friday, all students will be able to wear private clothing. Atte: The address\n\nCost: ₡200',
-    },
-    's0dt8kvq': {
-      'es': 'Confirmar Modificacion',
-      'en': 'Confirm Modification',
-    },
-    'ck7318d8': {
-      'es': 'Modificar Anuncio',
-      'en': 'Modify Ad',
     },
   },
   // CrearTareaProfesor
@@ -938,7 +821,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'home',
     },
   },
-  // ListarAlumnos
+  // ListaAlumnos
   {
     '3je7jaka': {
       'es': 'Alumnos',
@@ -1200,7 +1083,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Cancel',
     },
   },
-  // ListarGrupo
+  // ListaGrupo
   {
     '71e8lc7z': {
       'es': 'Pasar Lista',
@@ -1321,41 +1204,241 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Creación de grupo\n',
       'en': 'Roll Call',
     },
-    'rpe4g3hp': {
-      'es': 'Hello World',
+    'gye49uf5': {
+      'es': 'Importe el grupo desde excel',
+      'en': '',
+    },
+    'r6kvk4to': {
+      'es': 'Importar Grupo',
+      'en': '',
+    },
+    'fvjfyipr': {
+      'es': 'Sección:',
       'en': '',
     },
     'pkgod5hj': {
-      'es': 'Label here...',
-      'en': '',
-    },
-    'cmvg0dtm': {
-      'es': 'Hello World',
-      'en': '',
-    },
-    'tke5hxdm': {
-      'es': 'Option 1',
-      'en': '',
-    },
-    'doce0uht': {
-      'es': 'Please select...',
-      'en': '',
-    },
-    'jrw5e4e2': {
-      'es': 'Search for an item...',
+      'es': 'Sección...',
       'en': '',
     },
     'tqu7t3ec': {
-      'es': 'Hello World',
+      'es': 'Profesor a cargo',
       'en': '',
     },
     'hyi7xsk7': {
       'es': 'Label here...',
       'en': '',
     },
+    'cmvg0dtm': {
+      'es': 'Materias a impartir en el grupo',
+      'en': '',
+    },
+    'fpvskisl': {
+      'es': 'Selecione las materias a impartir...',
+      'en': '',
+    },
+    'tke5hxdm': {
+      'es': 'Español',
+      'en': '',
+    },
+    'ievfyv0c': {
+      'es': 'Ciencias',
+      'en': '',
+    },
+    'f9jen8ik': {
+      'es': 'Matématicas',
+      'en': '',
+    },
+    'izvtqkqe': {
+      'es': 'Estudios Sociales',
+      'en': '',
+    },
+    'qdzr0d9h': {
+      'es': 'Ingles',
+      'en': '',
+    },
+    'bulkj0jx': {
+      'es': 'Fisica Mate',
+      'en': '',
+    },
+    'pst42v9w': {
+      'es': 'Educación fisíca',
+      'en': '',
+    },
+    'in8mu5i7': {
+      'es': 'Música',
+      'en': '',
+    },
+    '9z5ahd2u': {
+      'es': 'Fránces',
+      'en': '',
+    },
+    'dcr79l12': {
+      'es': 'Plásticas',
+      'en': '',
+    },
+    'ihppzpvg': {
+      'es': 'Hogar',
+      'en': '',
+    },
+    '0h7wrz9w': {
+      'es': 'Industriales',
+      'en': '',
+    },
+    'doce0uht': {
+      'es': 'Selecione las materias a impartir...',
+      'en': '',
+    },
+    'jrw5e4e2': {
+      'es': 'Search for an item...',
+      'en': '',
+    },
+    'u1rs4k3c': {
+      'es': 'Crear Grupo',
+      'en': '',
+    },
     'ug8qmusg': {
       'es': 'Home',
       'en': 'home',
+    },
+  },
+  // EditarUsuario
+  {
+    'vrkaiyh2': {
+      'es': 'Editar Usuario\n',
+      'en': 'Roll Call',
+    },
+    '6kd6shgn': {
+      'es': 'Cédula',
+      'en': 'Identification card',
+    },
+    'fhaj24fo': {
+      'es': 'Nombre',
+      'en': 'Name',
+    },
+    'ze9eblcw': {
+      'es': 'Primer Apellido',
+      'en': 'Surname',
+    },
+    '1xqd69s3': {
+      'es': 'Segundo Apellido',
+      'en': 'Second surname',
+    },
+    'xjn12176': {
+      'es': 'Correo Electrónico',
+      'en': 'Email',
+    },
+    '49ykfzr7': {
+      'es': 'Option 1',
+      'en': '',
+    },
+    '082dhy66': {
+      'es': 'Seleccione un rol',
+      'en': '',
+    },
+    '3t260usy': {
+      'es': 'Search for an item...',
+      'en': 'Search for an item...',
+    },
+    'nggs14d2': {
+      'es': 'Por favor ingrese la cédula',
+      'en': '',
+    },
+    'anuvq0od': {
+      'es': 'El mínimo de caractéres es 9',
+      'en': '',
+    },
+    'g25mdsvb': {
+      'es': 'El máximo de caracéres es 11',
+      'en': '',
+    },
+    'yueprygm': {
+      'es': 'Formato inválido',
+      'en': '',
+    },
+    '6ina6uzv': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'ffg5bm3b': {
+      'es': 'Por favor ingrese el nombre',
+      'en': '',
+    },
+    '9l9uz7vr': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'i8pjv5ko': {
+      'es': 'Por favor ingrese el primer apellido',
+      'en': '',
+    },
+    '4tuku0sx': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'ofv4z6r8': {
+      'es': 'Por favor ingrese el segundo apellido',
+      'en': '',
+    },
+    '298pijkr': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'lx6byuvx': {
+      'es': 'Por favor ingrese un correo electrónico',
+      'en': '',
+    },
+    'i0zk6j0m': {
+      'es': 'Formato inválido',
+      'en': '',
+    },
+    'zttwp0ls': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'vp7pbl5l': {
+      'es': 'Por favor ingrese una contraseña',
+      'en': '',
+    },
+    'snki911n': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '02uowu2k': {
+      'es': 'Actualizar',
+      'en': 'Continue',
+    },
+    'r7zhcjhz': {
+      'es': 'Eliminar Usuario',
+      'en': 'Continue',
+    },
+    '4rvqcmpv': {
+      'es': 'Home',
+      'en': 'home',
+    },
+  },
+  // EditarAnuncios
+  {
+    'bnj0utym': {
+      'es': 'Editar Anuncio',
+      'en': 'Roll Call',
+    },
+    '8s5g7gaf': {
+      'es': 'Actualizar Anuncio',
+      'en': 'New Announcement',
+    },
+    'xfx9ka95': {
+      'es': 'Descripcion',
+      'en': 'Description',
+    },
+    '9we9pn95': {
+      'es':
+          'Recuerda que este viernes es viernes de COLORES, todos los estudiantes podrán utilizar ropa particular. Atte: La dirección\n\nCosto: ₡200',
+      'en':
+          'Remember that this Friday is COLORS Friday, all students will be able to wear private clothing. Atte: The address\n\nCost: ₡200',
+    },
+    'r0qhb43b': {
+      'es': 'Actualizar',
+      'en': 'Log in',
     },
   },
   // slideLateral

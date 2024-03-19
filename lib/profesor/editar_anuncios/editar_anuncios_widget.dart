@@ -3,25 +3,25 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'crear_anuncios_model.dart';
-export 'crear_anuncios_model.dart';
+import 'editar_anuncios_model.dart';
+export 'editar_anuncios_model.dart';
 
-class CrearAnunciosWidget extends StatefulWidget {
-  const CrearAnunciosWidget({super.key});
+class EditarAnunciosWidget extends StatefulWidget {
+  const EditarAnunciosWidget({super.key});
 
   @override
-  State<CrearAnunciosWidget> createState() => _CrearAnunciosWidgetState();
+  State<EditarAnunciosWidget> createState() => _EditarAnunciosWidgetState();
 }
 
-class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
-  late CrearAnunciosModel _model;
+class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
+  late EditarAnunciosModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => CrearAnunciosModel());
+    _model = createModel(context, () => EditarAnunciosModel());
 
     _model.txtDescripcionAnuncioController ??= TextEditingController();
     _model.txtDescripcionAnuncioFocusNode ??= FocusNode();
@@ -116,7 +116,7 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                                         45.0, 10.0, 52.0, 10.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
-                                        'r5ijjq19' /* Crear Anuncio */,
+                                        'bnj0utym' /* Editar Anuncio */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -193,7 +193,7 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                     alignment: const AlignmentDirectional(0.0, -1.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        '4u754800' /* Nuevo Anuncio */,
+                        '8s5g7gaf' /* Actualizar Anuncio */,
                       ),
                       style:
                           FlutterFlowTheme.of(context).headlineLarge.override(
@@ -220,12 +220,12 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: FFLocalizations.of(context).getText(
-                            'dbgzccb7' /* Descripcion */,
+                            'xfx9ka95' /* Descripcion */,
                           ),
                           hintText: FFLocalizations.of(context).getText(
-                            '5d8j4qme' /* Escriba aca todos los detalles... */,
+                            '9we9pn95' /* Recuerda que este viernes es v... */,
                           ),
-                          hintStyle: FlutterFlowTheme.of(context).labelSmall,
+                          hintStyle: FlutterFlowTheme.of(context).bodyMedium,
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context).primaryText,
@@ -280,10 +280,10 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                           const EdgeInsetsDirectional.fromSTEB(11.0, 0.0, 11.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () {
-                          print('btnPublicarAnuncio pressed ...');
+                          print('btnEditarAnuncio pressed ...');
                         },
                         text: FFLocalizations.of(context).getText(
-                          '1rifljq0' /* Publicar */,
+                          'r0qhb43b' /* Actualizar */,
                         ),
                         icon: const Icon(
                           Icons.publish_rounded,

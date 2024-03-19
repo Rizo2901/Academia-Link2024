@@ -3,25 +3,25 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
-import 'listar_usuarios_model.dart';
-export 'listar_usuarios_model.dart';
+import 'lista_usuarios_model.dart';
+export 'lista_usuarios_model.dart';
 
-class ListarUsuariosWidget extends StatefulWidget {
-  const ListarUsuariosWidget({super.key});
+class ListaUsuariosWidget extends StatefulWidget {
+  const ListaUsuariosWidget({super.key});
 
   @override
-  State<ListarUsuariosWidget> createState() => _ListarUsuariosWidgetState();
+  State<ListaUsuariosWidget> createState() => _ListaUsuariosWidgetState();
 }
 
-class _ListarUsuariosWidgetState extends State<ListarUsuariosWidget> {
-  late ListarUsuariosModel _model;
+class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
+  late ListaUsuariosModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ListarUsuariosModel());
+    _model = createModel(context, () => ListaUsuariosModel());
 
     _model.textController ??= TextEditingController();
     _model.textFieldFocusNode ??= FocusNode();

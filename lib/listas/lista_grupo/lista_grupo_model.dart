@@ -1,13 +1,17 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'admin_visualizar_anuncios_widget.dart'
-    show AdminVisualizarAnunciosWidget;
+import 'lista_grupo_widget.dart' show ListaGrupoWidget;
 import 'package:flutter/material.dart';
 
-class AdminVisualizarAnunciosModel
-    extends FlutterFlowModel<AdminVisualizarAnunciosWidget> {
+class ListaGrupoModel extends FlutterFlowModel<ListaGrupoWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for Checkbox widget.
+  bool? checkboxValue1;
+  // State field(s) for Checkbox widget.
+  bool? checkboxValue2;
+  // State field(s) for Checkbox widget.
+  bool? checkboxValue3;
 
   /// Initialization and disposal methods.
 

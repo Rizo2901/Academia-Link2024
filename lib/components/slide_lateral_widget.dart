@@ -325,7 +325,7 @@ class _SlideLateralWidgetState extends State<SlideLateralWidget> {
                                 GoRouter.of(context).clearRedirectLocation();
 
                                 context.goNamedAuth(
-                                    'CrearUsuarios', context.mounted);
+                                    'CrearUsuario', context.mounted);
                               },
                               child: Text(
                                 FFLocalizations.of(context).getText(

@@ -7,17 +7,18 @@ class CreargruposModel extends FlutterFlowModel<CreargruposWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
-  // State field(s) for DropDown widget.
-  String? dropDownValue;
-  FormFieldController<String>? dropDownValueController;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
+  // State field(s) for txtFSeccion widget.
+  FocusNode? txtFSeccionFocusNode;
+  TextEditingController? txtFSeccionController;
+  String? Function(BuildContext, String?)? txtFSeccionControllerValidator;
+  // State field(s) for txtFNombreProfesor widget.
+  FocusNode? txtFNombreProfesorFocusNode;
+  TextEditingController? txtFNombreProfesorController;
+  String? Function(BuildContext, String?)?
+      txtFNombreProfesorControllerValidator;
+  // State field(s) for dropMaterias widget.
+  List<String>? dropMateriasValue;
+  FormFieldController<List<String>>? dropMateriasValueController;
 
   /// Initialization and disposal methods.
 
@@ -27,11 +28,11 @@ class CreargruposModel extends FlutterFlowModel<CreargruposWidget> {
   @override
   void dispose() {
     unfocusNode.dispose();
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    txtFSeccionFocusNode?.dispose();
+    txtFSeccionController?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    txtFNombreProfesorFocusNode?.dispose();
+    txtFNombreProfesorController?.dispose();
   }
 
   /// Action blocks are added here.

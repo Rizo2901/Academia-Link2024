@@ -1,15 +1,11 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'modificar_anuncio_widget.dart' show ModificarAnuncioWidget;
+import 'lista_anuncios_widget.dart' show ListaAnunciosWidget;
 import 'package:flutter/material.dart';
 
-class ModificarAnuncioModel extends FlutterFlowModel<ModificarAnuncioWidget> {
+class ListaAnunciosModel extends FlutterFlowModel<ListaAnunciosWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
 
   /// Initialization and disposal methods.
 
@@ -19,8 +15,6 @@ class ModificarAnuncioModel extends FlutterFlowModel<ModificarAnuncioWidget> {
   @override
   void dispose() {
     unfocusNode.dispose();
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
   }
 
   /// Action blocks are added here.

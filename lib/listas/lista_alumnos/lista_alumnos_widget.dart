@@ -2,25 +2,25 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'listar_alumnos_model.dart';
-export 'listar_alumnos_model.dart';
+import 'lista_alumnos_model.dart';
+export 'lista_alumnos_model.dart';
 
-class ListarAlumnosWidget extends StatefulWidget {
-  const ListarAlumnosWidget({super.key});
+class ListaAlumnosWidget extends StatefulWidget {
+  const ListaAlumnosWidget({super.key});
 
   @override
-  State<ListarAlumnosWidget> createState() => _ListarAlumnosWidgetState();
+  State<ListaAlumnosWidget> createState() => _ListaAlumnosWidgetState();
 }
 
-class _ListarAlumnosWidgetState extends State<ListarAlumnosWidget> {
-  late ListarAlumnosModel _model;
+class _ListaAlumnosWidgetState extends State<ListaAlumnosWidget> {
+  late ListaAlumnosModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ListarAlumnosModel());
+    _model = createModel(context, () => ListaAlumnosModel());
 
     _model.textController ??= TextEditingController();
     _model.textFieldFocusNode ??= FocusNode();

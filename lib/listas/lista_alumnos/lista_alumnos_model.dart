@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'eliminar_anuncio_widget.dart' show EliminarAnuncioWidget;
+import 'lista_alumnos_widget.dart' show ListaAlumnosWidget;
 import 'package:flutter/material.dart';
 
-class EliminarAnuncioModel extends FlutterFlowModel<EliminarAnuncioWidget> {
+class ListaAlumnosModel extends FlutterFlowModel<ListaAlumnosWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

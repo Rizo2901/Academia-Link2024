@@ -1,25 +1,25 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'listar_grupo_model.dart';
-export 'listar_grupo_model.dart';
+import 'lista_grupo_model.dart';
+export 'lista_grupo_model.dart';
 
-class ListarGrupoWidget extends StatefulWidget {
-  const ListarGrupoWidget({super.key});
+class ListaGrupoWidget extends StatefulWidget {
+  const ListaGrupoWidget({super.key});
 
   @override
-  State<ListarGrupoWidget> createState() => _ListarGrupoWidgetState();
+  State<ListaGrupoWidget> createState() => _ListaGrupoWidgetState();
 }
 
-class _ListarGrupoWidgetState extends State<ListarGrupoWidget> {
-  late ListarGrupoModel _model;
+class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
+  late ListaGrupoModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ListarGrupoModel());
+    _model = createModel(context, () => ListaGrupoModel());
   }
 
   @override

@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'crear_anuncios_widget.dart' show CrearAnunciosWidget;
+import 'editar_anuncios_widget.dart' show EditarAnunciosWidget;
 import 'package:flutter/material.dart';
 
-class CrearAnunciosModel extends FlutterFlowModel<CrearAnunciosWidget> {
+class EditarAnunciosModel extends FlutterFlowModel<EditarAnunciosWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

@@ -73,14 +73,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) => appStateNotifier.loggedIn
           ? const HomePageProfesorWidget()
-          : const CrearUsuariosWidget(),
+          : const CrearUsuarioWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
               ? const HomePageProfesorWidget()
-              : const CrearUsuariosWidget(),
+              : const CrearUsuarioWidget(),
         ),
         FFRoute(
           name: 'Inicio',
@@ -98,9 +98,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const HomePageProfesorWidget(),
         ),
         FFRoute(
-          name: 'CrearUsuarios',
-          path: '/crearUsuarios',
-          builder: (context, params) => const CrearUsuariosWidget(),
+          name: 'CrearUsuario',
+          path: '/crearUsuario',
+          builder: (context, params) => const CrearUsuarioWidget(),
         ),
         FFRoute(
           name: 'MisgruposProfesor',
@@ -108,14 +108,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const MisgruposProfesorWidget(),
         ),
         FFRoute(
-          name: 'ListarUsuarios',
-          path: '/listarUsuarios',
-          builder: (context, params) => const ListarUsuariosWidget(),
-        ),
-        FFRoute(
-          name: 'EditarUsuarios',
-          path: '/editarUsuarios',
-          builder: (context, params) => const EditarUsuariosWidget(),
+          name: 'ListaUsuarios',
+          path: '/listaUsuarios',
+          builder: (context, params) => const ListaUsuariosWidget(),
         ),
         FFRoute(
           name: 'HomePageEstudiante',
@@ -138,19 +133,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const CrearAnunciosWidget(),
         ),
         FFRoute(
-          name: 'AdminVisualizarAnuncios',
-          path: '/adminVisualizarAnuncios',
-          builder: (context, params) => const AdminVisualizarAnunciosWidget(),
-        ),
-        FFRoute(
-          name: 'EliminarAnuncio',
-          path: '/eliminarAnuncio',
-          builder: (context, params) => const EliminarAnuncioWidget(),
-        ),
-        FFRoute(
-          name: 'ModificarAnuncio',
-          path: '/modificarAnuncio',
-          builder: (context, params) => const ModificarAnuncioWidget(),
+          name: 'ListaAnuncios',
+          path: '/listaAnuncios',
+          builder: (context, params) => const ListaAnunciosWidget(),
         ),
         FFRoute(
           name: 'CrearTareaProfesor',
@@ -163,9 +148,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const EditarTareaProfesorWidget(),
         ),
         FFRoute(
-          name: 'ListarAlumnos',
-          path: '/listarAlumnos',
-          builder: (context, params) => const ListarAlumnosWidget(),
+          name: 'ListaAlumnos',
+          path: '/listaAlumnos',
+          builder: (context, params) => const ListaAlumnosWidget(),
         ),
         FFRoute(
           name: 'Perfil',
@@ -183,9 +168,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const EliminarGruposWidget(),
         ),
         FFRoute(
-          name: 'ListarGrupo',
-          path: '/listarGrupo',
-          builder: (context, params) => const ListarGrupoWidget(),
+          name: 'ListaGrupo',
+          path: '/listaGrupo',
+          builder: (context, params) => const ListaGrupoWidget(),
         ),
         FFRoute(
           name: 'RecuperarContrasena',
@@ -196,6 +181,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Creargrupos',
           path: '/creargrupos',
           builder: (context, params) => const CreargruposWidget(),
+        ),
+        FFRoute(
+          name: 'EditarUsuario',
+          path: '/editarUsuario',
+          builder: (context, params) => const EditarUsuarioWidget(),
+        ),
+        FFRoute(
+          name: 'EditarAnuncios',
+          path: '/editarAnuncios',
+          builder: (context, params) => const EditarAnunciosWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -362,7 +357,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/crearUsuarios';
+            return '/crearUsuario';
           }
           return null;
         },

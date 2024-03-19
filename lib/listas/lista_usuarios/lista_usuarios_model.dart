@@ -1,9 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'listar_usuarios_widget.dart' show ListarUsuariosWidget;
+import 'lista_usuarios_widget.dart' show ListaUsuariosWidget;
 import 'package:flutter/material.dart';
 
-class ListarUsuariosModel extends FlutterFlowModel<ListarUsuariosWidget> {
+class ListaUsuariosModel extends FlutterFlowModel<ListaUsuariosWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
