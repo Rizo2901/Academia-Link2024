@@ -136,9 +136,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         45.0, 10.0, 52.0, 10.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'la0vnnnf' /* Registrar Usuario */,
-                                      ),
+                                      'Registrar Usuario',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -237,10 +235,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                       autofocus: true,
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          '6j1vojhr' /* Cédula */,
-                                        ),
+                                        labelText: 'Cédula',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         hintStyle: FlutterFlowTheme.of(context)
@@ -299,10 +294,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                       autofocus: true,
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          'szlnbj9t' /* Nombre */,
-                                        ),
+                                        labelText: 'Nombre',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         hintStyle: FlutterFlowTheme.of(context)
@@ -361,10 +353,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                       autofocus: true,
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          '20telw6c' /* Primer Apellido */,
-                                        ),
+                                        labelText: 'Primer Apellido',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         hintStyle: FlutterFlowTheme.of(context)
@@ -423,10 +412,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                       autofocus: true,
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          'qbd9aowh' /* Segundo Apellido */,
-                                        ),
+                                        labelText: 'Segundo Apellido',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         hintStyle: FlutterFlowTheme.of(context)
@@ -485,10 +471,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                       autofocus: true,
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          '7ojydtve' /* Correo Electrónico */,
-                                        ),
+                                        labelText: 'Correo Electrónico',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         hintStyle: FlutterFlowTheme.of(context)
@@ -549,10 +532,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                       obscureText:
                                           !_model.txtContrasenaVisibility,
                                       decoration: InputDecoration(
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          'ipvkfh2w' /* Contraseña */,
-                                        ),
+                                        labelText: 'Contraseña',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         hintStyle: FlutterFlowTheme.of(context)
@@ -660,10 +640,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                           textStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium,
-                                          hintText: FFLocalizations.of(context)
-                                              .getText(
-                                            '64qgjqlc' /* Seleccione un rol */,
-                                          ),
+                                          hintText: 'Seleccione un rol',
                                           icon: Icon(
                                             Icons.keyboard_arrow_down_rounded,
                                             color: FlutterFlowTheme.of(context)
@@ -775,9 +752,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                           .set(createProfesoresRecordData());
                                     }
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    'altpamw4' /* Continuar */,
-                                  ),
+                                  text: 'Continuar',
                                   options: FFButtonOptions(
                                     width: 300.0,
                                     height: 50.0,

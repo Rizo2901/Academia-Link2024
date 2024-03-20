@@ -139,9 +139,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             45.0, 10.0, 52.0, 10.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'l856dczb' /* Editar Perfil */,
-                                          ),
+                                          'Editar Perfil',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -276,9 +274,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        '5jbcousi' /* Cédula */,
-                                      ),
+                                      'Cédula',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -352,9 +348,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        'op50b72c' /* Nombre */,
-                                      ),
+                                      'Nombre',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -428,9 +422,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        '8jxl86jq' /* Primer Apellido */,
-                                      ),
+                                      'Primer Apellido',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -504,9 +496,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        'hbccvsg9' /* Segundo Apellido */,
-                                      ),
+                                      'Segundo Apellido',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -580,9 +570,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        'zkxypeun' /* Correo electrónico */,
-                                      ),
+                                      'Correo electrónico',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -717,9 +705,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                             ),
                           );
                         },
-                        text: FFLocalizations.of(context).getText(
-                          'w2cmaicb' /* Actualizar */,
-                        ),
+                        text: 'Actualizar',
                         options: FFButtonOptions(
                           width: 300.0,
                           height: 50.0,

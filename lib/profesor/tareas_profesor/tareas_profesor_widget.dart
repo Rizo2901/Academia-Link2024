@@ -109,9 +109,7 @@ class _TareasProfesorWidgetState extends State<TareasProfesorWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           45.0, 10.0, 91.0, 10.0),
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'tzb5hd7f' /* Tareas */,
-                                        ),
+                                        'Tareas',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -156,9 +154,7 @@ class _TareasProfesorWidgetState extends State<TareasProfesorWidget> {
                         onPressed: () {
                           print('Button pressed ...');
                         },
-                        text: FFLocalizations.of(context).getText(
-                          'yeu8wq3u' /* Nueva  */,
-                        ),
+                        text: 'Nueva ',
                         icon: const Icon(
                           Icons.add_circle_outline,
                           size: 15.0,
@@ -254,11 +250,7 @@ class _TareasProfesorWidgetState extends State<TareasProfesorWidget> {
                                                                 const AlignmentDirectional(
                                                                     -1.0, -1.0),
                                                             child: Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                'tb6zu1fg' /* Tarea 1 */,
-                                                              ),
+                                                              'Tarea 1',
                                                               textAlign:
                                                                   TextAlign
                                                                       .start,
@@ -285,11 +277,7 @@ class _TareasProfesorWidgetState extends State<TareasProfesorWidget> {
                                                                 const AlignmentDirectional(
                                                                     1.0, -1.0),
                                                             child: Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                'n01o1nw5' /* Estado: */,
-                                                              ),
+                                                              'Estado:',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium
@@ -308,11 +296,7 @@ class _TareasProfesorWidgetState extends State<TareasProfesorWidget> {
                                                               const AlignmentDirectional(
                                                                   1.0, -1.0),
                                                           child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              '8p9ghl0m' /*  Activa */,
-                                                            ),
+                                                            ' Activa',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium
@@ -342,10 +326,7 @@ class _TareasProfesorWidgetState extends State<TareasProfesorWidget> {
                                                         .secondaryBackground,
                                                   ),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'sk731lo2' /* Deben realizar una investigaci... */,
-                                                    ),
+                                                    'Deben realizar una investigación de los planetas del sistema solar y dar una referencia bibliografica de 3 fuentes con un resumen de su preferencia. El trabajo debe contar con portada, introducción, desarrollo y referencias. ',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -573,11 +554,7 @@ class _TareasProfesorWidgetState extends State<TareasProfesorWidget> {
                                                                 const AlignmentDirectional(
                                                                     -1.0, -1.0),
                                                             child: Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                '6g9gp0po' /* Tarea 2 */,
-                                                              ),
+                                                              'Tarea 2',
                                                               textAlign:
                                                                   TextAlign
                                                                       .start,
@@ -604,11 +581,7 @@ class _TareasProfesorWidgetState extends State<TareasProfesorWidget> {
                                                                 const AlignmentDirectional(
                                                                     1.0, -1.0),
                                                             child: Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                'xm8aus4a' /* Estado: */,
-                                                              ),
+                                                              'Estado:',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium
@@ -627,11 +600,7 @@ class _TareasProfesorWidgetState extends State<TareasProfesorWidget> {
                                                               const AlignmentDirectional(
                                                                   1.0, -1.0),
                                                           child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'ti81v808' /*  Inactiva */,
-                                                            ),
+                                                            ' Inactiva',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium
@@ -661,10 +630,7 @@ class _TareasProfesorWidgetState extends State<TareasProfesorWidget> {
                                                         .secondaryBackground,
                                                   ),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'xbrtstef' /* Deben realizar una investigaci... */,
-                                                    ),
+                                                    'Deben realizar una investigación de los planetas del sistema solar y dar una referencia bibliografica de 3 fuentes con un resumen de su preferencia. El trabajo debe contar con portada, introducción, desarrollo y referencias. ',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium

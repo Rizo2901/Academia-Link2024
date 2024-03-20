@@ -77,9 +77,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 0.0, 4.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                '7yvsww3v' /* Usuarios dentro del Sistema */,
-                              ),
+                              'Usuarios dentro del Sistema',
                               style:
                                   FlutterFlowTheme.of(context).headlineMedium,
                             ),
@@ -88,9 +86,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'qaietj14' /* Debajo encontrata una lista pa... */,
-                              ),
+                              'Debajo encontrata una lista para poder observar a todos los ususarios ingresados en el sistema.',
                               style: FlutterFlowTheme.of(context).labelMedium,
                             ),
                           ),
@@ -103,9 +99,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: FFLocalizations.of(context).getText(
-                                  'avi9htf5' /* Buscar usuarios... */,
-                                ),
+                                labelText: 'Buscar usuarios...',
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintStyle:
@@ -162,23 +156,11 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 8.0, 0.0, 8.0),
                                   child: FlutterFlowChoiceChips(
-                                    options: [
-                                      ChipData(
-                                          FFLocalizations.of(context).getText(
-                                        'pjdmkw5g' /* All */,
-                                      )),
-                                      ChipData(
-                                          FFLocalizations.of(context).getText(
-                                        '1gaosw3y' /* Estudiantes */,
-                                      )),
-                                      ChipData(
-                                          FFLocalizations.of(context).getText(
-                                        '8ru7ai61' /* Profesores */,
-                                      )),
-                                      ChipData(
-                                          FFLocalizations.of(context).getText(
-                                        'j28b4atz' /* Administradores */,
-                                      ))
+                                    options: const [
+                                      ChipData('All'),
+                                      ChipData('Estudiantes'),
+                                      ChipData('Profesores'),
+                                      ChipData('Administradores')
                                     ],
                                     onChanged: (val) => setState(
                                         () => _model.choiceChipsValues = val),
@@ -230,11 +212,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                     controller:
                                         _model.choiceChipsValueController ??=
                                             FormFieldController<List<String>>(
-                                      [
-                                        FFLocalizations.of(context).getText(
-                                          '54ygb3uh' /* All */,
-                                        )
-                                      ],
+                                      ['All'],
                                     ),
                                     wrapped: true,
                                   ),
@@ -277,9 +255,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 0.0, 0.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'n6vffhlq' /* Nombre */,
-                                          ),
+                                          'Nombre',
                                           style: FlutterFlowTheme.of(context)
                                               .labelSmall,
                                         ),
@@ -296,9 +272,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                         alignment:
                                             const AlignmentDirectional(-1.0, 0.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'blmyaeko' /* Cedula */,
-                                          ),
+                                          'Cedula',
                                           style: FlutterFlowTheme.of(context)
                                               .labelSmall,
                                         ),
@@ -315,9 +289,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                         alignment:
                                             const AlignmentDirectional(-1.0, 0.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            '6mjvcz8u' /* Titulo */,
-                                          ),
+                                          'Titulo',
                                           style: FlutterFlowTheme.of(context)
                                               .labelSmall,
                                         ),
@@ -334,9 +306,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                           alignment:
                                               const AlignmentDirectional(1.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'ovoo5dw1' /* Estado */,
-                                            ),
+                                            'Estado',
                                             style: FlutterFlowTheme.of(context)
                                                 .labelSmall,
                                           ),
@@ -420,10 +390,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'kbcqfrd7' /* Saúl Hernández */,
-                                                ),
+                                                'Saúl Hernández',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -433,10 +400,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    '8hzmwhpk' /* saulhernandez@gmail.com */,
-                                                  ),
+                                                  'saulhernandez@gmail.com',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -465,10 +429,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'alwz1cxd' /* 12837612 */,
-                                              ),
+                                              '12837612',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -486,10 +447,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                             alignment:
                                                 const AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '7t98f6q1' /* Profesor de Español */,
-                                              ),
+                                              'Profesor de Español',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -522,10 +480,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '92s13b5j' /* Activo */,
-                                                    ),
+                                                    'Activo',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,
@@ -602,10 +557,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  '2ya5rg8w' /* Andrés León */,
-                                                ),
+                                                'Andrés León',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -615,10 +567,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'xusn6gxg' /* andresleon@gmail.com */,
-                                                  ),
+                                                  'andresleon@gmail.com',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -647,10 +596,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'lgbcx8u7' /* 219387129 */,
-                                              ),
+                                              '219387129',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -668,10 +614,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                             alignment:
                                                 const AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '8sp7qit5' /* Profesor de Ingles */,
-                                              ),
+                                              'Profesor de Ingles',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -704,10 +647,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'kfw1j2yh' /* Inactivo */,
-                                                    ),
+                                                    'Inactivo',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,
@@ -784,10 +724,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'g8nkc0n5' /* Ian Rizo */,
-                                                ),
+                                                'Ian Rizo',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -797,10 +734,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    '3kmpwyxo' /* ianrizo@gmail.com */,
-                                                  ),
+                                                  'ianrizo@gmail.com',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -829,10 +763,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'keddcsri' /* 21376512 */,
-                                              ),
+                                              '21376512',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -850,10 +781,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                             alignment:
                                                 const AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '7dulgg2e' /* Estudiante */,
-                                              ),
+                                              'Estudiante',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -886,10 +814,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'w2gzb1ok' /* Inactivo */,
-                                                    ),
+                                                    'Inactivo',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,
@@ -966,10 +891,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  '7tsvjuqi' /* Luis Pérez */,
-                                                ),
+                                                'Luis Pérez',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -979,10 +901,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'qtsqtmt5' /* luisperez@gmail.com */,
-                                                  ),
+                                                  'luisperez@gmail.com',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -1011,10 +930,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '0i5w0n88' /* 1927837290 */,
-                                              ),
+                                              '1927837290',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -1032,10 +948,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                             alignment:
                                                 const AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '3ap2ivms' /* Estudiante */,
-                                              ),
+                                              'Estudiante',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -1068,10 +981,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '367mh9g1' /* Inactivo */,
-                                                    ),
+                                                    'Inactivo',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,
@@ -1148,10 +1058,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'ljfcql2r' /* Ariel Ramos */,
-                                                ),
+                                                'Ariel Ramos',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -1161,10 +1068,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'g089f916' /* arielramos@gmail.com */,
-                                                  ),
+                                                  'arielramos@gmail.com',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -1193,10 +1097,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'kz1sct6t' /* 41929182 */,
-                                              ),
+                                              '41929182',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -1214,10 +1115,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                             alignment:
                                                 const AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '33nxgwss' /* Administrador */,
-                                              ),
+                                              'Administrador',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -1250,10 +1148,7 @@ class _ListaUsuariosWidgetState extends State<ListaUsuariosWidget> {
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'oa3vhok6' /* Activo */,
-                                                    ),
+                                                    'Activo',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,

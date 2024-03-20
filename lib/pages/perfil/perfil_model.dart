@@ -13,9 +13,7 @@ class PerfilModel extends FlutterFlowModel<PerfilWidget> {
   String? Function(BuildContext, String?)? txtCedulaControllerValidator;
   String? _txtCedulaControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'b4pa2tpc' /* Por favor ingrese la cédula */,
-      );
+      return 'Por favor ingrese la cédula';
     }
 
     return null;
@@ -27,9 +25,7 @@ class PerfilModel extends FlutterFlowModel<PerfilWidget> {
   String? Function(BuildContext, String?)? txtNombreControllerValidator;
   String? _txtNombreControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'tuya9iga' /* Por favor ingrese el nombre */,
-      );
+      return 'Por favor ingrese el nombre';
     }
 
     return null;
@@ -41,9 +37,7 @@ class PerfilModel extends FlutterFlowModel<PerfilWidget> {
   String? Function(BuildContext, String?)? txtApellido1ControllerValidator;
   String? _txtApellido1ControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'eyuv3fti' /* Por favor ingrese el primer ap... */,
-      );
+      return 'Por favor ingrese el primer apellido';
     }
 
     return null;
@@ -55,9 +49,7 @@ class PerfilModel extends FlutterFlowModel<PerfilWidget> {
   String? Function(BuildContext, String?)? txtApellido2ControllerValidator;
   String? _txtApellido2ControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        '5outqyag' /* Por favor ingrese el segundo a... */,
-      );
+      return 'Por favor ingrese el segundo apellido';
     }
 
     return null;
@@ -69,15 +61,11 @@ class PerfilModel extends FlutterFlowModel<PerfilWidget> {
   String? Function(BuildContext, String?)? txtCorreoControllerValidator;
   String? _txtCorreoControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'gduyytai' /* Por favor ingrese el correo el... */,
-      );
+      return 'Por favor ingrese el correo electrónico';
     }
 
     if (!RegExp(kTextValidatorEmailRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        '8btq8unt' /* Formato inválido */,
-      );
+      return 'Formato inválido';
     }
     return null;
   }

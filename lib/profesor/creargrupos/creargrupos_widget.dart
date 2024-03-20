@@ -112,11 +112,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         45.0, 16.0, 52.0, 10.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '1qcb2adm' /* Creación de grupo
- */
-                                        ,
-                                      ),
+                                      'Creación de grupo\n',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -207,9 +203,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              FFLocalizations.of(context).getText(
-                                'gye49uf5' /* Importe el grupo desde excel */,
-                              ),
+                              'Importe el grupo desde excel',
                               style: FlutterFlowTheme.of(context).bodyMedium,
                             ),
                           ],
@@ -222,9 +216,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                             onPressed: () {
                               print('Button pressed ...');
                             },
-                            text: FFLocalizations.of(context).getText(
-                              'r6kvk4to' /* Importar Grupo */,
-                            ),
+                            text: 'Importar Grupo',
                             options: FFButtonOptions(
                               height: 40.0,
                               padding: const EdgeInsetsDirectional.fromSTEB(
@@ -270,9 +262,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                               children: [
                                 Expanded(
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'fvjfyipr' /* Sección: */,
-                                    ),
+                                    'Sección:',
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
                                   ),
@@ -294,10 +284,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                       autofocus: true,
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          'pkgod5hj' /* Sección... */,
-                                        ),
+                                        labelText: 'Sección...',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         hintStyle: FlutterFlowTheme.of(context)
@@ -369,9 +356,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context).getText(
-                                      'tqu7t3ec' /* Profesor a cargo */,
-                                    ),
+                                    'Profesor a cargo',
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
                                   ),
@@ -431,10 +416,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                           textStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium,
-                                          hintText: FFLocalizations.of(context)
-                                              .getText(
-                                            'azlugtgz' /* Seleccione al profesor... */,
-                                          ),
+                                          hintText: 'Seleccione al profesor...',
                                           icon: Icon(
                                             Icons.keyboard_arrow_down_rounded,
                                             color: FlutterFlowTheme.of(context)
@@ -486,9 +468,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context).getText(
-                                      'cmvg0dtm' /* Materias a impartir en el grup... */,
-                                    ),
+                                    'Materias a impartir en el grupo',
                                     textAlign: TextAlign.start,
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
@@ -506,52 +486,26 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                           _model.dropMateriasValueController ??=
                                               FormFieldController<List<String>>(
                                                   null),
-                                      options: [
-                                        FFLocalizations.of(context).getText(
-                                          'tke5hxdm' /* Español */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'ievfyv0c' /* Ciencias */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'f9jen8ik' /* Matématicas */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'izvtqkqe' /* Estudios Sociales */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'qdzr0d9h' /* Ingles */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'bulkj0jx' /* Fisica Mate */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'pst42v9w' /* Educación fisíca */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'in8mu5i7' /* Música */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          '9z5ahd2u' /* Fránces */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'dcr79l12' /* Plásticas */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          'ihppzpvg' /* Hogar */,
-                                        ),
-                                        FFLocalizations.of(context).getText(
-                                          '0h7wrz9w' /* Industriales */,
-                                        )
+                                      options: const [
+                                        'Español',
+                                        'Ciencias',
+                                        'Matématicas',
+                                        'Estudios Sociales',
+                                        'Ingles',
+                                        'Fisica Mate',
+                                        'Educación fisíca',
+                                        'Música',
+                                        'Fránces',
+                                        'Plásticas',
+                                        'Hogar',
+                                        'Industriales'
                                       ],
                                       width: 604.0,
                                       height: 65.0,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                       hintText:
-                                          FFLocalizations.of(context).getText(
-                                        'doce0uht' /* Selecione las materias a impar... */,
-                                      ),
+                                          'Selecione las materias a impartir...',
                                       icon: Icon(
                                         Icons.keyboard_arrow_down_rounded,
                                         color: FlutterFlowTheme.of(context)
@@ -601,9 +555,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                           _model.txtFSeccionController.text,
                                     ));
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'u1rs4k3c' /* Crear Grupo */,
-                              ),
+                              text: 'Crear Grupo',
                               options: FFButtonOptions(
                                 height: 48.89,
                                 padding: const EdgeInsetsDirectional.fromSTEB(

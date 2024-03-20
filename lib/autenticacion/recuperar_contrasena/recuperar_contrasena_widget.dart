@@ -69,9 +69,7 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
                       ),
                       Flexible(
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            's4ib1iy3' /* Academia Link */,
-                          ),
+                          'Academia Link',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Montserrat',
@@ -111,9 +109,7 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 12.0),
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          '8qcvygc1' /* Recuperar Contraseña */,
-                                        ),
+                                        'Recuperar Contraseña',
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -135,9 +131,7 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
                                     children: [
                                       Flexible(
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'd57ek7gb' /* Ingrese el correo electrónico ... */,
-                                          ),
+                                          'Ingrese el correo electrónico al que  desea recibir el link de recuperación',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -159,10 +153,7 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
                                     autofocus: true,
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      labelText:
-                                          FFLocalizations.of(context).getText(
-                                        'ypbuyvhb' /* Escriba su correo... */,
-                                      ),
+                                      labelText: 'Escriba su correo...',
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
                                       hintStyle: FlutterFlowTheme.of(context)
@@ -277,10 +268,7 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
                                                 ),
                                               );
                                             },
-                                            text: FFLocalizations.of(context)
-                                                .getText(
-                                              '01zm5oiu' /* Solicitar link */,
-                                            ),
+                                            text: 'Solicitar link',
                                             icon: const Icon(
                                               Icons.link,
                                               size: 15.0,
@@ -346,10 +334,7 @@ class _RecuperarContrasenaWidgetState extends State<RecuperarContrasenaWidget> {
                                                 },
                                               );
                                             },
-                                            text: FFLocalizations.of(context)
-                                                .getText(
-                                              '9ye3vprz' /* Regresar */,
-                                            ),
+                                            text: 'Regresar',
                                             options: FFButtonOptions(
                                               width: 300.0,
                                               height: 50.0,

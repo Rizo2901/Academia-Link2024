@@ -60,9 +60,7 @@ class _SlideLateralWidgetState extends State<SlideLateralWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 0.0, 8.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    '5ppzx77q' /* Account Options */,
-                  ),
+                  'Account Options',
                   textAlign: TextAlign.start,
                   style: FlutterFlowTheme.of(context).labelMedium,
                 ),
@@ -174,9 +172,7 @@ class _SlideLateralWidgetState extends State<SlideLateralWidget> {
                                 context.pushNamed('Perfil');
                               },
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'iikabzt7' /* Mi Perfil */,
-                                ),
+                                'Mi Perfil',
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                             ),
@@ -241,9 +237,7 @@ class _SlideLateralWidgetState extends State<SlideLateralWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'm8n3bary' /* Cerrar Sesión */,
-                                ),
+                                'Cerrar Sesión',
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                             ),

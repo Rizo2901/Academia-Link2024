@@ -112,9 +112,7 @@ class _ListaAnunciosWidgetState extends State<ListaAnunciosWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         45.0, 10.0, 52.0, 10.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'yl9un0p9' /* Anuncios */,
-                                      ),
+                                      'Anuncios',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -194,9 +192,7 @@ class _ListaAnunciosWidgetState extends State<ListaAnunciosWidget> {
                         onPressed: () async {
                           context.pushNamed('CrearAnuncios');
                         },
-                        text: FFLocalizations.of(context).getText(
-                          'nagpesk3' /* Nuevo */,
-                        ),
+                        text: 'Nuevo',
                         icon: const Icon(
                           Icons.add_circle_outline,
                           size: 15.0,

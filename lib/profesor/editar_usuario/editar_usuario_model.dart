@@ -15,25 +15,17 @@ class EditarUsuarioModel extends FlutterFlowModel<EditarUsuarioWidget> {
   String? _txtNuevaCedulaControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'nggs14d2' /* Por favor ingrese la cédula */,
-      );
+      return 'Por favor ingrese la cédula';
     }
 
     if (val.length < 9) {
-      return FFLocalizations.of(context).getText(
-        'anuvq0od' /* El mínimo de caractéres es 9 */,
-      );
+      return 'El mínimo de caractéres es 9';
     }
     if (val.length > 11) {
-      return FFLocalizations.of(context).getText(
-        'g25mdsvb' /* El máximo de caracéres es 11 */,
-      );
+      return 'El máximo de caracéres es 11';
     }
     if (!RegExp('^[a-zA-Z0-9]+\$').hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'yueprygm' /* Formato inválido */,
-      );
+      return 'Formato inválido';
     }
     return null;
   }
@@ -45,9 +37,7 @@ class EditarUsuarioModel extends FlutterFlowModel<EditarUsuarioWidget> {
   String? _txtNuevoNombreControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'ffg5bm3b' /* Por favor ingrese el nombre */,
-      );
+      return 'Por favor ingrese el nombre';
     }
 
     return null;
@@ -60,9 +50,7 @@ class EditarUsuarioModel extends FlutterFlowModel<EditarUsuarioWidget> {
   String? _txtNuevoApellido1ControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'i8pjv5ko' /* Por favor ingrese el primer ap... */,
-      );
+      return 'Por favor ingrese el primer apellido';
     }
 
     return null;
@@ -75,9 +63,7 @@ class EditarUsuarioModel extends FlutterFlowModel<EditarUsuarioWidget> {
   String? _txtNuevoApellido2ControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'ofv4z6r8' /* Por favor ingrese el segundo a... */,
-      );
+      return 'Por favor ingrese el segundo apellido';
     }
 
     return null;
@@ -90,15 +76,11 @@ class EditarUsuarioModel extends FlutterFlowModel<EditarUsuarioWidget> {
   String? _txtNuevoCorreoControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'lx6byuvx' /* Por favor ingrese un correo el... */,
-      );
+      return 'Por favor ingrese un correo electrónico';
     }
 
     if (!RegExp('^\\S+@\\S+\\.\\S+\$').hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'i0zk6j0m' /* Formato inválido */,
-      );
+      return 'Formato inválido';
     }
     return null;
   }

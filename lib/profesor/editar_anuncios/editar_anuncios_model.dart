@@ -14,9 +14,7 @@ class EditarAnunciosModel extends FlutterFlowModel<EditarAnunciosWidget> {
   String? _txtEditarTituloControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'ircyu0g3' /* Por favor ingrese el título */,
-      );
+      return 'Por favor ingrese el título';
     }
 
     return null;
@@ -29,9 +27,7 @@ class EditarAnunciosModel extends FlutterFlowModel<EditarAnunciosWidget> {
   String? _txtEditarAnuncioControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'nzjht32y' /* Por favor ingrese la descripci... */,
-      );
+      return 'Por favor ingrese la descripción';
     }
 
     return null;

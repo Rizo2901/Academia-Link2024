@@ -34,12 +34,9 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
     _model.textFieldFocusNode3 ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
-          _model.textController1?.text = FFLocalizations.of(context).getText(
-            'pk23ukla' /* Tarea 2 - Editada */,
-          );
-          _model.textController2?.text = FFLocalizations.of(context).getText(
-            'ca8ovjny' /* Deben realizar una investigaci... */,
-          );
+          _model.textController1?.text = 'Tarea 2 - Editada';
+          _model.textController2?.text =
+              'Deben realizar una investigación de los planetas del sistema solar y dar una referencia bibliografica de 3 fuentes con un resumen de su preferencia. El trabajo debe contar con portada, introducción, desarrollo y referencias. ';
         }));
   }
 
@@ -128,9 +125,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           45.0, 10.0, 91.0, 10.0),
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          '772yryrb' /* Tareas */,
-                                        ),
+                                        'Tareas',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -186,9 +181,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 0.0, 0.0),
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'jmqg9i7y' /* Nombre de la tarea: */,
-                                  ),
+                                  'Nombre de la tarea:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -269,9 +262,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 0.0, 0.0),
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'dbhhamlv' /* Descripción: */,
-                                  ),
+                                  'Descripción:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -355,9 +346,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 0.0, 0.0),
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'ev4rjtpr' /* Fecha Límite: */,
-                                  ),
+                                  'Fecha Límite:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -381,10 +370,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                     autofocus: true,
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      labelText:
-                                          FFLocalizations.of(context).getText(
-                                        '28j8i5ly' /* 16/05/2024 */,
-                                      ),
+                                      labelText: '16/05/2024',
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
                                       hintStyle: FlutterFlowTheme.of(context)
@@ -440,9 +426,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                   onPressed: () {
                                     print('Button pressed ...');
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    'e0rjn190' /* Calendario */,
-                                  ),
+                                  text: 'Calendario',
                                   icon: const FaIcon(
                                     FontAwesomeIcons.calendar,
                                   ),
@@ -477,9 +461,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 0.0, 0.0),
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    's0eq44ai' /* Estado: */,
-                                  ),
+                                  'Estado:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -535,9 +517,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                         onPressed: () {
                           print('Button pressed ...');
                         },
-                        text: FFLocalizations.of(context).getText(
-                          'jqx8hhty' /* Cancelar */,
-                        ),
+                        text: 'Cancelar',
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 0.25,
                           height: 40.0,
@@ -572,9 +552,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                         onPressed: () {
                           print('Button pressed ...');
                         },
-                        text: FFLocalizations.of(context).getText(
-                          'hnvmt8sx' /* Guardar */,
-                        ),
+                        text: 'Guardar',
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 0.25,
                           height: 40.0,

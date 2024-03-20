@@ -13,9 +13,7 @@ class CrearAnunciosModel extends FlutterFlowModel<CrearAnunciosWidget> {
   String? Function(BuildContext, String?)? txtTituloControllerValidator;
   String? _txtTituloControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'did5vn7w' /* Por favor ingrese el título */,
-      );
+      return 'Por favor ingrese el título';
     }
 
     return null;
@@ -29,9 +27,7 @@ class CrearAnunciosModel extends FlutterFlowModel<CrearAnunciosWidget> {
   String? _txtDescripcionAnuncioControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'sofotdf4' /* Por favor ingrese la descripci... */,
-      );
+      return 'Por favor ingrese la descripción';
     }
 
     return null;

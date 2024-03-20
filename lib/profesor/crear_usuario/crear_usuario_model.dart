@@ -14,25 +14,17 @@ class CrearUsuarioModel extends FlutterFlowModel<CrearUsuarioWidget> {
   String? Function(BuildContext, String?)? txtCedulaControllerValidator;
   String? _txtCedulaControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'v8mscy59' /* Por favor ingrese la cédula */,
-      );
+      return 'Por favor ingrese la cédula';
     }
 
     if (val.length < 9) {
-      return FFLocalizations.of(context).getText(
-        '50e1w0gk' /* El mínimo de caractéres es 9 */,
-      );
+      return 'El mínimo de caractéres es 9';
     }
     if (val.length > 11) {
-      return FFLocalizations.of(context).getText(
-        '2g4qi8a7' /* El máximo de caracéres es 11 */,
-      );
+      return 'El máximo de caracéres es 11';
     }
     if (!RegExp('^[a-zA-Z0-9]+\$').hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'qgi8dhol' /* Formato inválido */,
-      );
+      return 'Formato inválido';
     }
     return null;
   }
@@ -43,9 +35,7 @@ class CrearUsuarioModel extends FlutterFlowModel<CrearUsuarioWidget> {
   String? Function(BuildContext, String?)? txtNombreControllerValidator;
   String? _txtNombreControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        '27tiwtd2' /* Por favor ingrese el nombre */,
-      );
+      return 'Por favor ingrese el nombre';
     }
 
     return null;
@@ -57,9 +47,7 @@ class CrearUsuarioModel extends FlutterFlowModel<CrearUsuarioWidget> {
   String? Function(BuildContext, String?)? txtApellido1ControllerValidator;
   String? _txtApellido1ControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        '8pcprswr' /* Por favor ingrese el primer ap... */,
-      );
+      return 'Por favor ingrese el primer apellido';
     }
 
     return null;
@@ -71,9 +59,7 @@ class CrearUsuarioModel extends FlutterFlowModel<CrearUsuarioWidget> {
   String? Function(BuildContext, String?)? txtApellido2ControllerValidator;
   String? _txtApellido2ControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        '2hy5rxns' /* Por favor ingrese el segundo a... */,
-      );
+      return 'Por favor ingrese el segundo apellido';
     }
 
     return null;
@@ -85,15 +71,11 @@ class CrearUsuarioModel extends FlutterFlowModel<CrearUsuarioWidget> {
   String? Function(BuildContext, String?)? txtCorreoControllerValidator;
   String? _txtCorreoControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        '12uwhvrw' /* Por favor ingrese un correo el... */,
-      );
+      return 'Por favor ingrese un correo electrónico';
     }
 
     if (!RegExp('^\\S+@\\S+\\.\\S+\$').hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        '66r7owji' /* Formato inválido */,
-      );
+      return 'Formato inválido';
     }
     return null;
   }
@@ -105,9 +87,7 @@ class CrearUsuarioModel extends FlutterFlowModel<CrearUsuarioWidget> {
   String? Function(BuildContext, String?)? txtContrasenaControllerValidator;
   String? _txtContrasenaControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        '5h8os7qo' /* Por favor ingrese una contrase... */,
-      );
+      return 'Por favor ingrese una contraseña';
     }
 
     return null;

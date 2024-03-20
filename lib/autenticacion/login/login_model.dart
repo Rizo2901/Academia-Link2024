@@ -13,15 +13,11 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
   String? Function(BuildContext, String?)? txtFCorreoControllerValidator;
   String? _txtFCorreoControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'wsoxwt1e' /* Digite el correo electrónico */,
-      );
+      return 'Digite el correo electrónico';
     }
 
     if (!RegExp(kTextValidatorEmailRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        '8btq8unt' /* Formato inválido */,
-      );
+      return 'Formato inválido';
     }
     return null;
   }
@@ -34,9 +30,7 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
   String? _txtFContrasenaControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'ajlawe68' /* Digite la contraseña */,
-      );
+      return 'Digite la contraseña';
     }
 
     return null;

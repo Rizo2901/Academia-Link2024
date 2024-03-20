@@ -99,9 +99,7 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         45.0, 10.0, 81.0, 10.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '71e8lc7z' /* Pasar Lista */,
-                                      ),
+                                      'Pasar Lista',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -161,9 +159,7 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          FFLocalizations.of(context).getText(
-                            '4l0tefbj' /* Lista de:Grupo 7-2 */,
-                          ),
+                          'Lista de:Grupo 7-2',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
@@ -178,9 +174,7 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Text(
-                                  FFLocalizations.of(context).getText(
-                                    'r13sdf9t' /* Fecha: 3/11/2024 */,
-                                  ),
+                                  'Fecha: 3/11/2024',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -219,9 +213,7 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                       padding: const EdgeInsetsDirectional.fromSTEB(
                           45.0, 10.0, 91.0, 10.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'vojgmz9n' /* Alumnos: */,
-                        ),
+                        'Alumnos:',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'PT Sans',
                               fontSize: 20.0,
@@ -274,16 +266,12 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'z9aihxar' /* Nombre: */,
-                                        ),
+                                        'Nombre:',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          's6agtczj' /* Ian Rizo Zuñiga */,
-                                        ),
+                                        'Ian Rizo Zuñiga',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -293,16 +281,12 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'mkta2dyu' /* Cedúla: */,
-                                        ),
+                                        'Cedúla:',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          '68hzd0uv' /* 1-1866-0462 */,
-                                        ),
+                                        '1-1866-0462',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -342,9 +326,7 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                                 ),
                               ),
                               Text(
-                                FFLocalizations.of(context).getText(
-                                  'f6l3rsf8' /* Presente */,
-                                ),
+                                'Presente',
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                             ],
@@ -397,16 +379,12 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          '1b2oevak' /* Nombre: */,
-                                        ),
+                                        'Nombre:',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          '74kptzj2' /* Ian Rizo Zuñiga */,
-                                        ),
+                                        'Ian Rizo Zuñiga',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -416,16 +394,12 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'zrrmhfum' /* Cedúla: */,
-                                        ),
+                                        'Cedúla:',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          '9ata9fjw' /* 1-1866-0462 */,
-                                        ),
+                                        '1-1866-0462',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -465,9 +439,7 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                                 ),
                               ),
                               Text(
-                                FFLocalizations.of(context).getText(
-                                  'lqbsqwwn' /* Presente */,
-                                ),
+                                'Presente',
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                             ],
@@ -520,16 +492,12 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'gniy3p46' /* Nombre: */,
-                                        ),
+                                        'Nombre:',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          '5thdysnz' /* Ian Rizo Zuñiga */,
-                                        ),
+                                        'Ian Rizo Zuñiga',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -539,16 +507,12 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'knm3d9ga' /* Cedúla: */,
-                                        ),
+                                        'Cedúla:',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'htyd2aw1' /* 1-1866-0462 */,
-                                        ),
+                                        '1-1866-0462',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -588,9 +552,7 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                                 ),
                               ),
                               Text(
-                                FFLocalizations.of(context).getText(
-                                  'qyz2r91y' /* Presente */,
-                                ),
+                                'Presente',
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                             ],

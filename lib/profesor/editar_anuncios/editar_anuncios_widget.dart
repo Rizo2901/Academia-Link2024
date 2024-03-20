@@ -118,9 +118,7 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         45.0, 10.0, 52.0, 10.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '1yb3p8eu' /* Editar Anuncio */,
-                                      ),
+                                      'Editar Anuncio',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -210,9 +208,7 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 alignLabelWithHint: false,
-                                hintText: FFLocalizations.of(context).getText(
-                                  '75u44jtt' /* Titulo del Anuncio */,
-                                ),
+                                hintText: 'Titulo del Anuncio',
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -283,9 +279,7 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
                                         FlutterFlowTheme.of(context).bodyMedium,
                                     alignLabelWithHint: false,
                                     hintText:
-                                        FFLocalizations.of(context).getText(
-                                      'odx4gcct' /* Escriba aca todos los detalles... */,
-                                    ),
+                                        'Escriba aca todos los detalles de el anuncio a publicar...',
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
@@ -353,9 +347,7 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
                             return;
                           }
                         },
-                        text: FFLocalizations.of(context).getText(
-                          'elsw8q03' /* Actualizar */,
-                        ),
+                        text: 'Actualizar',
                         icon: const Icon(
                           Icons.publish_rounded,
                           size: 15.0,

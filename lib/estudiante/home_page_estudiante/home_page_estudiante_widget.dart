@@ -308,10 +308,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                             alignment:
                                                 const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'q5k3msva' /* Mis Notas */,
-                                              ),
+                                              'Mis Notas',
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -401,10 +398,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                             alignment:
                                                 const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'jfsddhcx' /* Anuncios */,
-                                              ),
+                                              'Anuncios',
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -561,10 +555,7 @@ class _HomePageEstudianteWidgetState extends State<HomePageEstudianteWidget> {
                                             alignment:
                                                 const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '205no9wa' /* Tareas */,
-                                              ),
+                                              'Tareas',
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)

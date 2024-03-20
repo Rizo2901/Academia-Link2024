@@ -115,9 +115,7 @@ class _ListaLikesWidgetState extends State<ListaLikesWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         45.0, 10.0, 52.0, 10.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'd0r5dmqt' /* Likes */,
-                                      ),
+                                      'Likes',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(

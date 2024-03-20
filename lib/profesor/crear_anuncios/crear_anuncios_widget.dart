@@ -119,9 +119,7 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         45.0, 10.0, 52.0, 10.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'r5ijjq19' /* Crear Anuncio */,
-                                      ),
+                                      'Crear Anuncio',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -211,9 +209,7 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 alignLabelWithHint: false,
-                                hintText: FFLocalizations.of(context).getText(
-                                  'kqa0zvfp' /* Titulo del Anuncio */,
-                                ),
+                                hintText: 'Titulo del Anuncio',
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -285,9 +281,7 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                                         FlutterFlowTheme.of(context).bodyMedium,
                                     alignLabelWithHint: false,
                                     hintText:
-                                        FFLocalizations.of(context).getText(
-                                      '3jngoldl' /* Escriba aca todos los detalles... */,
-                                    ),
+                                        'Escriba aca todos los detalles de el anuncio a publicar...',
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
@@ -380,9 +374,7 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                             ),
                           );
                         },
-                        text: FFLocalizations.of(context).getText(
-                          '1rifljq0' /* Publicar */,
-                        ),
+                        text: 'Publicar',
                         icon: const Icon(
                           Icons.publish_rounded,
                           size: 15.0,

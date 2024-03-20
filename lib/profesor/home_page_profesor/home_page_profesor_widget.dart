@@ -87,9 +87,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                         ),
                       ),
                       Text(
-                        FFLocalizations.of(context).getText(
-                          '76fkc81y' /* Bienvenido, */,
-                        ),
+                        'Bienvenido,',
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'PT Sans',
@@ -251,10 +249,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                               alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'koz4tbzp' /* Mis Grupos */,
-                                                ),
+                                                'Mis Grupos',
                                                 textAlign: TextAlign.center,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -345,10 +340,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                             alignment:
                                                 const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'sfgof2wt' /* Notas */,
-                                              ),
+                                              'Notas',
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -447,10 +439,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                               alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'h7b68dzp' /* Anuncios */,
-                                                ),
+                                                'Anuncios',
                                                 textAlign: TextAlign.center,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -548,10 +537,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                             alignment:
                                                 const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '769ysalm' /* Estudiantes */,
-                                              ),
+                                              'Estudiantes',
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -641,10 +627,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                             alignment:
                                                 const AlignmentDirectional(0.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '9dcmrvxv' /* Tareas */,
-                                              ),
+                                              'Tareas',
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)

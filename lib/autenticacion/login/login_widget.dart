@@ -70,9 +70,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                       Flexible(
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            'rztyp4gw' /* Academia Link */,
-                          ),
+                          'Academia Link',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Montserrat',
@@ -107,9 +105,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 12.0),
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '1490di54' /* Inicia Sesión  */,
-                                    ),
+                                    'Inicia Sesión ',
                                     textAlign: TextAlign.start,
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -130,9 +126,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context).getText(
-                                      '0enpxqf0' /* ¡Gracias por volver a Academia... */,
-                                    ),
+                                    '¡Gracias por volver a Academia Link!',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -159,10 +153,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       autofocus: true,
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          'cyi0uypf' /* Escriba su correo... */,
-                                        ),
+                                        labelText: 'Escriba su correo...',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         hintStyle: FlutterFlowTheme.of(context)
@@ -223,10 +214,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       obscureText:
                                           !_model.txtFContrasenaVisibility,
                                       decoration: InputDecoration(
-                                        labelText:
-                                            FFLocalizations.of(context).getText(
-                                          'peaya8h0' /* Escriba su contraseña... */,
-                                        ),
+                                        labelText: 'Escriba su contraseña...',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         hintStyle: FlutterFlowTheme.of(context)
@@ -343,10 +331,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   context.mounted);
                                             }
                                           },
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            'pxldxy1f' /* Iniciar sesión */,
-                                          ),
+                                          text: 'Iniciar sesión',
                                           icon: const Icon(
                                             Icons.login,
                                             size: 15.0,
@@ -410,9 +395,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       );
                                     },
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'hb63nwok' /* ¿Olvidó la contraseña? */,
-                                      ),
+                                      '¿Olvidó la contraseña?',
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium

@@ -34,12 +34,9 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
     _model.textFieldFocusNode3 ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
-          _model.textController1?.text = FFLocalizations.of(context).getText(
-            'oa8j9cu5' /* Tarea 1 */,
-          );
-          _model.textController2?.text = FFLocalizations.of(context).getText(
-            'z8gsxd0x' /* Deben realizar una investigaci... */,
-          );
+          _model.textController1?.text = 'Tarea 1';
+          _model.textController2?.text =
+              'Deben realizar una investigación de los planetas del sistema solar y dar una referencia bibliografica de 3 fuentes con un resumen de su preferencia. El trabajo debe contar con portada, introducción, desarrollo y referencias. ';
         }));
   }
 
@@ -128,9 +125,7 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           45.0, 10.0, 91.0, 10.0),
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          '8pw5486q' /* Tareas */,
-                                        ),
+                                        'Tareas',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -186,9 +181,7 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 0.0, 0.0),
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'o0zoahev' /* Nombre de la tarea: */,
-                                  ),
+                                  'Nombre de la tarea:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -269,9 +262,7 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 0.0, 0.0),
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'k8v9k01w' /* Descripción: */,
-                                  ),
+                                  'Descripción:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -355,9 +346,7 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 0.0, 0.0),
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    '3nsjec9b' /* Fecha Límite: */,
-                                  ),
+                                  'Fecha Límite:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -381,10 +370,7 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                                     autofocus: true,
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      labelText:
-                                          FFLocalizations.of(context).getText(
-                                        'ebuv62lj' /* 16/02/2024 */,
-                                      ),
+                                      labelText: '16/02/2024',
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
                                       hintStyle: FlutterFlowTheme.of(context)
@@ -440,9 +426,7 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                                   onPressed: () {
                                     print('Button pressed ...');
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    'z639ivu8' /* Calendario */,
-                                  ),
+                                  text: 'Calendario',
                                   icon: const FaIcon(
                                     FontAwesomeIcons.calendar,
                                   ),
@@ -477,9 +461,7 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 0.0, 0.0),
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'w0fb62h9' /* Estado: */,
-                                  ),
+                                  'Estado:',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -535,9 +517,7 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                         onPressed: () {
                           print('Button pressed ...');
                         },
-                        text: FFLocalizations.of(context).getText(
-                          '2tqihs79' /* Cancelar */,
-                        ),
+                        text: 'Cancelar',
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 0.25,
                           height: 40.0,
@@ -572,9 +552,7 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                         onPressed: () {
                           print('Button pressed ...');
                         },
-                        text: FFLocalizations.of(context).getText(
-                          'xxdsjvk6' /* Crear */,
-                        ),
+                        text: 'Crear',
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 0.25,
                           height: 40.0,

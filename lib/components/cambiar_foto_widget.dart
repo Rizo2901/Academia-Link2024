@@ -83,9 +83,7 @@ class _CambiarFotoWidgetState extends State<CambiarFotoWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 16.0, 0.0),
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'mi54v6qf' /* Cambiar foto de perfil */,
-                                  ),
+                                  'Cambiar foto de perfil',
                                   style: FlutterFlowTheme.of(context)
                                       .headlineMedium
                                       .override(
@@ -223,9 +221,7 @@ class _CambiarFotoWidgetState extends State<CambiarFotoWidget> {
                                     }
                                   }
                                 },
-                                text: FFLocalizations.of(context).getText(
-                                  'oiqc9rpr' /* Subir imagen */,
-                                ),
+                                text: 'Subir imagen',
                                 icon: const Icon(
                                   Icons.upload,
                                   size: 15.0,
@@ -261,9 +257,7 @@ class _CambiarFotoWidgetState extends State<CambiarFotoWidget> {
                                   ));
                                   Navigator.pop(context);
                                 },
-                                text: FFLocalizations.of(context).getText(
-                                  'b85djwyb' /* Guardar */,
-                                ),
+                                text: 'Guardar',
                                 options: FFButtonOptions(
                                   width: 150.0,
                                   height: 50.0,

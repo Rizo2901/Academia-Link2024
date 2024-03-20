@@ -85,9 +85,7 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                   title: Align(
                     alignment: const AlignmentDirectional(0.0, -1.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'y1h3ie8j' /* Eliminar Grupo */,
-                      ),
+                      'Eliminar Grupo',
                       style: FlutterFlowTheme.of(context).headlineSmall,
                     ),
                   ),
@@ -102,9 +100,7 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                   padding:
                       const EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 8.0, 16.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'tfokl1lu' /* Correo Electronico del Profeso... */,
-                    ),
+                    'Correo Electronico del Profesor',
                     style: FlutterFlowTheme.of(context).labelLarge,
                   ),
                 ),
@@ -116,13 +112,9 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                   focusNode: _model.textFieldFocusNode1,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: FFLocalizations.of(context).getText(
-                      '0wej4nxa' /* Ingrese el correo electronico ... */,
-                    ),
+                    labelText: 'Ingrese el correo electronico del profesor',
                     labelStyle: FlutterFlowTheme.of(context).labelLarge,
-                    hintText: FFLocalizations.of(context).getText(
-                      '8r3zfu1w' /* andresleon@gmail.com */,
-                    ),
+                    hintText: 'andresleon@gmail.com',
                     hintStyle: FlutterFlowTheme.of(context).bodyLarge,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -162,9 +154,7 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 8.0, 16.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    'xwidkpt6' /* Correo de los estudiantes */,
-                  ),
+                  'Correo de los estudiantes',
                   style: FlutterFlowTheme.of(context).labelLarge,
                 ),
               ),
@@ -175,13 +165,10 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                   focusNode: _model.textFieldFocusNode2,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: FFLocalizations.of(context).getText(
-                      'zpni738n' /* Ingrese el correo electronico ... */,
-                    ),
+                    labelText:
+                        'Ingrese el correo electronico de los estudiantes',
                     labelStyle: FlutterFlowTheme.of(context).labelLarge,
-                    hintText: FFLocalizations.of(context).getText(
-                      '01hvhrri' /* ianrizo@gmail.com */,
-                    ),
+                    hintText: 'ianrizo@gmail.com',
                     hintStyle: FlutterFlowTheme.of(context).bodyLarge,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -221,9 +208,7 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 8.0, 16.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    'bu0edipn' /* Nombre de la clase */,
-                  ),
+                  'Nombre de la clase',
                   style: FlutterFlowTheme.of(context).labelLarge,
                 ),
               ),
@@ -234,13 +219,9 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                   focusNode: _model.textFieldFocusNode3,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: FFLocalizations.of(context).getText(
-                      'wz943cp1' /* Ingrese el nombre de la clase */,
-                    ),
+                    labelText: 'Ingrese el nombre de la clase',
                     labelStyle: FlutterFlowTheme.of(context).labelLarge,
-                    hintText: FFLocalizations.of(context).getText(
-                      'earvmy7y' /* Español Tercer Grado - Clase A */,
-                    ),
+                    hintText: 'Español Tercer Grado - Clase A',
                     hintStyle: FlutterFlowTheme.of(context).bodyLarge,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -283,9 +264,7 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                   onPressed: () {
                     print('Button pressed ...');
                   },
-                  text: FFLocalizations.of(context).getText(
-                    'fc8bg4ic' /* Agregar más estudiantes */,
-                  ),
+                  text: 'Agregar más estudiantes',
                   options: FFButtonOptions(
                     width: double.infinity,
                     height: 50.0,
@@ -308,9 +287,7 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                   onPressed: () {
                     print('Button pressed ...');
                   },
-                  text: FFLocalizations.of(context).getText(
-                    'e6585ox7' /* Confirmar eliminación de grupo */,
-                  ),
+                  text: 'Confirmar eliminación de grupo',
                   options: FFButtonOptions(
                     width: double.infinity,
                     height: 50.0,
@@ -340,9 +317,7 @@ class _EliminarGruposWidgetState extends State<EliminarGruposWidget> {
                           onPressed: () async {
                             context.pushNamed('HomePageProfesor');
                           },
-                          text: FFLocalizations.of(context).getText(
-                            '1i4egg27' /* Cancelar */,
-                          ),
+                          text: 'Cancelar',
                           options: FFButtonOptions(
                             width: 317.0,
                             height: 50.0,

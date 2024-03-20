@@ -108,11 +108,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         45.0, 16.0, 52.0, 10.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'ojtvg647' /* Mis Grupos
- */
-                                        ,
-                                      ),
+                                      'Mis Grupos\n',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -158,9 +154,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
-                              '8gff6n8o' /* Grupos */,
-                            ),
+                            'Grupos',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -187,9 +181,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                 },
                               );
                             },
-                            text: FFLocalizations.of(context).getText(
-                              'j3d1hufr' /* Crear grupo */,
-                            ),
+                            text: 'Crear grupo',
                             options: FFButtonOptions(
                               height: 40.0,
                               padding: const EdgeInsetsDirectional.fromSTEB(
@@ -243,9 +235,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context).getText(
-                                      'fqy9ve4x' /* Sección:5-1 */,
-                                    ),
+                                    'Sección:5-1',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -295,9 +285,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   7.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              '40vflgv9' /* :25 */,
-                                            ),
+                                            ':25',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -316,9 +304,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                       onPressed: () {
                                         print('Button pressed ...');
                                       },
-                                      text: FFLocalizations.of(context).getText(
-                                        'ocz937zn' /* Pasar Lista */,
-                                      ),
+                                      text: 'Pasar Lista',
                                       icon: const Icon(
                                         Icons.featured_play_list_outlined,
                                         size: 15.0,
@@ -356,9 +342,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                       onPressed: () {
                                         print('Button pressed ...');
                                       },
-                                      text: FFLocalizations.of(context).getText(
-                                        'm16epqbx' /* Ver Grupo */,
-                                      ),
+                                      text: 'Ver Grupo',
                                       icon: const Icon(
                                         Icons.groups_sharp,
                                         size: 15.0,
@@ -425,9 +409,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context).getText(
-                                      'jx3mvuf2' /* Sección:7-3 */,
-                                    ),
+                                    'Sección:7-3',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -477,9 +459,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   7.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'ipy83ta5' /* :21 */,
-                                            ),
+                                            ':21',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -498,9 +478,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                       onPressed: () {
                                         print('Button pressed ...');
                                       },
-                                      text: FFLocalizations.of(context).getText(
-                                        'sq01zpif' /* Pasar Lista */,
-                                      ),
+                                      text: 'Pasar Lista',
                                       icon: const Icon(
                                         Icons.featured_play_list_outlined,
                                         size: 15.0,
@@ -538,9 +516,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                       onPressed: () {
                                         print('Button pressed ...');
                                       },
-                                      text: FFLocalizations.of(context).getText(
-                                        '3nzy3cek' /* Ver Grupo */,
-                                      ),
+                                      text: 'Ver Grupo',
                                       icon: const Icon(
                                         Icons.groups_sharp,
                                         size: 15.0,
@@ -607,9 +583,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context).getText(
-                                      'q2govzap' /* Sección:7-2 */,
-                                    ),
+                                    'Sección:7-2',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -659,9 +633,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   7.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'tfqbqp93' /* :24 */,
-                                            ),
+                                            ':24',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -680,9 +652,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                       onPressed: () {
                                         print('Button pressed ...');
                                       },
-                                      text: FFLocalizations.of(context).getText(
-                                        'l4g8teh3' /* Pasar Lista */,
-                                      ),
+                                      text: 'Pasar Lista',
                                       icon: const Icon(
                                         Icons.featured_play_list_outlined,
                                         size: 15.0,
@@ -720,9 +690,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                       onPressed: () {
                                         print('Button pressed ...');
                                       },
-                                      text: FFLocalizations.of(context).getText(
-                                        'a6hpimrj' /* Ver Grupo */,
-                                      ),
+                                      text: 'Ver Grupo',
                                       icon: const Icon(
                                         Icons.groups_sharp,
                                         size: 15.0,

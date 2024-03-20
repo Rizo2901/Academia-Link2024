@@ -79,9 +79,7 @@ class _EditarGruposWidgetState extends State<EditarGruposWidget> {
                         ),
                       ),
                       Text(
-                        FFLocalizations.of(context).getText(
-                          '10wzcegf' /* ¡Bienvenido, Saul! */,
-                        ),
+                        '¡Bienvenido, Saul!',
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'PT Sans',
@@ -164,9 +162,7 @@ class _EditarGruposWidgetState extends State<EditarGruposWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          FFLocalizations.of(context).getText(
-                            'nx2zdl1l' /* Grupo7-2 */,
-                          ),
+                          'Grupo7-2',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
@@ -193,9 +189,7 @@ class _EditarGruposWidgetState extends State<EditarGruposWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         7.0, 0.0, 0.0, 0.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'eisz17io' /* :25 */,
-                                      ),
+                                      ':25',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -272,16 +266,12 @@ class _EditarGruposWidgetState extends State<EditarGruposWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          '03g1vrz1' /* Nombre: */,
-                                        ),
+                                        'Nombre:',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'ku4btqm4' /* Ian Rizo Zuñiga */,
-                                        ),
+                                        'Ian Rizo Zuñiga',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -291,16 +281,12 @@ class _EditarGruposWidgetState extends State<EditarGruposWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'q1so15hn' /* Cedúla: */,
-                                        ),
+                                        'Cedúla:',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'gozc3g17' /* 1-1866-0462 */,
-                                        ),
+                                        '1-1866-0462',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),

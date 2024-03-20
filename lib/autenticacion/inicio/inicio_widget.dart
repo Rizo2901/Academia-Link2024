@@ -137,9 +137,7 @@ class _InicioWidgetState extends State<InicioWidget>
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          'vfohfc48' /* Academia Link */,
-                        ),
+                        'Academia Link',
                         style: FlutterFlowTheme.of(context).bodyLarge.override(
                               fontFamily: 'Montserrat',
                               color: Colors.black,
@@ -163,9 +161,7 @@ class _InicioWidgetState extends State<InicioWidget>
                     children: [
                       Flexible(
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            'dhu1wgw5' /* Conectando conocimiento y crea... */,
-                          ),
+                          'Conectando conocimiento y creando futuros',
                           textAlign: TextAlign.center,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
@@ -196,9 +192,7 @@ class _InicioWidgetState extends State<InicioWidget>
                             onPressed: () async {
                               context.pushNamed('Login');
                             },
-                            text: FFLocalizations.of(context).getText(
-                              'j6wfpwn2' /* Continuar */,
-                            ),
+                            text: 'Continuar',
                             options: FFButtonOptions(
                               width: 300.0,
                               height: 50.0,

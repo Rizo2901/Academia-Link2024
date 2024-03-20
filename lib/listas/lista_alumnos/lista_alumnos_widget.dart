@@ -103,9 +103,7 @@ class _ListaAlumnosWidgetState extends State<ListaAlumnosWidget> {
                                         ),
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          '7ftknaax' /* Alumnos */,
-                                        ),
+                                        'Alumnos',
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -185,9 +183,7 @@ class _ListaAlumnosWidgetState extends State<ListaAlumnosWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 0.0, 4.0),
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'r94wa7ha' /* Alumnos de la institución */,
-                                ),
+                                'Alumnos de la institución',
                                 style:
                                     FlutterFlowTheme.of(context).headlineMedium,
                               ),
@@ -196,9 +192,7 @@ class _ListaAlumnosWidgetState extends State<ListaAlumnosWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 0.0, 0.0),
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  's5l2iuej' /* Debajo encontrará una lista pa... */,
-                                ),
+                                'Debajo encontrará una lista para poder observar a todos los alumnos ingresados en el sistema.',
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ),
@@ -211,10 +205,7 @@ class _ListaAlumnosWidgetState extends State<ListaAlumnosWidget> {
                                 autofocus: true,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText:
-                                      FFLocalizations.of(context).getText(
-                                    'h48ht98a' /* Buscar alumno... */,
-                                  ),
+                                  labelText: 'Buscar alumno...',
                                   labelStyle:
                                       FlutterFlowTheme.of(context).labelMedium,
                                   hintStyle:
@@ -304,9 +295,7 @@ class _ListaAlumnosWidgetState extends State<ListaAlumnosWidget> {
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'lzgd32wd' /* Nombre */,
-                                            ),
+                                            'Nombre',
                                             style: FlutterFlowTheme.of(context)
                                                 .labelSmall,
                                           ),
@@ -323,9 +312,7 @@ class _ListaAlumnosWidgetState extends State<ListaAlumnosWidget> {
                                           alignment:
                                               const AlignmentDirectional(-1.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'xl25j1nl' /* Cedula */,
-                                            ),
+                                            'Cedula',
                                             style: FlutterFlowTheme.of(context)
                                                 .labelSmall,
                                           ),
@@ -343,10 +330,7 @@ class _ListaAlumnosWidgetState extends State<ListaAlumnosWidget> {
                                               alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'toe55snl' /* Grado */,
-                                                ),
+                                                'Grado',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelSmall,
@@ -520,10 +504,7 @@ class _ListaAlumnosWidgetState extends State<ListaAlumnosWidget> {
                                                       .fromSTEB(
                                                           0.0, 0.0, 12.0, 0.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'zeeu8mb9' /* 12837612 */,
-                                                    ),
+                                                    '12837612',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium,

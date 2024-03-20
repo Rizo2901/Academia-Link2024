@@ -129,11 +129,7 @@ class _EditarUsuarioWidgetState extends State<EditarUsuarioWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         45.0, 20.0, 52.0, 10.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'vrkaiyh2' /* Editar Usuario
- */
-                                        ,
-                                      ),
+                                      'Editar Usuario\n',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -237,11 +233,7 @@ class _EditarUsuarioWidgetState extends State<EditarUsuarioWidget> {
                                           autofocus: true,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            labelText:
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                              '6kd6shgn' /* Cédula */,
-                                            ),
+                                            labelText: 'Cédula',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .labelMedium,
@@ -308,11 +300,7 @@ class _EditarUsuarioWidgetState extends State<EditarUsuarioWidget> {
                                           autofocus: true,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            labelText:
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                              'fhaj24fo' /* Nombre */,
-                                            ),
+                                            labelText: 'Nombre',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .labelMedium,
@@ -379,11 +367,7 @@ class _EditarUsuarioWidgetState extends State<EditarUsuarioWidget> {
                                           autofocus: true,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            labelText:
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                              'ze9eblcw' /* Primer Apellido */,
-                                            ),
+                                            labelText: 'Primer Apellido',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .labelMedium,
@@ -450,11 +434,7 @@ class _EditarUsuarioWidgetState extends State<EditarUsuarioWidget> {
                                           autofocus: true,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            labelText:
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                              '1xqd69s3' /* Segundo Apellido */,
-                                            ),
+                                            labelText: 'Segundo Apellido',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .labelMedium,
@@ -521,11 +501,7 @@ class _EditarUsuarioWidgetState extends State<EditarUsuarioWidget> {
                                           autofocus: true,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            labelText:
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                              'xjn12176' /* Correo Electrónico */,
-                                            ),
+                                            labelText: 'Correo Electrónico',
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .labelMedium,
@@ -628,11 +604,7 @@ class _EditarUsuarioWidgetState extends State<EditarUsuarioWidget> {
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
-                                              hintText:
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                '082dhy66' /* Seleccione un rol */,
-                                              ),
+                                              hintText: 'Seleccione un rol',
                                               icon: Icon(
                                                 Icons
                                                     .keyboard_arrow_down_rounded,
@@ -720,9 +692,7 @@ class _EditarUsuarioWidgetState extends State<EditarUsuarioWidget> {
                                           ),
                                         );
                                       },
-                                      text: FFLocalizations.of(context).getText(
-                                        '02uowu2k' /* Actualizar */,
-                                      ),
+                                      text: 'Actualizar',
                                       options: FFButtonOptions(
                                         width: 300.0,
                                         height: 50.0,
