@@ -576,35 +576,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'home',
     },
   },
-  // Anuncios
-  {
-    'yfec0vh5': {
-      'es': 'Anuncios de la semana',
-      'en': 'Announcements of the week',
-    },
-    'j0tmp780': {
-      'es':
-          'Recuerda que este viernes es viernes de COLORES, todos los estudiantes podrán utilizar ropa particular. Atte: La dirección\n\nCosto: ₡200',
-      'en':
-          'Remember that this Friday is COLORS Friday, all students will be able to wear private clothing. Atte: The address\n\nCost: ₡200',
-    },
-    '24da1euu': {
-      'es':
-          'El próximo 16 de Febrero del 2024 la Escuela se encontrará CERRADA de acuerdo al comunicado del MEP el pasado 10 de Febrero sobre el día de bienestar mental. Atte: La dirección',
-      'en':
-          'On February 16, 2024, the School will be CLOSED according to the MEP statement on February 10 regarding mental well-being day. Atte: The address',
-    },
-    'cjdd784u': {
-      'es':
-          'Les recordamos que el próximo 20 de Febrero será la primera reunión de padres, esta se llevará a cabo en el aula respectiva de cada estudiante, NO utilizar la sala común para estos propósitos. Atte: La dirección',
-      'en':
-          'We remind you that next February 20 will be the first parent meeting, this will take place in the respective classroom of each student, DO NOT use the common room for these purposes. Atte: The address',
-    },
-    'm1qg1s38': {
-      'es': 'Home',
-      'en': 'home',
-    },
-  },
   // TareasProfesor
   {
     'tzb5hd7f': {
@@ -662,18 +633,38 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Crear Anuncio',
       'en': 'Roll Call',
     },
-    '4u754800': {
-      'es': 'Nuevo Anuncio',
-      'en': 'New Announcement',
+    '7onv287e': {
+      'es': '',
+      'en': '',
     },
-    'dbgzccb7': {
-      'es': 'Descripcion',
+    'kqa0zvfp': {
+      'es': 'Titulo del Anuncio',
+      'en': '',
+    },
+    'n8lopge8': {
+      'es': '',
       'en': 'Description',
     },
-    '5d8j4qme': {
+    '3jngoldl': {
       'es': 'Escriba aca todos los detalles de el anuncio a publicar...',
       'en':
           'Write here all the details of the advertisement to be published...',
+    },
+    'did5vn7w': {
+      'es': 'Por favor ingrese el título',
+      'en': '',
+    },
+    'kzxsc0xw': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'sofotdf4': {
+      'es': 'Por favor ingrese la descripción',
+      'en': '',
+    },
+    'ih7bbces': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
     },
     '1rifljq0': {
       'es': 'Publicar',
@@ -689,26 +680,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'nagpesk3': {
       'es': 'Nuevo',
       'en': 'New',
-    },
-    'anuu03iv': {
-      'es': 'Anuncio 1 ',
-      'en': 'Advertisement 1',
-    },
-    'h0cq9dl1': {
-      'es':
-          'Recuerda que este viernes es viernes de COLORES, todos los estudiantes podrán utilizar ropa particular. \n\nAtte: La dirección\n\nCosto: ₡200',
-      'en':
-          'Remember that this Friday is COLORS Friday, all students will be able to wear private clothing. Atte: The address\n\nCost: ₡200',
-    },
-    'fmsk22yy': {
-      'es': 'Anuncio 2 ',
-      'en': 'Advertisement 2',
-    },
-    'f1r5hx8x': {
-      'es':
-          'Les recordamos que el próximo 20 de Febrero será la primera reunión de padres, esta se llevará a cabo en el aula respectiva de cada estudiante, NO utilizar la sala común para estos propósitos. \n\nAtte: La dirección',
-      'en':
-          'We remind you that next February 20 will be the first parent meeting, this will take place in the respective classroom of each student, DO NOT use the common room for these purposes.\n\nAtte: The address',
     },
     '38w9os49': {
       'es': 'Home',
@@ -823,9 +794,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ListaAlumnos
   {
-    '3je7jaka': {
+    '7ftknaax': {
       'es': 'Alumnos',
-      'en': 'Students',
+      'en': 'Welcome, Saul!',
     },
     'r94wa7ha': {
       'es': 'Alumnos de la institución',
@@ -853,85 +824,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Grado',
       'en': 'Degree',
     },
-    'fjxocov8': {
-      'es': 'Saúl Hernández',
-      'en': 'Saul Hernandez',
-    },
-    'pvjoxw87': {
-      'es': 'saulhernandez@gmail.com',
-      'en': 'saulhernandez@gmail.com',
-    },
     'zeeu8mb9': {
       'es': '12837612',
       'en': '12837612',
-    },
-    'wkvcjo8f': {
-      'es': 'Sexto',
-      'en': 'Sixth',
-    },
-    'tuki0p3l': {
-      'es': 'Andrés León',
-      'en': 'Andres Leon',
-    },
-    '51r7n4f5': {
-      'es': 'andresleon@gmail.com',
-      'en': 'andresleon@gmail.com',
-    },
-    'tdsa6228': {
-      'es': '219387129',
-      'en': '219387129',
-    },
-    'lfkqc6c3': {
-      'es': 'Quinto',
-      'en': 'Fifth',
-    },
-    'vfjdlxl5': {
-      'es': 'Ian Rizo',
-      'en': 'Ian Rizo',
-    },
-    'zbxxwhne': {
-      'es': 'ianrizo@gmail.com',
-      'en': 'ianrizo@gmail.com',
-    },
-    'vaqs3jq8': {
-      'es': '21376512',
-      'en': '2142-05-12T06:00:00Z',
-    },
-    'z1qj8p1z': {
-      'es': 'Sexto',
-      'en': 'Sixth',
-    },
-    'i11dbwes': {
-      'es': 'Luis Pérez',
-      'en': 'Luis Perez',
-    },
-    'k58zjogp': {
-      'es': 'luisperez@gmail.com',
-      'en': 'luisperez@gmail.com',
-    },
-    's37rnkbq': {
-      'es': '1927837290',
-      'en': '1927837290',
-    },
-    'ppliom0l': {
-      'es': 'Cuarto',
-      'en': 'Room',
-    },
-    'f8x2d1tg': {
-      'es': 'Ariel Ramos',
-      'en': 'Ariel Ramos',
-    },
-    'jszni9qx': {
-      'es': 'arielramos@gmail.com',
-      'en': 'arielramos@gmail.com',
-    },
-    '30z6bucc': {
-      'es': '41929182',
-      'en': '4199-09-20T06:00:00Z',
-    },
-    'z1e4o2z1': {
-      'es': 'Sexto',
-      'en': 'Sixth',
     },
     '492nrgt9': {
       'es': 'Home',
@@ -940,57 +835,97 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Perfil
   {
-    'cx3lza08': {
-      'es': 'Perfil',
-      'en': 'Profile',
+    'l856dczb': {
+      'es': 'Editar Perfil',
+      'en': 'Roll Call',
     },
-    'iq23ej5i': {
-      'es': 'Cédula:',
-      'en': 'Identification card:',
+    '5jbcousi': {
+      'es': 'Cédula',
+      'en': '',
     },
-    '6sphabko': {
-      'es': '1-1624-0337',
-      'en': '1-1624-0337',
+    'tultn592': {
+      'es': '',
+      'en': '',
     },
-    'zow6l3pf': {
-      'es': 'Nombre:',
-      'en': 'Name:',
+    'op50b72c': {
+      'es': 'Nombre',
+      'en': '',
     },
-    '9paf87hd': {
-      'es': 'Saúl',
-      'en': 'Saul',
+    'kgfmz8z0': {
+      'es': '',
+      'en': '',
     },
-    '7u8rhoib': {
-      'es': 'P. Apellido:',
-      'en': 'Q. Last name:',
+    '8jxl86jq': {
+      'es': 'Primer Apellido',
+      'en': '',
     },
-    '7ncfftfs': {
-      'es': 'Hernández',
-      'en': 'Hernandez',
+    'ubctzrtj': {
+      'es': '',
+      'en': '',
     },
-    'didwakcd': {
-      'es': 'S. Apellido:',
-      'en': 'S. Last name:',
+    'hbccvsg9': {
+      'es': 'Segundo Apellido',
+      'en': '',
     },
-    '2obh7da7': {
-      'es': 'Araya',
-      'en': 'Araya',
+    '430kz1dy': {
+      'es': '',
+      'en': '',
     },
-    'f3cc4lma': {
-      'es': 'Correo E.:',
-      'en': 'Email:',
+    'zkxypeun': {
+      'es': 'Correo electrónico',
+      'en': '',
     },
-    'gzvho65y': {
-      'es': 'shernandez60228@ufide.ac.cr',
-      'en': 'shernandez60228@ufide.ac.cr',
+    'f7mx888z': {
+      'es': '',
+      'en': '',
     },
-    'vk5vb736': {
-      'es': 'Usuario:',
-      'en': 'User:',
+    'b4pa2tpc': {
+      'es': 'Por favor ingrese la cédula',
+      'en': '',
     },
-    'viffzz88': {
-      'es': 'Profesor',
-      'en': 'Teacher',
+    '68vf2ifx': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'tuya9iga': {
+      'es': 'Por favor ingrese el nombre',
+      'en': '',
+    },
+    '454xveoa': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'eyuv3fti': {
+      'es': 'Por favor ingrese el primer apellido',
+      'en': '',
+    },
+    'opd6wyq1': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '5outqyag': {
+      'es': 'Por favor ingrese el segundo apellido',
+      'en': '',
+    },
+    '2yjj9m3z': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'gduyytai': {
+      'es': 'Por favor ingrese el correo electrónico',
+      'en': '',
+    },
+    'kjhvpuh7': {
+      'es': 'Formato inválido',
+      'en': '',
+    },
+    'q1wmr1m9': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'w2cmaicb': {
+      'es': 'Actualizar',
+      'en': 'Continue',
     },
     'uh1qje3g': {
       'es': 'Home',
@@ -1224,8 +1159,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Profesor a cargo',
       'en': '',
     },
-    'hyi7xsk7': {
-      'es': 'Label here...',
+    'zqwcg2iy': {
+      'es': '',
+      'en': '',
+    },
+    'azlugtgz': {
+      'es': 'Seleccione al profesor...',
+      'en': '',
+    },
+    'iurzx7sb': {
+      'es': 'Search for an item...',
       'en': '',
     },
     'cmvg0dtm': {
@@ -1407,10 +1350,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Actualizar',
       'en': 'Continue',
     },
-    'r7zhcjhz': {
-      'es': 'Eliminar Usuario',
-      'en': 'Continue',
-    },
     '4rvqcmpv': {
       'es': 'Home',
       'en': 'home',
@@ -1418,27 +1357,57 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // EditarAnuncios
   {
-    'bnj0utym': {
+    '1yb3p8eu': {
       'es': 'Editar Anuncio',
       'en': 'Roll Call',
     },
-    '8s5g7gaf': {
-      'es': 'Actualizar Anuncio',
-      'en': 'New Announcement',
+    '0edu4sqe': {
+      'es': '',
+      'en': '',
     },
-    'xfx9ka95': {
-      'es': 'Descripcion',
+    '75u44jtt': {
+      'es': 'Titulo del Anuncio',
+      'en': '',
+    },
+    'b3ln94ox': {
+      'es': '',
       'en': 'Description',
     },
-    '9we9pn95': {
-      'es':
-          'Recuerda que este viernes es viernes de COLORES, todos los estudiantes podrán utilizar ropa particular. Atte: La dirección\n\nCosto: ₡200',
+    'odx4gcct': {
+      'es': 'Escriba aca todos los detalles de el anuncio a publicar...',
       'en':
-          'Remember that this Friday is COLORS Friday, all students will be able to wear private clothing. Atte: The address\n\nCost: ₡200',
+          'Write here all the details of the advertisement to be published...',
     },
-    'r0qhb43b': {
+    'ircyu0g3': {
+      'es': 'Por favor ingrese el título',
+      'en': '',
+    },
+    'w197m50z': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'nzjht32y': {
+      'es': 'Por favor ingrese la descripción',
+      'en': '',
+    },
+    'z8dbucue': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'elsw8q03': {
       'es': 'Actualizar',
       'en': 'Log in',
+    },
+  },
+  // ListaLikes
+  {
+    'd0r5dmqt': {
+      'es': 'Likes',
+      'en': 'Roll Call',
+    },
+    'rda1ud01': {
+      'es': 'Home',
+      'en': 'home',
     },
   },
   // slideLateral
@@ -1448,24 +1417,39 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Account Options',
     },
     'iikabzt7': {
-      'es': 'My Account',
+      'es': 'Mi Perfil',
       'en': 'My Account',
     },
-    '4ngurs3i': {
-      'es': 'Settings',
-      'en': 'Settings',
-    },
-    'ka0vepzv': {
-      'es': 'Billing Details',
-      'en': 'Billing Details',
-    },
     'm8n3bary': {
-      'es': 'Log out',
+      'es': 'Cerrar Sesión',
       'en': 'Log out',
+    },
+  },
+  // CambiarFoto
+  {
+    'mi54v6qf': {
+      'es': 'Cambiar foto de perfil',
+      'en': '',
+    },
+    'oiqc9rpr': {
+      'es': 'Subir imagen',
+      'en': '',
+    },
+    'b85djwyb': {
+      'es': 'Guardar',
+      'en': '',
     },
   },
   // Miscellaneous
   {
+    'hsh2lehx': {
+      'es': '',
+      'en': '',
+    },
+    '0ry9w4v7': {
+      'es': '',
+      'en': '',
+    },
     'os61fs8l': {
       'es': '',
       'en': '',

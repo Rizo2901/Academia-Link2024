@@ -20,8 +20,26 @@ class AnunciosRecord extends FirestoreRecord {
   String get descripcion => _descripcion ?? '';
   bool hasDescripcion() => _descripcion != null;
 
+  // "titulo" field.
+  String? _titulo;
+  String get titulo => _titulo ?? '';
+  bool hasTitulo() => _titulo != null;
+
+  // "like_usuario" field.
+  List<DocumentReference>? _likeUsuario;
+  List<DocumentReference> get likeUsuario => _likeUsuario ?? const [];
+  bool hasLikeUsuario() => _likeUsuario != null;
+
+  // "fecha_publicacion" field.
+  DateTime? _fechaPublicacion;
+  DateTime? get fechaPublicacion => _fechaPublicacion;
+  bool hasFechaPublicacion() => _fechaPublicacion != null;
+
   void _initializeFields() {
     _descripcion = snapshotData['descripcion'] as String?;
+    _titulo = snapshotData['titulo'] as String?;
+    _likeUsuario = getDataList(snapshotData['like_usuario']);
+    _fechaPublicacion = snapshotData['fecha_publicacion'] as DateTime?;
   }
 
   static CollectionReference get collection =>
@@ -60,10 +78,14 @@ class AnunciosRecord extends FirestoreRecord {
 
 Map<String, dynamic> createAnunciosRecordData({
   String? descripcion,
+  String? titulo,
+  DateTime? fechaPublicacion,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
       'descripcion': descripcion,
+      'titulo': titulo,
+      'fecha_publicacion': fechaPublicacion,
     }.withoutNulls,
   );
 
@@ -75,11 +97,16 @@ class AnunciosRecordDocumentEquality implements Equality<AnunciosRecord> {
 
   @override
   bool equals(AnunciosRecord? e1, AnunciosRecord? e2) {
-    return e1?.descripcion == e2?.descripcion;
+    const listEquality = ListEquality();
+    return e1?.descripcion == e2?.descripcion &&
+        e1?.titulo == e2?.titulo &&
+        listEquality.equals(e1?.likeUsuario, e2?.likeUsuario) &&
+        e1?.fechaPublicacion == e2?.fechaPublicacion;
   }
 
   @override
-  int hash(AnunciosRecord? e) => const ListEquality().hash([e?.descripcion]);
+  int hash(AnunciosRecord? e) => const ListEquality()
+      .hash([e?.descripcion, e?.titulo, e?.likeUsuario, e?.fechaPublicacion]);
 
   @override
   bool isValidKey(Object? o) => o is AnunciosRecord;

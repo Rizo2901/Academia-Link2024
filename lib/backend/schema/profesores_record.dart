@@ -30,10 +30,16 @@ class ProfesoresRecord extends FirestoreRecord {
   List<String> get idProfesor => _idProfesor ?? const [];
   bool hasIdProfesor() => _idProfesor != null;
 
+  // "nombre" field.
+  String? _nombre;
+  String get nombre => _nombre ?? '';
+  bool hasNombre() => _nombre != null;
+
   void _initializeFields() {
     _materias = getDataList(snapshotData['materias']);
     _gruposProfesor = getDataList(snapshotData['gruposProfesor']);
     _idProfesor = getDataList(snapshotData['idProfesor']);
+    _nombre = snapshotData['nombre'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -70,9 +76,13 @@ class ProfesoresRecord extends FirestoreRecord {
       reference.path.hashCode == other.reference.path.hashCode;
 }
 
-Map<String, dynamic> createProfesoresRecordData() {
+Map<String, dynamic> createProfesoresRecordData({
+  String? nombre,
+}) {
   final firestoreData = mapToFirestore(
-    <String, dynamic>{}.withoutNulls,
+    <String, dynamic>{
+      'nombre': nombre,
+    }.withoutNulls,
   );
 
   return firestoreData;
@@ -86,12 +96,13 @@ class ProfesoresRecordDocumentEquality implements Equality<ProfesoresRecord> {
     const listEquality = ListEquality();
     return listEquality.equals(e1?.materias, e2?.materias) &&
         listEquality.equals(e1?.gruposProfesor, e2?.gruposProfesor) &&
-        listEquality.equals(e1?.idProfesor, e2?.idProfesor);
+        listEquality.equals(e1?.idProfesor, e2?.idProfesor) &&
+        e1?.nombre == e2?.nombre;
   }
 
   @override
   int hash(ProfesoresRecord? e) => const ListEquality()
-      .hash([e?.materias, e?.gruposProfesor, e?.idProfesor]);
+      .hash([e?.materias, e?.gruposProfesor, e?.idProfesor, e?.nombre]);
 
   @override
   bool isValidKey(Object? o) => o is ProfesoresRecord;

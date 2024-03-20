@@ -1,4 +1,5 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/components/slide_lateral_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -8,7 +9,14 @@ import 'home_page_profesor_model.dart';
 export 'home_page_profesor_model.dart';
 
 class HomePageProfesorWidget extends StatefulWidget {
-  const HomePageProfesorWidget({super.key});
+  const HomePageProfesorWidget({
+    super.key,
+    this.profeso,
+    this.profesorName,
+  });
+
+  final String? profeso;
+  final ProfesoresRecord? profesorName;
 
   @override
   State<HomePageProfesorWidget> createState() => _HomePageProfesorWidgetState();
@@ -128,7 +136,7 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                     child: SizedBox(
                                       height:
                                           MediaQuery.sizeOf(context).height *
-                                              0.5,
+                                              0.3,
                                       child: const SlideLateralWidget(),
                                     ),
                                   ),
@@ -170,13 +178,14 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                 onTap: () async {
                                   context.pushNamed(
                                     'MisgruposProfesor',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: const TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType:
-                                            PageTransitionType.bottomToTop,
-                                        duration: Duration(milliseconds: 250),
+                                    queryParameters: {
+                                      'profesor': serializeParam(
+                                        widget.profesorName,
+                                        ParamType.Document,
                                       ),
+                                    }.withoutNulls,
+                                    extra: <String, dynamic>{
+                                      'profesor': widget.profesorName,
                                     },
                                   );
                                 },
@@ -384,71 +393,81 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                                   ],
                                   borderRadius: BorderRadius.circular(25.0),
                                 ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      child: Row(
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.pushNamed('ListaAnuncios');
+                                  },
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Expanded(
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Expanded(
+                                              child: Padding(
+                                                padding: const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        15.0, 10.0, 15.0, 0.0),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                  child: Image.asset(
+                                                    'assets/images/news.png',
+                                                    width: 300.0,
+                                                    height: 80.0,
+                                                    fit: BoxFit.contain,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Expanded(
-                                            child: Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      15.0, 10.0, 15.0, 0.0),
-                                              child: ClipRRect(
+                                            child: Container(
+                                              height: MediaQuery.sizeOf(context)
+                                                      .height *
+                                                  0.05,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
                                                 borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                                child: Image.asset(
-                                                  'assets/images/news.png',
-                                                  width: 300.0,
-                                                  height: 80.0,
-                                                  fit: BoxFit.contain,
+                                                    BorderRadius.circular(25.0),
+                                              ),
+                                              alignment: const AlignmentDirectional(
+                                                  0.0, 0.0),
+                                              child: Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'h7b68dzp' /* Anuncios */,
                                                 ),
+                                                textAlign: TextAlign.center,
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'PT Sans',
+                                                          fontSize: 20.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
                                               ),
                                             ),
                                           ),
                                         ],
                                       ),
-                                    ),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Expanded(
-                                          child: Container(
-                                            height: MediaQuery.sizeOf(context)
-                                                    .height *
-                                                0.05,
-                                            decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                              borderRadius:
-                                                  BorderRadius.circular(25.0),
-                                            ),
-                                            alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
-                                            child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'h7b68dzp' /* Anuncios */,
-                                              ),
-                                              textAlign: TextAlign.center,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'PT Sans',
-                                                        fontSize: 20.0,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),

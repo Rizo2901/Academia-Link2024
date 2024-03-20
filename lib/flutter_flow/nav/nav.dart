@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -73,14 +74,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) => appStateNotifier.loggedIn
           ? const HomePageProfesorWidget()
-          : const CrearUsuarioWidget(),
+          : const ListaAnunciosWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
               ? const HomePageProfesorWidget()
-              : const CrearUsuarioWidget(),
+              : const ListaAnunciosWidget(),
         ),
         FFRoute(
           name: 'Inicio',
@@ -95,7 +96,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'HomePageProfesor',
           path: '/homePageProfesor',
-          builder: (context, params) => const HomePageProfesorWidget(),
+          asyncParams: {
+            'profesorName':
+                getDoc(['profesores'], ProfesoresRecord.fromSnapshot),
+          },
+          builder: (context, params) => HomePageProfesorWidget(
+            profeso: params.getParam('profeso', ParamType.String),
+            profesorName: params.getParam('profesorName', ParamType.Document),
+          ),
         ),
         FFRoute(
           name: 'CrearUsuario',
@@ -105,7 +113,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'MisgruposProfesor',
           path: '/misgruposProfesor',
-          builder: (context, params) => const MisgruposProfesorWidget(),
+          asyncParams: {
+            'profesor': getDoc(['profesores'], ProfesoresRecord.fromSnapshot),
+          },
+          builder: (context, params) => MisgruposProfesorWidget(
+            profesor: params.getParam('profesor', ParamType.Document),
+          ),
         ),
         FFRoute(
           name: 'ListaUsuarios',
@@ -116,11 +129,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'HomePageEstudiante',
           path: '/homePageEstudiante',
           builder: (context, params) => const HomePageEstudianteWidget(),
-        ),
-        FFRoute(
-          name: 'Anuncios',
-          path: '/anuncios',
-          builder: (context, params) => const AnunciosWidget(),
         ),
         FFRoute(
           name: 'TareasProfesor',
@@ -180,7 +188,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Creargrupos',
           path: '/creargrupos',
-          builder: (context, params) => const CreargruposWidget(),
+          asyncParams: {
+            'profesor': getDoc(['profesores'], ProfesoresRecord.fromSnapshot),
+          },
+          builder: (context, params) => CreargruposWidget(
+            profesor: params.getParam('profesor', ParamType.Document),
+          ),
         ),
         FFRoute(
           name: 'EditarUsuario',
@@ -191,6 +204,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'EditarAnuncios',
           path: '/editarAnuncios',
           builder: (context, params) => const EditarAnunciosWidget(),
+        ),
+        FFRoute(
+          name: 'ListaLikes',
+          path: '/listaLikes',
+          asyncParams: {
+            'dddd': getDoc(['anuncios'], AnunciosRecord.fromSnapshot),
+          },
+          builder: (context, params) => ListaLikesWidget(
+            dddd: params.getParam('dddd', ParamType.Document),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -357,7 +380,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/crearUsuario';
+            return '/listaAnuncios';
           }
           return null;
         },

@@ -11,11 +11,9 @@ class CreargruposModel extends FlutterFlowModel<CreargruposWidget> {
   FocusNode? txtFSeccionFocusNode;
   TextEditingController? txtFSeccionController;
   String? Function(BuildContext, String?)? txtFSeccionControllerValidator;
-  // State field(s) for txtFNombreProfesor widget.
-  FocusNode? txtFNombreProfesorFocusNode;
-  TextEditingController? txtFNombreProfesorController;
-  String? Function(BuildContext, String?)?
-      txtFNombreProfesorControllerValidator;
+  // State field(s) for dropProfesor widget.
+  String? dropProfesorValue;
+  FormFieldController<String>? dropProfesorValueController;
   // State field(s) for dropMaterias widget.
   List<String>? dropMateriasValue;
   FormFieldController<List<String>>? dropMateriasValueController;
@@ -30,9 +28,6 @@ class CreargruposModel extends FlutterFlowModel<CreargruposWidget> {
     unfocusNode.dispose();
     txtFSeccionFocusNode?.dispose();
     txtFSeccionController?.dispose();
-
-    txtFNombreProfesorFocusNode?.dispose();
-    txtFNombreProfesorController?.dispose();
   }
 
   /// Action blocks are added here.

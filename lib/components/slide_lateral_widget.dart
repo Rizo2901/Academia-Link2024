@@ -75,13 +75,15 @@ class _SlideLateralWidgetState extends State<SlideLateralWidget> {
                     Padding(
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(40.0),
-                        child: Image.network(
-                          'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
-                          width: 32.0,
-                          height: 32.0,
-                          fit: BoxFit.cover,
+                      child: AuthUserStreamWidget(
+                        builder: (context) => ClipRRect(
+                          borderRadius: BorderRadius.circular(40.0),
+                          child: Image.network(
+                            currentUserPhoto,
+                            width: 32.0,
+                            height: 32.0,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
@@ -163,109 +165,20 @@ class _SlideLateralWidgetState extends State<SlideLateralWidget> {
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                'iikabzt7' /* My Account */,
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed('Perfil');
+                              },
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  'iikabzt7' /* Mi Perfil */,
+                                ),
+                                style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              MouseRegion(
-                opaque: false,
-                cursor: SystemMouseCursors.basic ?? MouseCursor.defer,
-                onEnter: ((event) async {
-                  setState(() => _model.mouseRegionHovered2 = true);
-                }),
-                onExit: ((event) async {
-                  setState(() => _model.mouseRegionHovered2 = false);
-                }),
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 150),
-                  curve: Curves.easeInOut,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: _model.mouseRegionHovered2
-                        ? FlutterFlowTheme.of(context).primaryBackground
-                        : FlutterFlowTheme.of(context).secondaryBackground,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              12.0, 0.0, 0.0, 0.0),
-                          child: Icon(
-                            Icons.settings_outlined,
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            size: 20.0,
-                          ),
-                        ),
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 0.0, 0.0),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                '4ngurs3i' /* Settings */,
-                              ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              MouseRegion(
-                opaque: false,
-                cursor: SystemMouseCursors.click ?? MouseCursor.defer,
-                onEnter: ((event) async {
-                  setState(() => _model.mouseRegionHovered3 = true);
-                }),
-                onExit: ((event) async {
-                  setState(() => _model.mouseRegionHovered3 = false);
-                }),
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 150),
-                  curve: Curves.easeInOut,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: _model.mouseRegionHovered3
-                        ? FlutterFlowTheme.of(context).primaryBackground
-                        : FlutterFlowTheme.of(context).secondaryBackground,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              12.0, 0.0, 0.0, 0.0),
-                          child: Icon(
-                            Icons.attach_money_rounded,
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            size: 20.0,
-                          ),
-                        ),
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 0.0, 0.0),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                'ka0vepzv' /* Billing Details */,
-                              ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
                             ),
                           ),
                         ),
@@ -282,61 +195,61 @@ class _SlideLateralWidgetState extends State<SlideLateralWidget> {
                 opaque: false,
                 cursor: SystemMouseCursors.click ?? MouseCursor.defer,
                 onEnter: ((event) async {
-                  setState(() => _model.mouseRegionHovered4 = true);
+                  setState(() => _model.mouseRegionHovered2 = true);
                 }),
                 onExit: ((event) async {
-                  setState(() => _model.mouseRegionHovered4 = false);
+                  setState(() => _model.mouseRegionHovered2 = false);
                 }),
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 150),
-                  curve: Curves.easeInOut,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: _model.mouseRegionHovered4
-                        ? FlutterFlowTheme.of(context).primaryBackground
-                        : FlutterFlowTheme.of(context).secondaryBackground,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              12.0, 0.0, 0.0, 0.0),
-                          child: Icon(
-                            Icons.login_rounded,
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            size: 20.0,
-                          ),
-                        ),
-                        Expanded(
-                          child: Padding(
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    GoRouter.of(context).prepareAuthEvent();
+                    await authManager.signOut();
+                    GoRouter.of(context).clearRedirectLocation();
+
+                    context.pushNamedAuth('Login', context.mounted);
+                  },
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 150),
+                    curve: Curves.easeInOut,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: _model.mouseRegionHovered2
+                          ? FlutterFlowTheme.of(context).primaryBackground
+                          : FlutterFlowTheme.of(context).secondaryBackground,
+                    ),
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
-                            child: InkWell(
-                              splashColor: Colors.transparent,
-                              focusColor: Colors.transparent,
-                              hoverColor: Colors.transparent,
-                              highlightColor: Colors.transparent,
-                              onTap: () async {
-                                GoRouter.of(context).prepareAuthEvent();
-                                await authManager.signOut();
-                                GoRouter.of(context).clearRedirectLocation();
-
-                                context.goNamedAuth(
-                                    'CrearUsuario', context.mounted);
-                              },
+                            child: Icon(
+                              Icons.login_rounded,
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              size: 20.0,
+                            ),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  12.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  'm8n3bary' /* Log out */,
+                                  'm8n3bary' /* Cerrar Sesión */,
                                 ),
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),

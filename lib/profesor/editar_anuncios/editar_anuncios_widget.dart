@@ -23,8 +23,11 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
     super.initState();
     _model = createModel(context, () => EditarAnunciosModel());
 
-    _model.txtDescripcionAnuncioController ??= TextEditingController();
-    _model.txtDescripcionAnuncioFocusNode ??= FocusNode();
+    _model.txtEditarTituloController ??= TextEditingController();
+    _model.txtEditarTituloFocusNode ??= FocusNode();
+
+    _model.txtEditarAnuncioController ??= TextEditingController();
+    _model.txtEditarAnuncioFocusNode ??= FocusNode();
   }
 
   @override
@@ -53,7 +56,7 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
               children: [
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
-                  height: 177.0,
+                  height: 150.0,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
@@ -116,7 +119,7 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
                                         45.0, 10.0, 52.0, 10.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
-                                        'bnj0utym' /* Editar Anuncio */,
+                                        '1yb3p8eu' /* Editar Anuncio */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -157,7 +160,7 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
                                                 height:
                                                     MediaQuery.sizeOf(context)
                                                             .height *
-                                                        0.5,
+                                                        0.3,
                                                 child: const SlideLateralWidget(),
                                               ),
                                             ),
@@ -188,80 +191,145 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Align(
-                    alignment: const AlignmentDirectional(0.0, -1.0),
-                    child: Text(
-                      FFLocalizations.of(context).getText(
-                        '8s5g7gaf' /* Actualizar Anuncio */,
-                      ),
-                      style:
-                          FlutterFlowTheme.of(context).headlineLarge.override(
-                                fontFamily: 'Montserrat',
-                                color: FlutterFlowTheme.of(context).primaryText,
-                              ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 0.0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                      child: TextFormField(
-                        controller: _model.txtDescripcionAnuncioController,
-                        focusNode: _model.txtDescripcionAnuncioFocusNode,
-                        obscureText: false,
-                        decoration: InputDecoration(
-                          labelText: FFLocalizations.of(context).getText(
-                            'xfx9ka95' /* Descripcion */,
-                          ),
-                          hintText: FFLocalizations.of(context).getText(
-                            '9we9pn95' /* Recuerda que este viernes es v... */,
-                          ),
-                          hintStyle: FlutterFlowTheme.of(context).bodyMedium,
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              width: 2.0,
+                    child: Form(
+                      key: _model.formKey,
+                      autovalidateMode: AutovalidateMode.disabled,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                8.0, 0.0, 8.0, 0.0),
+                            child: TextFormField(
+                              controller: _model.txtEditarTituloController,
+                              focusNode: _model.txtEditarTituloFocusNode,
+                              autofocus: true,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                alignLabelWithHint: false,
+                                hintText: FFLocalizations.of(context).getText(
+                                  '75u44jtt' /* Titulo del Anuncio */,
+                                ),
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Montserrat',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      fontSize: 32.0,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color:
+                                        FlutterFlowTheme.of(context).alternate,
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                errorBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context).error,
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                focusedErrorBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context).error,
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Montserrat',
+                                    fontSize: 32.0,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                              textAlign: TextAlign.center,
+                              validator: _model
+                                  .txtEditarTituloControllerValidator
+                                  .asValidator(context),
                             ),
-                            borderRadius: BorderRadius.circular(8.0),
                           ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color(0x00000000),
-                              width: 2.0,
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 20.0, 0.0, 0.0),
+                            child: Container(
+                              height: 200.0,
+                              decoration: const BoxDecoration(),
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                child: TextFormField(
+                                  controller: _model.txtEditarAnuncioController,
+                                  focusNode: _model.txtEditarAnuncioFocusNode,
+                                  obscureText: false,
+                                  decoration: InputDecoration(
+                                    labelStyle:
+                                        FlutterFlowTheme.of(context).bodyMedium,
+                                    alignLabelWithHint: false,
+                                    hintText:
+                                        FFLocalizations.of(context).getText(
+                                      'odx4gcct' /* Escriba aca todos los detalles... */,
+                                    ),
+                                    enabledBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        width: 2.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderSide: const BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 2.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    errorBorder: OutlineInputBorder(
+                                      borderSide: const BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 2.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    focusedErrorBorder: OutlineInputBorder(
+                                      borderSide: const BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 2.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    contentPadding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            20.0, 32.0, 20.0, 12.0),
+                                  ),
+                                  style:
+                                      FlutterFlowTheme.of(context).bodyMedium,
+                                  maxLines: 10,
+                                  validator: _model
+                                      .txtEditarAnuncioControllerValidator
+                                      .asValidator(context),
+                                ),
+                              ),
                             ),
-                            borderRadius: BorderRadius.circular(8.0),
                           ),
-                          errorBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color(0x00000000),
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          focusedErrorBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color(0x00000000),
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                              20.0, 32.0, 20.0, 12.0),
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium,
-                        maxLines: 5,
-                        validator: _model
-                            .txtDescripcionAnuncioControllerValidator
-                            .asValidator(context),
+                        ],
                       ),
                     ),
                   ),
@@ -279,11 +347,14 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(11.0, 0.0, 11.0, 0.0),
                       child: FFButtonWidget(
-                        onPressed: () {
-                          print('btnEditarAnuncio pressed ...');
+                        onPressed: () async {
+                          if (_model.formKey.currentState == null ||
+                              !_model.formKey.currentState!.validate()) {
+                            return;
+                          }
                         },
                         text: FFLocalizations.of(context).getText(
-                          'r0qhb43b' /* Actualizar */,
+                          'elsw8q03' /* Actualizar */,
                         ),
                         icon: const Icon(
                           Icons.publish_rounded,

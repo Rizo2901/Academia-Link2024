@@ -1,3 +1,4 @@
+import '/backend/backend.dart';
 import '/components/slide_lateral_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -22,6 +23,9 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => CrearAnunciosModel());
+
+    _model.txtTituloController ??= TextEditingController();
+    _model.txtTituloFocusNode ??= FocusNode();
 
     _model.txtDescripcionAnuncioController ??= TextEditingController();
     _model.txtDescripcionAnuncioFocusNode ??= FocusNode();
@@ -53,7 +57,7 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
               children: [
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
-                  height: 177.0,
+                  height: 150.0,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
@@ -157,7 +161,7 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                                                 height:
                                                     MediaQuery.sizeOf(context)
                                                             .height *
-                                                        0.5,
+                                                        0.3,
                                                 child: const SlideLateralWidget(),
                                               ),
                                             ),
@@ -188,80 +192,146 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Align(
-                    alignment: const AlignmentDirectional(0.0, -1.0),
-                    child: Text(
-                      FFLocalizations.of(context).getText(
-                        '4u754800' /* Nuevo Anuncio */,
-                      ),
-                      style:
-                          FlutterFlowTheme.of(context).headlineLarge.override(
-                                fontFamily: 'Montserrat',
-                                color: FlutterFlowTheme.of(context).primaryText,
-                              ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 0.0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                      child: TextFormField(
-                        controller: _model.txtDescripcionAnuncioController,
-                        focusNode: _model.txtDescripcionAnuncioFocusNode,
-                        obscureText: false,
-                        decoration: InputDecoration(
-                          labelText: FFLocalizations.of(context).getText(
-                            'dbgzccb7' /* Descripcion */,
-                          ),
-                          hintText: FFLocalizations.of(context).getText(
-                            '5d8j4qme' /* Escriba aca todos los detalles... */,
-                          ),
-                          hintStyle: FlutterFlowTheme.of(context).labelSmall,
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              width: 2.0,
+                    child: Form(
+                      key: _model.formKey,
+                      autovalidateMode: AutovalidateMode.disabled,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                8.0, 0.0, 8.0, 0.0),
+                            child: TextFormField(
+                              controller: _model.txtTituloController,
+                              focusNode: _model.txtTituloFocusNode,
+                              autofocus: true,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                alignLabelWithHint: false,
+                                hintText: FFLocalizations.of(context).getText(
+                                  'kqa0zvfp' /* Titulo del Anuncio */,
+                                ),
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Montserrat',
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      fontSize: 32.0,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color:
+                                        FlutterFlowTheme.of(context).alternate,
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                errorBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context).error,
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                focusedErrorBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context).error,
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Montserrat',
+                                    fontSize: 32.0,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                              textAlign: TextAlign.center,
+                              validator: _model.txtTituloControllerValidator
+                                  .asValidator(context),
                             ),
-                            borderRadius: BorderRadius.circular(8.0),
                           ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color(0x00000000),
-                              width: 2.0,
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 20.0, 0.0, 0.0),
+                            child: Container(
+                              height: 147.0,
+                              decoration: const BoxDecoration(),
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                child: TextFormField(
+                                  controller:
+                                      _model.txtDescripcionAnuncioController,
+                                  focusNode:
+                                      _model.txtDescripcionAnuncioFocusNode,
+                                  obscureText: false,
+                                  decoration: InputDecoration(
+                                    labelStyle:
+                                        FlutterFlowTheme.of(context).bodyMedium,
+                                    alignLabelWithHint: false,
+                                    hintText:
+                                        FFLocalizations.of(context).getText(
+                                      '3jngoldl' /* Escriba aca todos los detalles... */,
+                                    ),
+                                    enabledBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        width: 2.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderSide: const BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 2.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    errorBorder: OutlineInputBorder(
+                                      borderSide: const BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 2.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    focusedErrorBorder: OutlineInputBorder(
+                                      borderSide: const BorderSide(
+                                        color: Color(0x00000000),
+                                        width: 2.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    contentPadding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            20.0, 32.0, 20.0, 12.0),
+                                  ),
+                                  style:
+                                      FlutterFlowTheme.of(context).bodyMedium,
+                                  maxLines: 5,
+                                  validator: _model
+                                      .txtDescripcionAnuncioControllerValidator
+                                      .asValidator(context),
+                                ),
+                              ),
                             ),
-                            borderRadius: BorderRadius.circular(8.0),
                           ),
-                          errorBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color(0x00000000),
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          focusedErrorBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color(0x00000000),
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                              20.0, 32.0, 20.0, 12.0),
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium,
-                        maxLines: 5,
-                        validator: _model
-                            .txtDescripcionAnuncioControllerValidator
-                            .asValidator(context),
+                        ],
                       ),
                     ),
                   ),
@@ -269,7 +339,7 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
               ),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -279,8 +349,36 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(11.0, 0.0, 11.0, 0.0),
                       child: FFButtonWidget(
-                        onPressed: () {
-                          print('btnPublicarAnuncio pressed ...');
+                        onPressed: () async {
+                          if (_model.formKey.currentState == null ||
+                              !_model.formKey.currentState!.validate()) {
+                            return;
+                          }
+
+                          await AnunciosRecord.collection
+                              .doc()
+                              .set(createAnunciosRecordData(
+                                titulo: _model.txtTituloController.text,
+                                descripcion:
+                                    _model.txtDescripcionAnuncioController.text,
+                                fechaPublicacion: getCurrentTimestamp,
+                              ));
+
+                          context.pushNamed('ListaAnuncios');
+
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                'Anuncio creado con éxito',
+                                style: TextStyle(
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
+                                ),
+                              ),
+                              duration: const Duration(milliseconds: 4000),
+                              backgroundColor: const Color(0xFF070D59),
+                            ),
+                          );
                         },
                         text: FFLocalizations.of(context).getText(
                           '1rifljq0' /* Publicar */,

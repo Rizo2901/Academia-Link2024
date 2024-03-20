@@ -1,4 +1,5 @@
-import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
+import '/components/slide_lateral_widget.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -9,7 +10,12 @@ import 'creargrupos_model.dart';
 export 'creargrupos_model.dart';
 
 class CreargruposWidget extends StatefulWidget {
-  const CreargruposWidget({super.key});
+  const CreargruposWidget({
+    super.key,
+    required this.profesor,
+  });
+
+  final ProfesoresRecord? profesor;
 
   @override
   State<CreargruposWidget> createState() => _CreargruposWidgetState();
@@ -27,10 +33,6 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
 
     _model.txtFSeccionController ??= TextEditingController();
     _model.txtFSeccionFocusNode ??= FocusNode();
-
-    _model.txtFNombreProfesorController ??=
-        TextEditingController(text: currentUserDisplayName);
-    _model.txtFNombreProfesorFocusNode ??= FocusNode();
   }
 
   @override
@@ -128,11 +130,46 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 10.0, 10.0, 10.0),
-                                  child: Icon(
-                                    Icons.menu,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                    size: 31.0,
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      await showModalBottomSheet(
+                                        isScrollControlled: true,
+                                        backgroundColor: Colors.transparent,
+                                        context: context,
+                                        builder: (context) {
+                                          return GestureDetector(
+                                            onTap: () => _model
+                                                    .unfocusNode.canRequestFocus
+                                                ? FocusScope.of(context)
+                                                    .requestFocus(
+                                                        _model.unfocusNode)
+                                                : FocusScope.of(context)
+                                                    .unfocus(),
+                                            child: Padding(
+                                              padding: MediaQuery.viewInsetsOf(
+                                                  context),
+                                              child: SizedBox(
+                                                height:
+                                                    MediaQuery.sizeOf(context)
+                                                            .height *
+                                                        0.3,
+                                                child: const SlideLateralWidget(),
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      ).then((value) => safeSetState(() {}));
+                                    },
+                                    child: Icon(
+                                      Icons.menu,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      size: 31.0,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -146,9 +183,9 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
               ],
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 8.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 16.0, 8.0, 0.0),
               child: Container(
-                width: 390.0,
+                width: 372.0,
                 height: 100.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -344,80 +381,84 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Container(
-                                    width: 279.0,
+                                    width: 297.0,
                                     decoration: const BoxDecoration(),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 0.0, 8.0, 0.0),
-                                      child: AuthUserStreamWidget(
-                                        builder: (context) => TextFormField(
-                                          controller: _model
-                                              .txtFNombreProfesorController,
-                                          focusNode: _model
-                                              .txtFNombreProfesorFocusNode,
-                                          autofocus: true,
-                                          obscureText: false,
-                                          decoration: InputDecoration(
-                                            labelText:
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                              'hyi7xsk7' /* Label here... */,
-                                            ),
-                                            labelStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .labelMedium,
-                                            hintStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .labelMedium,
-                                            enabledBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .alternate,
-                                                width: 2.0,
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            ),
-                                            focusedBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                                width: 2.0,
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            ),
-                                            errorBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .error,
-                                                width: 2.0,
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            ),
-                                            focusedErrorBorder:
-                                                UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .error,
-                                                width: 2.0,
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            ),
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
-                                          validator: _model
-                                              .txtFNombreProfesorControllerValidator
-                                              .asValidator(context),
-                                        ),
+                                    child:
+                                        StreamBuilder<List<ProfesoresRecord>>(
+                                      stream: queryProfesoresRecord(
+                                        singleRecord: true,
                                       ),
+                                      builder: (context, snapshot) {
+                                        // Customize what your widget looks like when it's loading.
+                                        if (!snapshot.hasData) {
+                                          return Center(
+                                            child: SizedBox(
+                                              width: 50.0,
+                                              height: 50.0,
+                                              child: CircularProgressIndicator(
+                                                valueColor:
+                                                    AlwaysStoppedAnimation<
+                                                        Color>(
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                                ),
+                                              ),
+                                            ),
+                                          );
+                                        }
+                                        List<ProfesoresRecord>
+                                            dropProfesorProfesoresRecordList =
+                                            snapshot.data!;
+                                        // Return an empty Container when the item does not exist.
+                                        if (snapshot.data!.isEmpty) {
+                                          return Container();
+                                        }
+                                        final dropProfesorProfesoresRecord =
+                                            dropProfesorProfesoresRecordList
+                                                    .isNotEmpty
+                                                ? dropProfesorProfesoresRecordList
+                                                    .first
+                                                : null;
+                                        return FlutterFlowDropDown<String>(
+                                          controller: _model
+                                                  .dropProfesorValueController ??=
+                                              FormFieldController<String>(null),
+                                          options: const <String>[],
+                                          onChanged: (val) => setState(() =>
+                                              _model.dropProfesorValue = val),
+                                          width: 604.0,
+                                          height: 65.0,
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium,
+                                          hintText: FFLocalizations.of(context)
+                                              .getText(
+                                            'azlugtgz' /* Seleccione al profesor... */,
+                                          ),
+                                          icon: Icon(
+                                            Icons.keyboard_arrow_down_rounded,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                            size: 24.0,
+                                          ),
+                                          fillColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .secondaryBackground,
+                                          elevation: 2.0,
+                                          borderColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .alternate,
+                                          borderWidth: 2.0,
+                                          borderRadius: 8.0,
+                                          margin:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  16.0, 4.0, 16.0, 4.0),
+                                          hidesUnderline: true,
+                                          isOverButton: true,
+                                          isSearchable: false,
+                                          isMultiSelect: false,
+                                        );
+                                      },
                                     ),
                                   ),
                                 ],
@@ -505,21 +546,11 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                       ],
                                       width: 604.0,
                                       height: 65.0,
-                                      searchHintTextStyle:
-                                          FlutterFlowTheme.of(context)
-                                              .labelMedium,
-                                      searchTextStyle:
-                                          FlutterFlowTheme.of(context)
-                                              .bodyMedium,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                       hintText:
                                           FFLocalizations.of(context).getText(
                                         'doce0uht' /* Selecione las materias a impar... */,
-                                      ),
-                                      searchHintText:
-                                          FFLocalizations.of(context).getText(
-                                        'jrw5e4e2' /* Search for an item... */,
                                       ),
                                       icon: Icon(
                                         Icons.keyboard_arrow_down_rounded,
@@ -538,7 +569,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                           16.0, 4.0, 16.0, 4.0),
                                       hidesUnderline: true,
                                       isOverButton: true,
-                                      isSearchable: true,
+                                      isSearchable: false,
                                       isMultiSelect: true,
                                       onMultiSelectChanged: (val) => setState(
                                           () => _model.dropMateriasValue = val),
@@ -562,8 +593,13 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             FFButtonWidget(
-                              onPressed: () {
-                                print('btnGuardarGrupo pressed ...');
+                              onPressed: () async {
+                                await GruposRecord.collection
+                                    .doc()
+                                    .set(createGruposRecordData(
+                                      seccion:
+                                          _model.txtFSeccionController.text,
+                                    ));
                               },
                               text: FFLocalizations.of(context).getText(
                                 'u1rs4k3c' /* Crear Grupo */,
@@ -574,7 +610,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                     24.0, 0.0, 24.0, 0.0),
                                 iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: const Color(0xFF60C76D),
+                                color: const Color(0xFF070D59),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -586,7 +622,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
-                                borderRadius: BorderRadius.circular(8.0),
+                                borderRadius: BorderRadius.circular(10.0),
                               ),
                             ),
                           ],

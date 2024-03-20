@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'anuncios_widget.dart' show AnunciosWidget;
+import 'lista_likes_widget.dart' show ListaLikesWidget;
 import 'package:flutter/material.dart';
 
-class AnunciosModel extends FlutterFlowModel<AnunciosWidget> {
+class ListaLikesModel extends FlutterFlowModel<ListaLikesWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

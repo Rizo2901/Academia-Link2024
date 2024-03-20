@@ -1,3 +1,4 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -7,7 +8,12 @@ import 'misgrupos_profesor_model.dart';
 export 'misgrupos_profesor_model.dart';
 
 class MisgruposProfesorWidget extends StatefulWidget {
-  const MisgruposProfesorWidget({super.key});
+  const MisgruposProfesorWidget({
+    super.key,
+    required this.profesor,
+  });
+
+  final ProfesoresRecord? profesor;
 
   @override
   State<MisgruposProfesorWidget> createState() =>
@@ -168,7 +174,18 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                               0.0, 0.0, 18.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () async {
-                              context.pushNamed('Creargrupos');
+                              context.pushNamed(
+                                'Creargrupos',
+                                queryParameters: {
+                                  'profesor': serializeParam(
+                                    widget.profesor,
+                                    ParamType.Document,
+                                  ),
+                                }.withoutNulls,
+                                extra: <String, dynamic>{
+                                  'profesor': widget.profesor,
+                                },
+                              );
                             },
                             text: FFLocalizations.of(context).getText(
                               'j3d1hufr' /* Crear grupo */,

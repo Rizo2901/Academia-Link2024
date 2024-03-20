@@ -115,7 +115,7 @@ class _EditarGruposWidgetState extends State<EditarGruposWidget> {
                                     child: SizedBox(
                                       height:
                                           MediaQuery.sizeOf(context).height *
-                                              0.5,
+                                              0.3,
                                       child: const SlideLateralWidget(),
                                     ),
                                   ),

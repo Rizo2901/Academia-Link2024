@@ -73,7 +73,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
               children: [
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
-                  height: 177.0,
+                  height: 130.0,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
@@ -178,7 +178,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                                 height:
                                                     MediaQuery.sizeOf(context)
                                                             .height *
-                                                        0.5,
+                                                        0.3,
                                                 child: const SlideLateralWidget(),
                                               ),
                                             ),
@@ -224,13 +224,13 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                           children: [
                             Form(
                               key: _model.formKey,
-                              autovalidateMode: AutovalidateMode.disabled,
+                              autovalidateMode: AutovalidateMode.always,
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 5.0, 15.0),
+                                        5.0, 0.0, 5.0, 10.0),
                                     child: TextFormField(
                                       controller: _model.txtCedulaController,
                                       focusNode: _model.txtCedulaFocusNode,
@@ -292,7 +292,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 5.0, 15.0),
+                                        5.0, 0.0, 5.0, 10.0),
                                     child: TextFormField(
                                       controller: _model.txtNombreController,
                                       focusNode: _model.txtNombreFocusNode,
@@ -354,7 +354,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 5.0, 15.0),
+                                        5.0, 0.0, 5.0, 10.0),
                                     child: TextFormField(
                                       controller: _model.txtApellido1Controller,
                                       focusNode: _model.txtApellido1FocusNode,
@@ -416,7 +416,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 5.0, 15.0),
+                                        5.0, 0.0, 5.0, 10.0),
                                     child: TextFormField(
                                       controller: _model.txtApellido2Controller,
                                       focusNode: _model.txtApellido2FocusNode,
@@ -478,7 +478,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 5.0, 15.0),
+                                        5.0, 0.0, 5.0, 10.0),
                                     child: TextFormField(
                                       controller: _model.txtCorreoController,
                                       focusNode: _model.txtCorreoFocusNode,
@@ -540,7 +540,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 5.0, 15.0),
+                                        5.0, 0.0, 5.0, 10.0),
                                     child: TextFormField(
                                       controller:
                                           _model.txtContrasenaController,
@@ -619,7 +619,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 15.0, 5.0, 0.0),
+                                        5.0, 10.0, 5.0, 0.0),
                                     child: StreamBuilder<List<RolesRecord>>(
                                       stream: queryRolesRecord(),
                                       builder: (context, snapshot) {
@@ -656,7 +656,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                                   1.0,
                                           height: MediaQuery.sizeOf(context)
                                                   .height *
-                                              0.054,
+                                              0.06,
                                           textStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium,

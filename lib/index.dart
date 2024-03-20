@@ -11,7 +11,6 @@ export '/listas/lista_usuarios/lista_usuarios_widget.dart'
     show ListaUsuariosWidget;
 export '/estudiante/home_page_estudiante/home_page_estudiante_widget.dart'
     show HomePageEstudianteWidget;
-export '/pages/anuncios/anuncios_widget.dart' show AnunciosWidget;
 export '/profesor/tareas_profesor/tareas_profesor_widget.dart'
     show TareasProfesorWidget;
 export '/profesor/crear_anuncios/crear_anuncios_widget.dart'
@@ -37,3 +36,4 @@ export '/profesor/editar_usuario/editar_usuario_widget.dart'
     show EditarUsuarioWidget;
 export '/profesor/editar_anuncios/editar_anuncios_widget.dart'
     show EditarAnunciosWidget;
+export '/listas/lista_likes/lista_likes_widget.dart' show ListaLikesWidget;
