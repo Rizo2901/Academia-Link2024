@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'editar_anuncios_model.dart';
 export 'editar_anuncios_model.dart';
 
@@ -248,7 +249,7 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
                                           fontFamily: 'Montserrat',
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          fontSize: 32.0,
+                                          fontSize: 28.0,
                                           fontWeight: FontWeight.w600,
                                         ),
                                     enabledBorder: UnderlineInputBorder(
@@ -292,6 +293,9 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
                                         fontWeight: FontWeight.w600,
                                       ),
                                   textAlign: TextAlign.center,
+                                  maxLength: 35,
+                                  maxLengthEnforcement:
+                                      MaxLengthEnforcement.enforced,
                                   validator: _model
                                       .txtEditarTituloControllerValidator
                                       .asValidator(context),
@@ -362,6 +366,9 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                       maxLines: 10,
+                                      maxLength: 250,
+                                      maxLengthEnforcement:
+                                          MaxLengthEnforcement.enforced,
                                       validator: _model
                                           .txtEditarAnuncioControllerValidator
                                           .asValidator(context),
@@ -392,6 +399,30 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
                                   !_model.formKey.currentState!.validate()) {
                                 return;
                               }
+
+                              await widget.anuncioEditar!
+                                  .update(createAnunciosRecordData(
+                                titulo: _model.txtEditarTituloController.text,
+                                fechaPublicacion: getCurrentTimestamp,
+                                descripcion:
+                                    _model.txtEditarAnuncioController.text,
+                              ));
+
+                              context.pushNamed('ListaAnuncios');
+
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    'Anuncio actualizado con éxito',
+                                    style: TextStyle(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                    ),
+                                  ),
+                                  duration: const Duration(milliseconds: 4000),
+                                  backgroundColor: const Color(0xFF070D59),
+                                ),
+                              );
                             },
                             text: 'Actualizar',
                             icon: const Icon(

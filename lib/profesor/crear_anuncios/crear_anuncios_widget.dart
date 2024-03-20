@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'crear_anuncios_model.dart';
 export 'crear_anuncios_model.dart';
 
@@ -216,7 +217,7 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                                       fontFamily: 'Montserrat',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
-                                      fontSize: 32.0,
+                                      fontSize: 28.0,
                                       fontWeight: FontWeight.w600,
                                     ),
                                 enabledBorder: UnderlineInputBorder(
@@ -257,6 +258,9 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                                     fontWeight: FontWeight.w600,
                                   ),
                               textAlign: TextAlign.center,
+                              maxLength: 35,
+                              maxLengthEnforcement:
+                                  MaxLengthEnforcement.enforced,
                               validator: _model.txtTituloControllerValidator
                                   .asValidator(context),
                             ),
@@ -318,6 +322,9 @@ class _CrearAnunciosWidgetState extends State<CrearAnunciosWidget> {
                                   style:
                                       FlutterFlowTheme.of(context).bodyMedium,
                                   maxLines: 5,
+                                  maxLength: 250,
+                                  maxLengthEnforcement:
+                                      MaxLengthEnforcement.enforced,
                                   validator: _model
                                       .txtDescripcionAnuncioControllerValidator
                                       .asValidator(context),

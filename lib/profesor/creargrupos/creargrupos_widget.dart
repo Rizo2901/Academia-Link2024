@@ -54,7 +54,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -63,7 +63,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
               children: [
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
-                  height: 177.0,
+                  height: 150.0,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [

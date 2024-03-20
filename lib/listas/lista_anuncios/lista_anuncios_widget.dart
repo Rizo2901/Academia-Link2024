@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/components/slide_lateral_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -97,7 +98,13 @@ class _ListaAnunciosWidgetState extends State<ListaAnunciosWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.safePop();
+                                    if (valueOrDefault(
+                                            currentUserDocument?.rol, '') ==
+                                        'Estudiante') {
+                                      context.pushNamed('HomePageEstudiante');
+                                    } else {
+                                      context.pushNamed('HomePageProfesor');
+                                    }
                                   },
                                   child: Icon(
                                     Icons.chevron_left_rounded,
@@ -152,7 +159,7 @@ class _ListaAnunciosWidgetState extends State<ListaAnunciosWidget> {
                                                 height:
                                                     MediaQuery.sizeOf(context)
                                                             .height *
-                                                        0.5,
+                                                        0.3,
                                                 child: const SlideLateralWidget(),
                                               ),
                                             ),
@@ -182,46 +189,50 @@ class _ListaAnunciosWidgetState extends State<ListaAnunciosWidget> {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Expanded(
-                  child: Align(
-                    alignment: const AlignmentDirectional(1.0, 0.0),
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
-                      child: FFButtonWidget(
-                        onPressed: () async {
-                          context.pushNamed('CrearAnuncios');
-                        },
-                        text: 'Nuevo',
-                        icon: const Icon(
-                          Icons.add_circle_outline,
-                          size: 15.0,
-                        ),
-                        options: FFButtonOptions(
-                          width: MediaQuery.sizeOf(context).width * 0.3,
-                          height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              20.0, 0.0, 20.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0xFF222A72),
-                          textStyle:
-                              FlutterFlowTheme.of(context).titleSmall.override(
+                if (valueOrDefault(currentUserDocument?.rol, '') == 'Profesor')
+                  Expanded(
+                    child: Align(
+                      alignment: const AlignmentDirectional(1.0, 0.0),
+                      child: Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
+                        child: AuthUserStreamWidget(
+                          builder: (context) => FFButtonWidget(
+                            onPressed: () async {
+                              context.pushNamed('CrearAnuncios');
+                            },
+                            text: 'Nuevo',
+                            icon: const Icon(
+                              Icons.add,
+                              size: 20.0,
+                            ),
+                            options: FFButtonOptions(
+                              width: MediaQuery.sizeOf(context).width * 0.3,
+                              height: 40.0,
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 0.0, 20.0, 0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: const Color(0xFF222A72),
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .override(
                                     fontFamily: 'Readex Pro',
                                     color: Colors.white,
                                     fontSize: 18.0,
                                   ),
-                          elevation: 3.0,
-                          borderSide: const BorderSide(
-                            color: Colors.transparent,
-                            width: 1.0,
+                              elevation: 3.0,
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                                width: 1.0,
+                              ),
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
                           ),
-                          borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
                     ),
                   ),
-                ),
               ],
             ),
             Row(
@@ -230,15 +241,18 @@ class _ListaAnunciosWidgetState extends State<ListaAnunciosWidget> {
                 Flexible(
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 20.0, 10.0, 0.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
-                      height: MediaQuery.sizeOf(context).height * 1.0,
+                      height: MediaQuery.sizeOf(context).height * 0.734,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25.0),
                       ),
                       child: StreamBuilder<List<AnunciosRecord>>(
-                        stream: queryAnunciosRecord(),
+                        stream: queryAnunciosRecord(
+                          queryBuilder: (anunciosRecord) => anunciosRecord
+                              .orderBy('fecha_publicacion', descending: true),
+                        ),
                         builder: (context, snapshot) {
                           // Customize what your widget looks like when it's loading.
                           if (!snapshot.hasData) {
@@ -265,299 +279,308 @@ class _ListaAnunciosWidgetState extends State<ListaAnunciosWidget> {
                                       (columnIndex) {
                                 final columnAnunciosRecord =
                                     columnAnunciosRecordList[columnIndex];
-                                return Flexible(
-                                  child: Container(
-                                    width:
-                                        MediaQuery.sizeOf(context).width * 1.0,
-                                    height:
-                                        MediaQuery.sizeOf(context).height * 0.2,
-                                    decoration: const BoxDecoration(),
-                                    child: Card(
-                                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                                      elevation: 4.0,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        children: [
-                                          Column(
-                                            mainAxisSize: MainAxisSize.min,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        10.0, 0.0, 0.0, 0.0),
-                                                child: Row(
+                                return Container(
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                  height:
+                                      MediaQuery.sizeOf(context).height * 0.288,
+                                  decoration: const BoxDecoration(),
+                                  child: Card(
+                                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                                    elevation: 4.0,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      10.0, 5.0, 0.0, 0.0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Expanded(
+                                                    child: Align(
+                                                      alignment:
+                                                          const AlignmentDirectional(
+                                                              -1.0, -1.0),
+                                                      child: Text(
+                                                        columnAnunciosRecord
+                                                            .titulo,
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'PT Sans',
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 17.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                            ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      10.0, 10.0, 0.0, 0.0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Flexible(
+                                                    child: Text(
+                                                      columnAnunciosRecord
+                                                          .descripcion,
+                                                      maxLines: 5,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      10.0, 10.0, 10.0, 0.0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.end,
+                                                children: [
+                                                  Flexible(
+                                                    child: Text(
+                                                      dateTimeFormat(
+                                                        'relative',
+                                                        columnAnunciosRecord
+                                                            .fechaPublicacion!,
+                                                        locale:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .languageCode,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        if (valueOrDefault(
+                                                currentUserDocument?.rol, '') ==
+                                            'Profesor')
+                                          Flexible(
+                                            child: Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 30.0, 0.0, 20.0),
+                                              child: AuthUserStreamWidget(
+                                                builder: (context) => Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
                                                     Expanded(
-                                                      child: Align(
-                                                        alignment:
-                                                            const AlignmentDirectional(
-                                                                -1.0, -1.0),
-                                                        child: Text(
-                                                          columnAnunciosRecord
-                                                              .titulo,
-                                                          textAlign:
-                                                              TextAlign.start,
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'PT Sans',
-                                                                color: Colors
-                                                                    .black,
-                                                                fontSize: 17.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                              ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        10.0, 10.0, 0.0, 0.0),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Flexible(
-                                                      child: Text(
-                                                        columnAnunciosRecord
-                                                            .descripcion,
-                                                        maxLines: 5,
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        10.0, 10.0, 10.0, 0.0),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.end,
-                                                  children: [
-                                                    Flexible(
-                                                      child: Text(
-                                                        dateTimeFormat(
-                                                          'relative',
-                                                          columnAnunciosRecord
-                                                              .fechaPublicacion!,
-                                                          locale:
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .languageCode,
-                                                        ),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 20.0, 0.0, 20.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Expanded(
-                                                  child: Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(20.0, 0.0,
-                                                                20.0, 0.0),
-                                                    child: FFButtonWidget(
-                                                      onPressed: () async {
-                                                        context.pushNamed(
-                                                          'EditarAnuncios',
-                                                          queryParameters: {
-                                                            'anuncioEditar':
-                                                                serializeParam(
-                                                              columnAnunciosRecord
-                                                                  .reference,
-                                                              ParamType
-                                                                  .DocumentReference,
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    20.0,
+                                                                    0.0,
+                                                                    20.0,
+                                                                    0.0),
+                                                        child: FFButtonWidget(
+                                                          onPressed: () async {
+                                                            context.pushNamed(
+                                                              'EditarAnuncios',
+                                                              queryParameters: {
+                                                                'anuncioEditar':
+                                                                    serializeParam(
+                                                                  columnAnunciosRecord
+                                                                      .reference,
+                                                                  ParamType
+                                                                      .DocumentReference,
+                                                                ),
+                                                              }.withoutNulls,
+                                                            );
+                                                          },
+                                                          text: '',
+                                                          icon: const FaIcon(
+                                                            FontAwesomeIcons
+                                                                .edit,
+                                                          ),
+                                                          options:
+                                                              FFButtonOptions(
+                                                            width: MediaQuery
+                                                                        .sizeOf(
+                                                                            context)
+                                                                    .width *
+                                                                0.25,
+                                                            height: 40.0,
+                                                            padding:
+                                                                const EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        24.0,
+                                                                        0.0,
+                                                                        24.0,
+                                                                        0.0),
+                                                            iconPadding:
+                                                                const EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0),
+                                                            color: const Color(
+                                                                0xFF070D59),
+                                                            textStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .titleSmall
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Readex Pro',
+                                                                      color: Colors
+                                                                          .white,
+                                                                    ),
+                                                            elevation: 3.0,
+                                                            borderSide:
+                                                                const BorderSide(
+                                                              color: Colors
+                                                                  .transparent,
+                                                              width: 1.0,
                                                             ),
-                                                          }.withoutNulls,
-                                                        );
-                                                      },
-                                                      text: '',
-                                                      icon: const FaIcon(
-                                                        FontAwesomeIcons.edit,
-                                                      ),
-                                                      options: FFButtonOptions(
-                                                        width:
-                                                            MediaQuery.sizeOf(
-                                                                        context)
-                                                                    .width *
-                                                                0.25,
-                                                        height: 40.0,
-                                                        padding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    24.0,
-                                                                    0.0,
-                                                                    24.0,
-                                                                    0.0),
-                                                        iconPadding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    0.0,
-                                                                    0.0,
-                                                                    0.0),
-                                                        color:
-                                                            const Color(0xFF070D59),
-                                                        textStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .titleSmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: Colors
-                                                                      .white,
-                                                                ),
-                                                        elevation: 3.0,
-                                                        borderSide: const BorderSide(
-                                                          color: Colors
-                                                              .transparent,
-                                                          width: 1.0,
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        8.0),
+                                                          ),
                                                         ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
                                                       ),
                                                     ),
-                                                  ),
-                                                ),
-                                                Expanded(
-                                                  child: Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(20.0, 0.0,
-                                                                20.0, 0.0),
-                                                    child: FFButtonWidget(
-                                                      onPressed: () async {
-                                                        var confirmDialogResponse =
-                                                            await showDialog<
-                                                                    bool>(
-                                                                  context:
-                                                                      context,
-                                                                  builder:
-                                                                      (alertDialogContext) {
-                                                                    return AlertDialog(
-                                                                      content: const Text(
-                                                                          'Está seguro que desea eliminar este anuncio?'),
-                                                                      actions: [
-                                                                        TextButton(
-                                                                          onPressed: () => Navigator.pop(
-                                                                              alertDialogContext,
-                                                                              false),
-                                                                          child:
-                                                                              const Text('Cancelar'),
-                                                                        ),
-                                                                        TextButton(
-                                                                          onPressed: () => Navigator.pop(
-                                                                              alertDialogContext,
-                                                                              true),
-                                                                          child:
-                                                                              const Text('Confirmar'),
-                                                                        ),
-                                                                      ],
-                                                                    );
-                                                                  },
-                                                                ) ??
-                                                                false;
-                                                        await columnAnunciosRecord
-                                                            .reference
-                                                            .delete();
-                                                      },
-                                                      text: '',
-                                                      icon: const FaIcon(
-                                                        FontAwesomeIcons
-                                                            .solidTrashAlt,
-                                                      ),
-                                                      options: FFButtonOptions(
-                                                        width:
-                                                            MediaQuery.sizeOf(
-                                                                        context)
-                                                                    .width *
-                                                                0.25,
-                                                        height: 40.0,
+                                                    Expanded(
+                                                      child: Padding(
                                                         padding:
                                                             const EdgeInsetsDirectional
                                                                 .fromSTEB(
-                                                                    24.0,
+                                                                    20.0,
                                                                     0.0,
-                                                                    24.0,
+                                                                    20.0,
                                                                     0.0),
-                                                        iconPadding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    0.0,
-                                                                    0.0,
-                                                                    0.0),
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                        child: FFButtonWidget(
+                                                          onPressed: () async {
+                                                            var confirmDialogResponse =
+                                                                await showDialog<
+                                                                        bool>(
+                                                                      context:
+                                                                          context,
+                                                                      builder:
+                                                                          (alertDialogContext) {
+                                                                        return AlertDialog(
+                                                                          content:
+                                                                              const Text('Está seguro que desea eliminar este anuncio?'),
+                                                                          actions: [
+                                                                            TextButton(
+                                                                              onPressed: () => Navigator.pop(alertDialogContext, false),
+                                                                              child: const Text('Cancelar'),
+                                                                            ),
+                                                                            TextButton(
+                                                                              onPressed: () => Navigator.pop(alertDialogContext, true),
+                                                                              child: const Text('Confirmar'),
+                                                                            ),
+                                                                          ],
+                                                                        );
+                                                                      },
+                                                                    ) ??
+                                                                    false;
+                                                            if (confirmDialogResponse) {
+                                                              await columnAnunciosRecord
+                                                                  .reference
+                                                                  .delete();
+                                                            }
+                                                          },
+                                                          text: '',
+                                                          icon: const FaIcon(
+                                                            FontAwesomeIcons
+                                                                .solidTrashAlt,
+                                                          ),
+                                                          options:
+                                                              FFButtonOptions(
+                                                            width: MediaQuery
+                                                                        .sizeOf(
+                                                                            context)
+                                                                    .width *
+                                                                0.25,
+                                                            height: 40.0,
+                                                            padding:
+                                                                const EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        24.0,
+                                                                        0.0,
+                                                                        24.0,
+                                                                        0.0),
+                                                            iconPadding:
+                                                                const EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0),
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
                                                                 .error,
-                                                        textStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .titleSmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: Colors
-                                                                      .white,
-                                                                ),
-                                                        elevation: 3.0,
-                                                        borderSide: const BorderSide(
-                                                          color: Colors
-                                                              .transparent,
-                                                          width: 1.0,
+                                                            textStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .titleSmall
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Readex Pro',
+                                                                      color: Colors
+                                                                          .white,
+                                                                    ),
+                                                            elevation: 3.0,
+                                                            borderSide:
+                                                                const BorderSide(
+                                                              color: Colors
+                                                                  .transparent,
+                                                              width: 1.0,
+                                                            ),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        8.0),
+                                                          ),
                                                         ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
                                                       ),
                                                     ),
-                                                  ),
+                                                  ],
                                                 ),
-                                              ],
+                                              ),
                                             ),
                                           ),
-                                        ],
-                                      ),
+                                      ],
                                     ),
                                   ),
                                 );

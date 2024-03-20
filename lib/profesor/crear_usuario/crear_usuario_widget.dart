@@ -73,7 +73,7 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
               children: [
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
-                  height: 130.0,
+                  height: 150.0,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
