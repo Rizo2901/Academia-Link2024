@@ -74,14 +74,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) => appStateNotifier.loggedIn
           ? const HomePageProfesorWidget()
-          : const ListaAlumnosWidget(),
+          : const CrearTareaProfesorWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
               ? const HomePageProfesorWidget()
-              : const ListaAlumnosWidget(),
+              : const CrearTareaProfesorWidget(),
         ),
         FFRoute(
           name: 'Inicio',
@@ -131,9 +131,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const HomePageEstudianteWidget(),
         ),
         FFRoute(
-          name: 'TareasProfesor',
-          path: '/tareasProfesor',
-          builder: (context, params) => const TareasProfesorWidget(),
+          name: 'ListaTareas',
+          path: '/listaTareas',
+          builder: (context, params) => const ListaTareasWidget(),
         ),
         FFRoute(
           name: 'CrearAnuncios',
@@ -203,7 +203,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'EditarAnuncios',
           path: '/editarAnuncios',
-          builder: (context, params) => const EditarAnunciosWidget(),
+          builder: (context, params) => EditarAnunciosWidget(
+            anuncioEditar: params.getParam('anuncioEditar',
+                ParamType.DocumentReference, false, ['anuncios']),
+          ),
         ),
         FFRoute(
           name: 'ListaLikes',
@@ -380,7 +383,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/listaAlumnos';
+            return '/crearTareaProfesor';
           }
           return null;
         },

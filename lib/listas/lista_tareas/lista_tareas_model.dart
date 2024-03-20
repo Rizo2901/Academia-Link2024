@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'tareas_profesor_widget.dart' show TareasProfesorWidget;
+import 'lista_tareas_widget.dart' show ListaTareasWidget;
 import 'package:flutter/material.dart';
 
-class TareasProfesorModel extends FlutterFlowModel<TareasProfesorWidget> {
+class ListaTareasModel extends FlutterFlowModel<ListaTareasWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

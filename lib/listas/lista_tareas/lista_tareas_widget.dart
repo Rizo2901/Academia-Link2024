@@ -3,25 +3,25 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'tareas_profesor_model.dart';
-export 'tareas_profesor_model.dart';
+import 'lista_tareas_model.dart';
+export 'lista_tareas_model.dart';
 
-class TareasProfesorWidget extends StatefulWidget {
-  const TareasProfesorWidget({super.key});
+class ListaTareasWidget extends StatefulWidget {
+  const ListaTareasWidget({super.key});
 
   @override
-  State<TareasProfesorWidget> createState() => _TareasProfesorWidgetState();
+  State<ListaTareasWidget> createState() => _ListaTareasWidgetState();
 }
 
-class _TareasProfesorWidgetState extends State<TareasProfesorWidget> {
-  late TareasProfesorModel _model;
+class _ListaTareasWidgetState extends State<ListaTareasWidget> {
+  late ListaTareasModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => TareasProfesorModel());
+    _model = createModel(context, () => ListaTareasModel());
   }
 
   @override

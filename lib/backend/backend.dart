@@ -12,6 +12,7 @@ import 'schema/grupos_record.dart';
 import 'schema/estudiante_record.dart';
 import 'schema/anuncios_record.dart';
 import 'schema/estudiantes_record.dart';
+import 'schema/tareas_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart';
@@ -26,6 +27,7 @@ export 'schema/grupos_record.dart';
 export 'schema/estudiante_record.dart';
 export 'schema/anuncios_record.dart';
 export 'schema/estudiantes_record.dart';
+export 'schema/tareas_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Future<int> queryUsersRecordCount({
@@ -281,6 +283,43 @@ Future<List<EstudiantesRecord>> queryEstudiantesRecordOnce({
     queryCollectionOnce(
       EstudiantesRecord.collection,
       EstudiantesRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query TareasRecords (as a Stream and as a Future).
+Future<int> queryTareasRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      TareasRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<TareasRecord>> queryTareasRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      TareasRecord.collection,
+      TareasRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<TareasRecord>> queryTareasRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      TareasRecord.collection,
+      TareasRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

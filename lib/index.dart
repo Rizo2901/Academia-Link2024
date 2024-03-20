@@ -11,8 +11,7 @@ export '/listas/lista_usuarios/lista_usuarios_widget.dart'
     show ListaUsuariosWidget;
 export '/estudiante/home_page_estudiante/home_page_estudiante_widget.dart'
     show HomePageEstudianteWidget;
-export '/profesor/tareas_profesor/tareas_profesor_widget.dart'
-    show TareasProfesorWidget;
+export '/listas/lista_tareas/lista_tareas_widget.dart' show ListaTareasWidget;
 export '/profesor/crear_anuncios/crear_anuncios_widget.dart'
     show CrearAnunciosWidget;
 export '/listas/lista_anuncios/lista_anuncios_widget.dart'

@@ -1,3 +1,4 @@
+import '/components/slide_lateral_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -24,18 +25,18 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
     super.initState();
     _model = createModel(context, () => EditarTareaProfesorModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.txtNombreTareaController ??= TextEditingController();
+    _model.txtNombreTareaFocusNode ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.txtDescripcionController ??= TextEditingController();
+    _model.txtDescripcionFocusNode ??= FocusNode();
 
-    _model.textController3 ??= TextEditingController();
-    _model.textFieldFocusNode3 ??= FocusNode();
+    _model.txtFechaController ??= TextEditingController();
+    _model.txtFechaFocusNode ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
-          _model.textController1?.text = 'Tarea 2 - Editada';
-          _model.textController2?.text =
+          _model.txtNombreTareaController?.text = 'Tarea 2 - Editada';
+          _model.txtDescripcionController?.text =
               'Deben realizar una investigación de los planetas del sistema solar y dar una referencia bibliografica de 3 fuentes con un resumen de su preferencia. El trabajo debe contar con portada, introducción, desarrollo y referencias. ';
         }));
   }
@@ -62,97 +63,88 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
             Row(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Expanded(
-                  child: Container(
-                    width: 100.0,
-                    height: MediaQuery.sizeOf(context).height * 0.25,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          const Color(0xFF7C89FF),
-                          FlutterFlowTheme.of(context).secondaryBackground
-                        ],
-                        stops: const [0.0, 1.0],
-                        begin: const AlignmentDirectional(0.0, 1.0),
-                        end: const AlignmentDirectional(0, -1.0),
-                      ),
+                Container(
+                  width: MediaQuery.sizeOf(context).width * 1.0,
+                  height: 175.0,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        const Color(0xFF94C0F2),
+                        FlutterFlowTheme.of(context).primaryBackground
+                      ],
+                      stops: const [0.0, 1.0],
+                      begin: const AlignmentDirectional(0.0, -1.0),
+                      end: const AlignmentDirectional(0, 1.0),
                     ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Flexible(
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                15.0, 10.0, 15.0, 0.0),
-                            child: Container(
-                              width: MediaQuery.sizeOf(context).width * 1.0,
-                              height: 62.0,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                                boxShadow: const [
-                                  BoxShadow(
-                                    blurRadius: 0.0,
-                                    color: Color(0x33717171),
-                                    offset: Offset(0.0, 2.0),
-                                    spreadRadius: 0.0,
-                                  )
-                                ],
-                                borderRadius: BorderRadius.circular(15.0),
-                                shape: BoxShape.rectangle,
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        7.0, 8.0, 10.0, 3.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/MicrosoftTeams-image__3_-removebg-preview.png',
-                                        width: 92.0,
-                                        height: 200.0,
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
-                                  ),
-                                  Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          45.0, 10.0, 91.0, 10.0),
-                                      child: Text(
-                                        'Tareas',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'PT Sans',
-                                              fontSize: 20.0,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 10.0, 10.0, 10.0),
-                                    child: Icon(
-                                      Icons.menu,
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
-                                      size: 31.0,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(7.0, 8.0, 0.0, 3.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                          child: Image.asset(
+                            'assets/images/MicrosoftTeams-image__3_-removebg-preview.png',
+                            width: 82.0,
+                            height: 64.0,
+                            fit: BoxFit.contain,
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                      Text(
+                        'Tareas',
+                        textAlign: TextAlign.start,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'PT Sans',
+                              color: Colors.black,
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.w600,
+                            ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            29.0, 0.0, 20.0, 0.0),
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            await showModalBottomSheet(
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                              context: context,
+                              builder: (context) {
+                                return GestureDetector(
+                                  onTap: () =>
+                                      _model.unfocusNode.canRequestFocus
+                                          ? FocusScope.of(context)
+                                              .requestFocus(_model.unfocusNode)
+                                          : FocusScope.of(context).unfocus(),
+                                  child: Padding(
+                                    padding: MediaQuery.viewInsetsOf(context),
+                                    child: SizedBox(
+                                      height:
+                                          MediaQuery.sizeOf(context).height *
+                                              0.3,
+                                      child: const SlideLateralWidget(),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ).then((value) => safeSetState(() {}));
+                          },
+                          child: Icon(
+                            Icons.menu,
+                            color: FlutterFlowTheme.of(context).secondaryText,
+                            size: 36.0,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -200,8 +192,8 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 10.0, 20.0, 0.0),
                                   child: TextFormField(
-                                    controller: _model.textController1,
-                                    focusNode: _model.textFieldFocusNode1,
+                                    controller: _model.txtNombreTareaController,
+                                    focusNode: _model.txtNombreTareaFocusNode,
                                     autofocus: true,
                                     obscureText: false,
                                     decoration: InputDecoration(
@@ -248,7 +240,8 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                     ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
-                                    validator: _model.textController1Validator
+                                    validator: _model
+                                        .txtNombreTareaControllerValidator
                                         .asValidator(context),
                                   ),
                                 ),
@@ -281,8 +274,8 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 10.0, 20.0, 0.0),
                                   child: TextFormField(
-                                    controller: _model.textController2,
-                                    focusNode: _model.textFieldFocusNode2,
+                                    controller: _model.txtDescripcionController,
+                                    focusNode: _model.txtDescripcionFocusNode,
                                     autofocus: true,
                                     obscureText: false,
                                     decoration: InputDecoration(
@@ -332,7 +325,8 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                         FlutterFlowTheme.of(context).bodyMedium,
                                     textAlign: TextAlign.start,
                                     maxLines: 5,
-                                    validator: _model.textController2Validator
+                                    validator: _model
+                                        .txtDescripcionControllerValidator
                                         .asValidator(context),
                                   ),
                                 ),
@@ -365,8 +359,8 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 20.0, 0.0),
                                   child: TextFormField(
-                                    controller: _model.textController3,
-                                    focusNode: _model.textFieldFocusNode3,
+                                    controller: _model.txtFechaController,
+                                    focusNode: _model.txtFechaFocusNode,
                                     autofocus: true,
                                     obscureText: false,
                                     decoration: InputDecoration(
@@ -414,14 +408,15 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                     ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
-                                    validator: _model.textController3Validator
+                                    validator: _model
+                                        .txtFechaControllerValidator
                                         .asValidator(context),
                                   ),
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
-                                    20.0, 10.0, 0.0, 0.0),
+                                    20.0, 10.0, 20.0, 0.0),
                                 child: FFButtonWidget(
                                   onPressed: () {
                                     print('Button pressed ...');
