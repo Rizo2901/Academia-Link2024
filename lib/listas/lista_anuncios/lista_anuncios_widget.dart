@@ -365,6 +365,8 @@ class _ListaAnunciosWidgetState extends State<ListaAnunciosWidget> {
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.end,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.end,
                                                 children: [
                                                   Flexible(
                                                     child: Text(
@@ -391,15 +393,17 @@ class _ListaAnunciosWidgetState extends State<ListaAnunciosWidget> {
                                         if (valueOrDefault(
                                                 currentUserDocument?.rol, '') ==
                                             'Profesor')
-                                          Flexible(
+                                          Expanded(
                                             child: Padding(
                                               padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
-                                                      0.0, 30.0, 0.0, 20.0),
+                                                      0.0, 30.0, 0.0, 10.0),
                                               child: AuthUserStreamWidget(
                                                 builder: (context) => Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.end,
                                                   children: [
                                                     Expanded(
                                                       child: Padding(

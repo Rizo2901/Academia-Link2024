@@ -1,4 +1,6 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/components/slide_lateral_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -96,11 +98,26 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Icon(
-                                  Icons.chevron_left_rounded,
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                  size: 45.0,
+                                InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    if (valueOrDefault(
+                                            currentUserDocument?.rol, '') ==
+                                        'Estudiante') {
+                                      context.pushNamed('HomePageEstudiante');
+                                    } else {
+                                      context.pushNamed('HomePageProfesor');
+                                    }
+                                  },
+                                  child: Icon(
+                                    Icons.chevron_left_rounded,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    size: 45.0,
+                                  ),
                                 ),
                                 Align(
                                   alignment: const AlignmentDirectional(-1.0, 0.0),
@@ -122,11 +139,46 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 10.0, 10.0, 10.0),
-                                  child: Icon(
-                                    Icons.menu,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                    size: 31.0,
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      await showModalBottomSheet(
+                                        isScrollControlled: true,
+                                        backgroundColor: Colors.transparent,
+                                        context: context,
+                                        builder: (context) {
+                                          return GestureDetector(
+                                            onTap: () => _model
+                                                    .unfocusNode.canRequestFocus
+                                                ? FocusScope.of(context)
+                                                    .requestFocus(
+                                                        _model.unfocusNode)
+                                                : FocusScope.of(context)
+                                                    .unfocus(),
+                                            child: Padding(
+                                              padding: MediaQuery.viewInsetsOf(
+                                                  context),
+                                              child: SizedBox(
+                                                height:
+                                                    MediaQuery.sizeOf(context)
+                                                            .height *
+                                                        0.3,
+                                                child: const SlideLateralWidget(),
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      ).then((value) => safeSetState(() {}));
+                                    },
+                                    child: Icon(
+                                      Icons.menu,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      size: 31.0,
+                                    ),
                                   ),
                                 ),
                               ],

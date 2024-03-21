@@ -16,10 +16,7 @@ class CrearTareaProfesorModel
   FocusNode? txtDescripcionFocusNode;
   TextEditingController? txtDescripcionController;
   String? Function(BuildContext, String?)? txtDescripcionControllerValidator;
-  // State field(s) for txtFecha widget.
-  FocusNode? txtFechaFocusNode;
-  TextEditingController? txtFechaController;
-  String? Function(BuildContext, String?)? txtFechaControllerValidator;
+  DateTime? datePicked;
   // State field(s) for Switch widget.
   bool? switchValue;
   // State field(s) for DropDown widget.
@@ -39,9 +36,6 @@ class CrearTareaProfesorModel
 
     txtDescripcionFocusNode?.dispose();
     txtDescripcionController?.dispose();
-
-    txtFechaFocusNode?.dispose();
-    txtFechaController?.dispose();
   }
 
   /// Action blocks are added here.

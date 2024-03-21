@@ -543,7 +543,23 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             FFButtonWidget(
-                              onPressed: () async {},
+                              onPressed: () async {
+                                await GruposRecord.collection
+                                    .doc()
+                                    .set(createGruposRecordData(
+                                      profesor: widget.profesor?.reference,
+                                      seccion:
+                                          _model.txtFSeccionController.text,
+                                    ));
+
+                                await widget.profesor!.reference.update({
+                                  ...mapToFirestore(
+                                    {
+                                      'materias': _model.dropMateriasValue,
+                                    },
+                                  ),
+                                });
+                              },
                               text: 'Crear Grupo',
                               options: FFButtonOptions(
                                 height: 48.89,

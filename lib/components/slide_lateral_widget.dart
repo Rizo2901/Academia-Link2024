@@ -60,7 +60,7 @@ class _SlideLateralWidgetState extends State<SlideLateralWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 0.0, 8.0),
                 child: Text(
-                  'Account Options',
+                  'Cuenta',
                   textAlign: TextAlign.start,
                   style: FlutterFlowTheme.of(context).labelMedium,
                 ),

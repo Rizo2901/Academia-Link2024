@@ -33,9 +33,6 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
 
     _model.txtDescripcionController ??= TextEditingController();
     _model.txtDescripcionFocusNode ??= FocusNode();
-
-    _model.txtFechaController ??= TextEditingController();
-    _model.txtFechaFocusNode ??= FocusNode();
   }
 
   @override
@@ -359,75 +356,64 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      20.0, 0.0, 20.0, 0.0),
-                                  child: TextFormField(
-                                    controller: _model.txtFechaController,
-                                    focusNode: _model.txtFechaFocusNode,
-                                    autofocus: true,
-                                    obscureText: false,
-                                    decoration: InputDecoration(
-                                      labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
-                                      hintStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .alternate,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      errorBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      focusedErrorBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Cutive',
-                                        ),
-                                    validator: _model
-                                        .txtFechaControllerValidator
-                                        .asValidator(context),
-                                  ),
-                                ),
-                              ),
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 10.0, 20.0, 0.0),
                                 child: FFButtonWidget(
-                                  onPressed: () {
-                                    print('Button pressed ...');
+                                  onPressed: () async {
+                                    final datePickedDate =
+                                        await showDatePicker(
+                                      context: context,
+                                      initialDate: getCurrentTimestamp,
+                                      firstDate: getCurrentTimestamp,
+                                      lastDate: DateTime(2050),
+                                      builder: (context, child) {
+                                        return wrapInMaterialDatePickerTheme(
+                                          context,
+                                          child!,
+                                          headerBackgroundColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                          headerForegroundColor:
+                                              FlutterFlowTheme.of(context).info,
+                                          headerTextStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineLarge
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    fontSize: 32.0,
+                                                    fontWeight: FontWeight.w600,
+                                                  ),
+                                          pickerBackgroundColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .secondaryBackground,
+                                          pickerForegroundColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .primaryText,
+                                          selectedDateTimeBackgroundColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                          selectedDateTimeForegroundColor:
+                                              FlutterFlowTheme.of(context).info,
+                                          actionButtonForegroundColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .primaryText,
+                                          iconSize: 24.0,
+                                        );
+                                      },
+                                    );
+
+                                    if (datePickedDate != null) {
+                                      safeSetState(() {
+                                        _model.datePicked = DateTime(
+                                          datePickedDate.year,
+                                          datePickedDate.month,
+                                          datePickedDate.day,
+                                        );
+                                      });
+                                    }
                                   },
                                   text: 'Calendario',
                                   icon: const FaIcon(
@@ -453,6 +439,25 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    20.0, 0.0, 20.0, 0.0),
+                                child: Text(
+                                  dateTimeFormat(
+                                    'yMMMd',
+                                    _model.datePicked,
+                                    locale: FFLocalizations.of(context)
+                                        .languageCode,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        fontSize: 16.0,
+                                      ),
                                 ),
                               ),
                             ],
@@ -608,7 +613,7 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                         },
                         text: 'Cancelar',
                         options: FFButtonOptions(
-                          width: MediaQuery.sizeOf(context).width * 0.25,
+                          width: MediaQuery.sizeOf(context).width * 0.27,
                           height: 40.0,
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 24.0, 0.0),
@@ -638,12 +643,46 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
                       child: FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
+                        onPressed: () async {
+                          await TareasRecord.collection.doc().set({
+                            ...createTareasRecordData(
+                              tNombre: _model.txtNombreTareaController.text,
+                              tDescripcion:
+                                  _model.txtDescripcionController.text,
+                              tFechaLimite: _model.datePicked,
+                              estado: _model.switchValue,
+                            ),
+                            ...mapToFirestore(
+                              {
+                                'Grupos': _model.dropDownValue,
+                              },
+                            ),
+                          });
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                'Tarea creada exitosamente',
+                                style: TextStyle(
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                ),
+                              ),
+                              duration: const Duration(milliseconds: 4000),
+                              backgroundColor:
+                                  FlutterFlowTheme.of(context).secondary,
+                            ),
+                          );
+                          setState(() {
+                            _model.txtNombreTareaController?.clear();
+                            _model.txtDescripcionController?.clear();
+                          });
+                          setState(() {
+                            _model.dropDownValueController?.reset();
+                          });
                         },
                         text: 'Crear',
                         options: FFButtonOptions(
-                          width: MediaQuery.sizeOf(context).width * 0.25,
+                          width: MediaQuery.sizeOf(context).width * 0.27,
                           height: 40.0,
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 24.0, 0.0),
