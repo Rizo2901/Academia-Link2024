@@ -5,7 +5,12 @@ import 'lista_grupo_model.dart';
 export 'lista_grupo_model.dart';
 
 class ListaGrupoWidget extends StatefulWidget {
-  const ListaGrupoWidget({super.key});
+  const ListaGrupoWidget({
+    super.key,
+    this.grupoLista,
+  });
+
+  final List<DocumentReference>? grupoLista;
 
   @override
   State<ListaGrupoWidget> createState() => _ListaGrupoWidgetState();
@@ -87,11 +92,20 @@ class _ListaGrupoWidgetState extends State<ListaGrupoWidget> {
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Icon(
-                                  Icons.chevron_left_rounded,
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                  size: 45.0,
+                                InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.safePop();
+                                  },
+                                  child: Icon(
+                                    Icons.chevron_left_rounded,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    size: 45.0,
+                                  ),
                                 ),
                                 Align(
                                   alignment: const AlignmentDirectional(-1.0, 0.0),

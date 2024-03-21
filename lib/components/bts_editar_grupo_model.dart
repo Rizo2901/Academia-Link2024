@@ -1,12 +1,11 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'creargrupos_widget.dart' show CreargruposWidget;
+import 'bts_editar_grupo_widget.dart' show BtsEditarGrupoWidget;
 import 'package:flutter/material.dart';
 
-class CreargruposModel extends FlutterFlowModel<CreargruposWidget> {
-  ///  State fields for stateful widgets in this page.
+class BtsEditarGrupoModel extends FlutterFlowModel<BtsEditarGrupoWidget> {
+  ///  State fields for stateful widgets in this component.
 
-  final unfocusNode = FocusNode();
   // State field(s) for txtFSeccion widget.
   FocusNode? txtFSeccionFocusNode;
   TextEditingController? txtFSeccionController;
@@ -18,10 +17,6 @@ class CreargruposModel extends FlutterFlowModel<CreargruposWidget> {
   // State field(s) for dropMaterias widget.
   List<String>? dropMateriasValue;
   FormFieldController<List<String>>? dropMateriasValueController;
-  // State field(s) for txtCantEstudiante widget.
-  FocusNode? txtCantEstudianteFocusNode;
-  TextEditingController? txtCantEstudianteController;
-  String? Function(BuildContext, String?)? txtCantEstudianteControllerValidator;
 
   /// Initialization and disposal methods.
 
@@ -30,15 +25,11 @@ class CreargruposModel extends FlutterFlowModel<CreargruposWidget> {
 
   @override
   void dispose() {
-    unfocusNode.dispose();
     txtFSeccionFocusNode?.dispose();
     txtFSeccionController?.dispose();
 
     txtFProfesorFocusNode?.dispose();
     txtFProfesorController?.dispose();
-
-    txtCantEstudianteFocusNode?.dispose();
-    txtCantEstudianteController?.dispose();
   }
 
   /// Action blocks are added here.

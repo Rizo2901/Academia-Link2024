@@ -35,11 +35,29 @@ class ProfesoresRecord extends FirestoreRecord {
   String get nombre => _nombre ?? '';
   bool hasNombre() => _nombre != null;
 
+  // "correoProfesor" field.
+  String? _correoProfesor;
+  String get correoProfesor => _correoProfesor ?? '';
+  bool hasCorreoProfesor() => _correoProfesor != null;
+
+  // "fotoPerfil" field.
+  String? _fotoPerfil;
+  String get fotoPerfil => _fotoPerfil ?? '';
+  bool hasFotoPerfil() => _fotoPerfil != null;
+
+  // "usuario" field.
+  DocumentReference? _usuario;
+  DocumentReference? get usuario => _usuario;
+  bool hasUsuario() => _usuario != null;
+
   void _initializeFields() {
     _materias = getDataList(snapshotData['materias']);
     _gruposProfesor = getDataList(snapshotData['gruposProfesor']);
     _idProfesor = getDataList(snapshotData['idProfesor']);
     _nombre = snapshotData['nombre'] as String?;
+    _correoProfesor = snapshotData['correoProfesor'] as String?;
+    _fotoPerfil = snapshotData['fotoPerfil'] as String?;
+    _usuario = snapshotData['usuario'] as DocumentReference?;
   }
 
   static CollectionReference get collection =>
@@ -78,10 +96,16 @@ class ProfesoresRecord extends FirestoreRecord {
 
 Map<String, dynamic> createProfesoresRecordData({
   String? nombre,
+  String? correoProfesor,
+  String? fotoPerfil,
+  DocumentReference? usuario,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
       'nombre': nombre,
+      'correoProfesor': correoProfesor,
+      'fotoPerfil': fotoPerfil,
+      'usuario': usuario,
     }.withoutNulls,
   );
 
@@ -97,12 +121,22 @@ class ProfesoresRecordDocumentEquality implements Equality<ProfesoresRecord> {
     return listEquality.equals(e1?.materias, e2?.materias) &&
         listEquality.equals(e1?.gruposProfesor, e2?.gruposProfesor) &&
         listEquality.equals(e1?.idProfesor, e2?.idProfesor) &&
-        e1?.nombre == e2?.nombre;
+        e1?.nombre == e2?.nombre &&
+        e1?.correoProfesor == e2?.correoProfesor &&
+        e1?.fotoPerfil == e2?.fotoPerfil &&
+        e1?.usuario == e2?.usuario;
   }
 
   @override
-  int hash(ProfesoresRecord? e) => const ListEquality()
-      .hash([e?.materias, e?.gruposProfesor, e?.idProfesor, e?.nombre]);
+  int hash(ProfesoresRecord? e) => const ListEquality().hash([
+        e?.materias,
+        e?.gruposProfesor,
+        e?.idProfesor,
+        e?.nombre,
+        e?.correoProfesor,
+        e?.fotoPerfil,
+        e?.usuario
+      ]);
 
   @override
   bool isValidKey(Object? o) => o is ProfesoresRecord;

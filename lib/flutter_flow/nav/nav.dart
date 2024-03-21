@@ -72,16 +72,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => appStateNotifier.loggedIn
-          ? const HomePageProfesorWidget()
-          : const CrearTareaProfesorWidget(),
+      errorBuilder: (context, state) =>
+          appStateNotifier.loggedIn ? const InicioWidget() : const ListaTareasWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? const HomePageProfesorWidget()
-              : const CrearTareaProfesorWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? const InicioWidget() : const ListaTareasWidget(),
         ),
         FFRoute(
           name: 'Inicio',
@@ -115,9 +113,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/misgruposProfesor',
           asyncParams: {
             'profesor': getDoc(['profesores'], ProfesoresRecord.fromSnapshot),
+            'grupo': getDoc(['grupos'], GruposRecord.fromSnapshot),
           },
           builder: (context, params) => MisgruposProfesorWidget(
             profesor: params.getParam('profesor', ParamType.Document),
+            grupo: params.getParam('grupo', ParamType.Document),
           ),
         ),
         FFRoute(
@@ -153,7 +153,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'EditarTareaProfesor',
           path: '/editarTareaProfesor',
-          builder: (context, params) => const EditarTareaProfesorWidget(),
+          asyncParams: {
+            'tareas': getDoc(['tareas'], TareasRecord.fromSnapshot),
+          },
+          builder: (context, params) => EditarTareaProfesorWidget(
+            tareas: params.getParam('tareas', ParamType.Document),
+          ),
         ),
         FFRoute(
           name: 'ListaAlumnos',
@@ -168,7 +173,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'EditarGrupos',
           path: '/editarGrupos',
-          builder: (context, params) => const EditarGruposWidget(),
+          builder: (context, params) => EditarGruposWidget(
+            grupoEditar: params.getParam(
+                'grupoEditar', ParamType.DocumentReference, false, ['grupos']),
+          ),
         ),
         FFRoute(
           name: 'EliminarGrupos',
@@ -178,7 +186,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'ListaGrupo',
           path: '/listaGrupo',
-          builder: (context, params) => const ListaGrupoWidget(),
+          builder: (context, params) => ListaGrupoWidget(
+            grupoLista: params.getParam<DocumentReference>(
+                'grupoLista', ParamType.DocumentReference, true, ['grupos']),
+          ),
         ),
         FFRoute(
           name: 'RecuperarContrasena',
@@ -190,9 +201,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/creargrupos',
           asyncParams: {
             'profesor': getDoc(['profesores'], ProfesoresRecord.fromSnapshot),
+            'creaGrupo': getDoc(['grupos'], GruposRecord.fromSnapshot),
           },
           builder: (context, params) => CreargruposWidget(
             profesor: params.getParam('profesor', ParamType.Document),
+            creaGrupo: params.getParam('creaGrupo', ParamType.Document),
+            item: params.getParam('item', ParamType.String),
+            grupoItem: params.getParam(
+                'grupoItem', ParamType.DocumentReference, false, ['grupos']),
           ),
         ),
         FFRoute(
@@ -383,7 +399,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/crearTareaProfesor';
+            return '/listaTareas';
           }
           return null;
         },

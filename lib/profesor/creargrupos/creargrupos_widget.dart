@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/components/slide_lateral_widget.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
@@ -13,9 +14,15 @@ class CreargruposWidget extends StatefulWidget {
   const CreargruposWidget({
     super.key,
     required this.profesor,
-  });
+    required this.creaGrupo,
+    String? item,
+    this.grupoItem,
+  }) : item = item ?? '0';
 
   final ProfesoresRecord? profesor;
+  final GruposRecord? creaGrupo;
+  final String item;
+  final DocumentReference? grupoItem;
 
   @override
   State<CreargruposWidget> createState() => _CreargruposWidgetState();
@@ -35,8 +42,11 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
     _model.txtFSeccionFocusNode ??= FocusNode();
 
     _model.txtFProfesorController ??=
-        TextEditingController(text: widget.profesor?.nombre);
+        TextEditingController(text: currentUserDisplayName);
     _model.txtFProfesorFocusNode ??= FocusNode();
+
+    _model.txtCantEstudianteController ??= TextEditingController();
+    _model.txtCantEstudianteFocusNode ??= FocusNode();
   }
 
   @override
@@ -375,67 +385,70 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           8.0, 0.0, 8.0, 0.0),
-                                      child: TextFormField(
-                                        controller:
-                                            _model.txtFProfesorController,
-                                        focusNode: _model.txtFProfesorFocusNode,
-                                        autofocus: true,
-                                        obscureText: false,
-                                        decoration: InputDecoration(
-                                          labelText: 'Profesor a cargo...',
-                                          labelStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMedium,
-                                          hintStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMedium,
-                                          enabledBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 2.0,
+                                      child: AuthUserStreamWidget(
+                                        builder: (context) => TextFormField(
+                                          controller:
+                                              _model.txtFProfesorController,
+                                          focusNode:
+                                              _model.txtFProfesorFocusNode,
+                                          autofocus: true,
+                                          obscureText: false,
+                                          decoration: InputDecoration(
+                                            labelText: 'Profesor a cargo...',
+                                            labelStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMedium,
+                                            hintStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMedium,
+                                            enabledBorder: UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .alternate,
+                                                width: 2.0,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                          focusedBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                              width: 2.0,
+                                            focusedBorder: UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                width: 2.0,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                          errorBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .error,
-                                              width: 2.0,
+                                            errorBorder: UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .error,
+                                                width: 2.0,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                          focusedErrorBorder:
-                                              UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .error,
-                                              width: 2.0,
+                                            focusedErrorBorder:
+                                                UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .error,
+                                                width: 2.0,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                             ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
                                           ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium,
+                                          validator: _model
+                                              .txtFProfesorControllerValidator
+                                              .asValidator(context),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
-                                        validator: _model
-                                            .txtFProfesorControllerValidator
-                                            .asValidator(context),
                                       ),
                                     ),
                                   ),
@@ -535,9 +548,115 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                   ),
                   Padding(
                     padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 23.0, 0.0, 0.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Expanded(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Expanded(
+                                    child: Text(
+                                      'Cantidad estudiantes',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Container(
+                                    width: 287.0,
+                                    decoration: const BoxDecoration(),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          8.0, 0.0, 8.0, 0.0),
+                                      child: TextFormField(
+                                        controller:
+                                            _model.txtCantEstudianteController,
+                                        focusNode:
+                                            _model.txtCantEstudianteFocusNode,
+                                        autofocus: true,
+                                        obscureText: false,
+                                        decoration: InputDecoration(
+                                          labelText: 'Cantidad estudiante...\n',
+                                          labelStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMedium,
+                                          hintStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMedium,
+                                          enabledBorder: UnderlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .alternate,
+                                              width: 2.0,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          ),
+                                          focusedBorder: UnderlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                              width: 2.0,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          ),
+                                          errorBorder: UnderlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .error,
+                                              width: 2.0,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          ),
+                                          focusedErrorBorder:
+                                              UnderlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .error,
+                                              width: 2.0,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          ),
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                        keyboardType: TextInputType.number,
+                                        validator: _model
+                                            .txtCantEstudianteControllerValidator
+                                            .asValidator(context),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
                         const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -550,15 +669,9 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                       profesor: widget.profesor?.reference,
                                       seccion:
                                           _model.txtFSeccionController.text,
+                                      cantidadEstudiantes: int.tryParse(_model
+                                          .txtCantEstudianteController.text),
                                     ));
-
-                                await widget.profesor!.reference.update({
-                                  ...mapToFirestore(
-                                    {
-                                      'materias': _model.dropMateriasValue,
-                                    },
-                                  ),
-                                });
                               },
                               text: 'Crear Grupo',
                               options: FFButtonOptions(
@@ -583,6 +696,32 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                               ),
                             ),
                           ],
+                        ),
+                        FFButtonWidget(
+                          onPressed: () {
+                            print('btnGuardarGrupo pressed ...');
+                          },
+                          text: 'Crear Estudiante',
+                          options: FFButtonOptions(
+                            height: 48.89,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                24.0, 0.0, 24.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: const Color(0xFF070D59),
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Colors.white,
+                                ),
+                            elevation: 3.0,
+                            borderSide: const BorderSide(
+                              color: Colors.transparent,
+                              width: 1.0,
+                            ),
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
                         ),
                       ],
                     ),

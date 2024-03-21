@@ -608,8 +608,8 @@ class _CrearTareaProfesorWidgetState extends State<CrearTareaProfesorWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                       child: FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
+                        onPressed: () async {
+                          context.safePop();
                         },
                         text: 'Cancelar',
                         options: FFButtonOptions(

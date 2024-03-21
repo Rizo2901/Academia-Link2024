@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/components/slide_lateral_widget.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
@@ -749,10 +750,12 @@ class _CrearUsuarioWidgetState extends State<CrearUsuarioWidget> {
                                     if (_model.ddRolValue == 'Profesor') {
                                       await ProfesoresRecord.collection
                                           .doc()
-                                          .set(createProfesoresRecordData());
+                                          .set(createProfesoresRecordData(
+                                            usuario: currentUserReference,
+                                          ));
                                     }
                                   },
-                                  text: 'Continuar',
+                                  text: 'Crear',
                                   options: FFButtonOptions(
                                     width: 300.0,
                                     height: 50.0,
