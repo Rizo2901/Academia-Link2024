@@ -1,5 +1,5 @@
 import '/backend/backend.dart';
-import '/components/cambiar_foto_widget.dart';
+import '/components/cmp_cambiar_foto_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -138,8 +138,7 @@ class _PerfilEstudianteWidgetState extends State<PerfilEstudianteWidget> {
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
-                                        Navigator.pop(context);
-                                        context.safePop();
+                                        context.pushNamed('ListaEstudiantes');
                                       },
                                       child: Icon(
                                         Icons.chevron_left_rounded,
@@ -155,7 +154,7 @@ class _PerfilEstudianteWidgetState extends State<PerfilEstudianteWidget> {
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             45.0, 10.0, 52.0, 10.0),
                                         child: Text(
-                                          'Editar Perfil',
+                                          'Editar Estudiante',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -248,7 +247,7 @@ class _PerfilEstudianteWidgetState extends State<PerfilEstudianteWidget> {
                                           height: MediaQuery.sizeOf(context)
                                                   .height *
                                               0.5,
-                                          child: const CambiarFotoWidget(),
+                                          child: const CmpCambiarFotoWidget(),
                                         ),
                                       ),
                                     );

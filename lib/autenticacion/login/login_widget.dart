@@ -119,23 +119,27 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 ),
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 11.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Text(
-                                    '¡Gracias por volver a Academia Link!',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Cutive',
-                                          color: Colors.black,
-                                          fontSize: 16.0,
-                                        ),
-                                  ),
-                                ],
+                            Flexible(
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 11.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Flexible(
+                                      child: Text(
+                                        '¡Gracias por volver a Academia Link!',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Cutive',
+                                              color: Colors.black,
+                                              fontSize: 16.0,
+                                            ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                             Form(

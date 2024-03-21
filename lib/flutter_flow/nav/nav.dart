@@ -73,14 +73,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const InicioWidget() : const HomePageProfesorWidget(),
+          appStateNotifier.loggedIn ? const HomePageProfesorWidget() : const InicioWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
-              ? const InicioWidget()
-              : const HomePageProfesorWidget(),
+              ? const HomePageProfesorWidget()
+              : const InicioWidget(),
         ),
         FFRoute(
           name: 'Inicio',
@@ -122,14 +122,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'ListaUsuarios',
-          path: '/listaUsuarios',
-          builder: (context, params) => const ListaUsuariosWidget(),
-        ),
-        FFRoute(
-          name: 'HomePageEstudiante',
-          path: '/homePageEstudiante',
-          builder: (context, params) => const HomePageEstudianteWidget(),
+          name: 'ListaUsuarios-Pendiente',
+          path: '/listaUsuariosPendiente',
+          builder: (context, params) => const ListaUsuariosPendienteWidget(),
         ),
         FFRoute(
           name: 'ListaTareas',
@@ -162,9 +157,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'ListaAlumnos',
-          path: '/listaAlumnos',
-          builder: (context, params) => const ListaAlumnosWidget(),
+          name: 'ListaEstudiantes',
+          path: '/listaEstudiantes',
+          builder: (context, params) => const ListaEstudiantesWidget(),
         ),
         FFRoute(
           name: 'Perfil',
@@ -172,22 +167,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const PerfilWidget(),
         ),
         FFRoute(
-          name: 'EditarGrupos',
-          path: '/editarGrupos',
-          builder: (context, params) => EditarGruposWidget(
+          name: 'EditarGrupos-Pendiente',
+          path: '/editarGruposPendiente',
+          builder: (context, params) => EditarGruposPendienteWidget(
             grupoEditar: params.getParam(
                 'grupoEditar', ParamType.DocumentReference, false, ['grupos']),
           ),
         ),
         FFRoute(
-          name: 'EliminarGrupos',
-          path: '/eliminarGrupos',
-          builder: (context, params) => const EliminarGruposWidget(),
+          name: 'EliminarGrupos-Pendiente',
+          path: '/eliminarGruposPendiente',
+          builder: (context, params) => const EliminarGruposPendienteWidget(),
         ),
         FFRoute(
-          name: 'ListaGrupo',
-          path: '/listaGrupo',
-          builder: (context, params) => ListaGrupoWidget(
+          name: 'ListaGrupo-Pendiente',
+          path: '/listaGrupoPendiente',
+          builder: (context, params) => ListaGrupoPendienteWidget(
             grupoLista: params.getParam<DocumentReference>(
                 'grupoLista', ParamType.DocumentReference, true, ['grupos']),
           ),
@@ -226,12 +221,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'ListaLikes',
-          path: '/listaLikes',
+          name: 'ListaLikes-Pendiente',
+          path: '/listaLikesPendiente',
           asyncParams: {
             'dddd': getDoc(['anuncios'], AnunciosRecord.fromSnapshot),
           },
-          builder: (context, params) => ListaLikesWidget(
+          builder: (context, params) => ListaLikesPendienteWidget(
             dddd: params.getParam('dddd', ParamType.Document),
           ),
         ),
@@ -246,6 +241,23 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             perfilEstudiantes:
                 params.getParam('perfilEstudiantes', ParamType.Document),
           ),
+        ),
+        FFRoute(
+          name: 'HomePageEstudiante',
+          path: '/homePageEstudiante',
+          asyncParams: {
+            'profesorName':
+                getDoc(['profesores'], ProfesoresRecord.fromSnapshot),
+          },
+          builder: (context, params) => HomePageEstudianteWidget(
+            profeso: params.getParam('profeso', ParamType.String),
+            profesorName: params.getParam('profesorName', ParamType.Document),
+          ),
+        ),
+        FFRoute(
+          name: 'ListaProfesores-Pendiente',
+          path: '/listaProfesoresPendiente',
+          builder: (context, params) => const ListaProfesoresPendienteWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -412,7 +424,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/homePageProfesor';
+            return '/inicio';
           }
           return null;
         },

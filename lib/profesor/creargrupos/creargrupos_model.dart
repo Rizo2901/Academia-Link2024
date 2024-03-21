@@ -1,3 +1,4 @@
+import '/components/cmpside_menu_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'creargrupos_widget.dart' show CreargruposWidget;
@@ -22,11 +23,15 @@ class CreargruposModel extends FlutterFlowModel<CreargruposWidget> {
   FocusNode? txtCantEstudianteFocusNode;
   TextEditingController? txtCantEstudianteController;
   String? Function(BuildContext, String?)? txtCantEstudianteControllerValidator;
+  // Model for cmpsideMenu component.
+  late CmpsideMenuModel cmpsideMenuModel;
 
   /// Initialization and disposal methods.
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    cmpsideMenuModel = createModel(context, () => CmpsideMenuModel());
+  }
 
   @override
   void dispose() {
@@ -39,6 +44,8 @@ class CreargruposModel extends FlutterFlowModel<CreargruposWidget> {
 
     txtCantEstudianteFocusNode?.dispose();
     txtCantEstudianteController?.dispose();
+
+    cmpsideMenuModel.dispose();
   }
 
   /// Action blocks are added here.

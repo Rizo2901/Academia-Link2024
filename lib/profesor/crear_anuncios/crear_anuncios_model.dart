@@ -1,3 +1,4 @@
+import '/components/cmpside_menu_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'crear_anuncios_widget.dart' show CrearAnunciosWidget;
 import 'package:flutter/material.dart';
@@ -33,6 +34,9 @@ class CrearAnunciosModel extends FlutterFlowModel<CrearAnunciosWidget> {
     return null;
   }
 
+  // Model for cmpsideMenu component.
+  late CmpsideMenuModel cmpsideMenuModel;
+
   /// Initialization and disposal methods.
 
   @override
@@ -40,6 +44,7 @@ class CrearAnunciosModel extends FlutterFlowModel<CrearAnunciosWidget> {
     txtTituloControllerValidator = _txtTituloControllerValidator;
     txtDescripcionAnuncioControllerValidator =
         _txtDescripcionAnuncioControllerValidator;
+    cmpsideMenuModel = createModel(context, () => CmpsideMenuModel());
   }
 
   @override
@@ -50,6 +55,8 @@ class CrearAnunciosModel extends FlutterFlowModel<CrearAnunciosWidget> {
 
     txtDescripcionAnuncioFocusNode?.dispose();
     txtDescripcionAnuncioController?.dispose();
+
+    cmpsideMenuModel.dispose();
   }
 
   /// Action blocks are added here.

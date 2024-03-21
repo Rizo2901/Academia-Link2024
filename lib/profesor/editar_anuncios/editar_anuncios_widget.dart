@@ -1,5 +1,5 @@
 import '/backend/backend.dart';
-import '/components/slide_lateral_widget.dart';
+import '/components/cmpside_menu_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -72,6 +72,17 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
           child: Scaffold(
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+            endDrawer: SizedBox(
+              width: MediaQuery.sizeOf(context).width * 0.7,
+              child: Drawer(
+                elevation: 17.0,
+                child: wrapWithModel(
+                  model: _model.cmpsideMenuModel,
+                  updateCallback: () => setState(() {}),
+                  child: const CmpsideMenuWidget(),
+                ),
+              ),
+            ),
             body: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -166,35 +177,8 @@ class _EditarAnunciosWidgetState extends State<EditarAnunciosWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          await showModalBottomSheet(
-                                            isScrollControlled: true,
-                                            backgroundColor: Colors.transparent,
-                                            context: context,
-                                            builder: (context) {
-                                              return GestureDetector(
-                                                onTap: () => _model.unfocusNode
-                                                        .canRequestFocus
-                                                    ? FocusScope.of(context)
-                                                        .requestFocus(
-                                                            _model.unfocusNode)
-                                                    : FocusScope.of(context)
-                                                        .unfocus(),
-                                                child: Padding(
-                                                  padding:
-                                                      MediaQuery.viewInsetsOf(
-                                                          context),
-                                                  child: SizedBox(
-                                                    height: MediaQuery.sizeOf(
-                                                                context)
-                                                            .height *
-                                                        0.3,
-                                                    child: const SlideLateralWidget(),
-                                                  ),
-                                                ),
-                                              );
-                                            },
-                                          ).then(
-                                              (value) => safeSetState(() {}));
+                                          scaffoldKey.currentState!
+                                              .openEndDrawer();
                                         },
                                         child: Icon(
                                           Icons.menu,

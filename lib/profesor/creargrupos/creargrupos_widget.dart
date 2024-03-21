@@ -1,6 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/components/slide_lateral_widget.dart';
+import '/components/cmpside_menu_widget.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -65,6 +65,17 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        endDrawer: SizedBox(
+          width: MediaQuery.sizeOf(context).width * 0.7,
+          child: Drawer(
+            elevation: 17.0,
+            child: wrapWithModel(
+              model: _model.cmpsideMenuModel,
+              updateCallback: () => setState(() {}),
+              child: const CmpsideMenuWidget(),
+            ),
+          ),
+        ),
         body: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -113,6 +124,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Icon(
                                   Icons.chevron_left_rounded,
@@ -124,9 +136,9 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                   alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        45.0, 16.0, 52.0, 10.0),
+                                        45.0, 10.0, 52.0, 10.0),
                                     child: Text(
-                                      'Creación de grupo\n',
+                                      'Crear Grupo',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -146,33 +158,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      await showModalBottomSheet(
-                                        isScrollControlled: true,
-                                        backgroundColor: Colors.transparent,
-                                        context: context,
-                                        builder: (context) {
-                                          return GestureDetector(
-                                            onTap: () => _model
-                                                    .unfocusNode.canRequestFocus
-                                                ? FocusScope.of(context)
-                                                    .requestFocus(
-                                                        _model.unfocusNode)
-                                                : FocusScope.of(context)
-                                                    .unfocus(),
-                                            child: Padding(
-                                              padding: MediaQuery.viewInsetsOf(
-                                                  context),
-                                              child: SizedBox(
-                                                height:
-                                                    MediaQuery.sizeOf(context)
-                                                            .height *
-                                                        0.3,
-                                                child: const SlideLateralWidget(),
-                                              ),
-                                            ),
-                                          );
-                                        },
-                                      ).then((value) => safeSetState(() {}));
+                                      scaffoldKey.currentState!.openEndDrawer();
                                     },
                                     child: Icon(
                                       Icons.menu,
@@ -237,7 +223,7 @@ class _CreargruposWidgetState extends State<CreargruposWidget> {
                                   24.0, 0.0, 24.0, 0.0),
                               iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: const Color(0xFF6093C7),
+                              color: const Color(0xFF070D59),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(

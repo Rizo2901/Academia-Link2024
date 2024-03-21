@@ -1,3 +1,4 @@
+import '/components/cmpside_menu_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'crear_usuario_widget.dart' show CrearUsuarioWidget;
@@ -96,6 +97,8 @@ class CrearUsuarioModel extends FlutterFlowModel<CrearUsuarioWidget> {
   // State field(s) for ddRol widget.
   String? ddRolValue;
   FormFieldController<String>? ddRolValueController;
+  // Model for cmpsideMenu component.
+  late CmpsideMenuModel cmpsideMenuModel;
 
   /// Initialization and disposal methods.
 
@@ -108,6 +111,7 @@ class CrearUsuarioModel extends FlutterFlowModel<CrearUsuarioWidget> {
     txtCorreoControllerValidator = _txtCorreoControllerValidator;
     txtContrasenaVisibility = false;
     txtContrasenaControllerValidator = _txtContrasenaControllerValidator;
+    cmpsideMenuModel = createModel(context, () => CmpsideMenuModel());
   }
 
   @override
@@ -130,6 +134,8 @@ class CrearUsuarioModel extends FlutterFlowModel<CrearUsuarioWidget> {
 
     txtContrasenaFocusNode?.dispose();
     txtContrasenaController?.dispose();
+
+    cmpsideMenuModel.dispose();
   }
 
   /// Action blocks are added here.

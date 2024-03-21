@@ -1,6 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/components/slide_lateral_widget.dart';
+import '/components/cmpside_menu_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -51,6 +51,17 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        endDrawer: SizedBox(
+          width: MediaQuery.sizeOf(context).width * 0.7,
+          child: Drawer(
+            elevation: 17.0,
+            child: wrapWithModel(
+              model: _model.cmpsideMenuModel,
+              updateCallback: () => setState(() {}),
+              child: const CmpsideMenuWidget(),
+            ),
+          ),
+        ),
         body: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -147,33 +158,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      await showModalBottomSheet(
-                                        isScrollControlled: true,
-                                        backgroundColor: Colors.transparent,
-                                        context: context,
-                                        builder: (context) {
-                                          return GestureDetector(
-                                            onTap: () => _model
-                                                    .unfocusNode.canRequestFocus
-                                                ? FocusScope.of(context)
-                                                    .requestFocus(
-                                                        _model.unfocusNode)
-                                                : FocusScope.of(context)
-                                                    .unfocus(),
-                                            child: Padding(
-                                              padding: MediaQuery.viewInsetsOf(
-                                                  context),
-                                              child: SizedBox(
-                                                height:
-                                                    MediaQuery.sizeOf(context)
-                                                            .height *
-                                                        0.3,
-                                                child: const SlideLateralWidget(),
-                                              ),
-                                            ),
-                                          );
-                                        },
-                                      ).then((value) => safeSetState(() {}));
+                                      scaffoldKey.currentState!.openEndDrawer();
                                     },
                                     child: Icon(
                                       Icons.menu,
@@ -496,7 +481,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                                   child: FFButtonWidget(
                                                     onPressed: () async {
                                                       context.pushNamed(
-                                                          'ListaGrupo');
+                                                          'ListaGrupo-Pendiente');
                                                     },
                                                     text: 'Pasar Lista',
                                                     icon: const Icon(
@@ -549,7 +534,7 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                                                   child: FFButtonWidget(
                                                     onPressed: () async {
                                                       context.pushNamed(
-                                                        'EditarGrupos',
+                                                        'EditarGrupos-Pendiente',
                                                         queryParameters: {
                                                           'grupoEditar':
                                                               serializeParam(
@@ -616,68 +601,6 @@ class _MisgruposProfesorWidgetState extends State<MisgruposProfesorWidget> {
                             },
                           );
                         },
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Align(
-              alignment: const AlignmentDirectional(0.0, 1.0),
-              child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Container(
-                        width: 100.0,
-                        height: MediaQuery.sizeOf(context).height * 0.1,
-                        decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                        ),
-                        child: Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              const Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    25.0, 0.0, 0.0, 0.0),
-                                child: FaIcon(
-                                  FontAwesomeIcons.home,
-                                  color: Color(0xDC1700FF),
-                                  size: 26.0,
-                                ),
-                              ),
-                              const Icon(
-                                Icons.favorite,
-                                color: Color(0xFFFF0004),
-                                size: 26.0,
-                              ),
-                              Icon(
-                                Icons.logout,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                size: 26.0,
-                              ),
-                              const Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 25.0, 0.0),
-                                child: FaIcon(
-                                  FontAwesomeIcons.userCog,
-                                  color: Colors.black,
-                                  size: 26.0,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
                       ),
                     ),
                   ],

@@ -1,3 +1,4 @@
+import '/components/cmpside_menu_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'editar_usuario_widget.dart' show EditarUsuarioWidget;
@@ -88,6 +89,8 @@ class EditarUsuarioModel extends FlutterFlowModel<EditarUsuarioWidget> {
   // State field(s) for ddRol widget.
   String? ddRolValue;
   FormFieldController<String>? ddRolValueController;
+  // Model for cmpsideMenu component.
+  late CmpsideMenuModel cmpsideMenuModel;
 
   /// Initialization and disposal methods.
 
@@ -100,6 +103,7 @@ class EditarUsuarioModel extends FlutterFlowModel<EditarUsuarioWidget> {
     txtNuevoApellido2ControllerValidator =
         _txtNuevoApellido2ControllerValidator;
     txtNuevoCorreoControllerValidator = _txtNuevoCorreoControllerValidator;
+    cmpsideMenuModel = createModel(context, () => CmpsideMenuModel());
   }
 
   @override
@@ -119,6 +123,8 @@ class EditarUsuarioModel extends FlutterFlowModel<EditarUsuarioWidget> {
 
     txtNuevoCorreoFocusNode?.dispose();
     txtNuevoCorreoController?.dispose();
+
+    cmpsideMenuModel.dispose();
   }
 
   /// Action blocks are added here.

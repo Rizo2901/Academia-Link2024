@@ -1,6 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/components/cambiar_foto_widget.dart';
+import '/components/cmp_cambiar_foto_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -234,7 +234,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                           height: MediaQuery.sizeOf(context)
                                                   .height *
                                               0.5,
-                                          child: const CambiarFotoWidget(),
+                                          child: const CmpCambiarFotoWidget(),
                                         ),
                                       ),
                                     );

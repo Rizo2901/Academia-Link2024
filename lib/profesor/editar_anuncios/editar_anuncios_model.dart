@@ -1,3 +1,4 @@
+import '/components/cmpside_menu_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'editar_anuncios_widget.dart' show EditarAnunciosWidget;
 import 'package:flutter/material.dart';
@@ -33,12 +34,16 @@ class EditarAnunciosModel extends FlutterFlowModel<EditarAnunciosWidget> {
     return null;
   }
 
+  // Model for cmpsideMenu component.
+  late CmpsideMenuModel cmpsideMenuModel;
+
   /// Initialization and disposal methods.
 
   @override
   void initState(BuildContext context) {
     txtEditarTituloControllerValidator = _txtEditarTituloControllerValidator;
     txtEditarAnuncioControllerValidator = _txtEditarAnuncioControllerValidator;
+    cmpsideMenuModel = createModel(context, () => CmpsideMenuModel());
   }
 
   @override
@@ -49,6 +54,8 @@ class EditarAnunciosModel extends FlutterFlowModel<EditarAnunciosWidget> {
 
     txtEditarAnuncioFocusNode?.dispose();
     txtEditarAnuncioController?.dispose();
+
+    cmpsideMenuModel.dispose();
   }
 
   /// Action blocks are added here.

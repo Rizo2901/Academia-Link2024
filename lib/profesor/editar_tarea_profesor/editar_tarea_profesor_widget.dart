@@ -1,5 +1,5 @@
 import '/backend/backend.dart';
-import '/components/slide_lateral_widget.dart';
+import '/components/cmpside_menu_widget.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -65,95 +65,123 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        endDrawer: SizedBox(
+          width: MediaQuery.sizeOf(context).width * 0.7,
+          child: Drawer(
+            elevation: 17.0,
+            child: wrapWithModel(
+              model: _model.cmpsideMenuModel,
+              updateCallback: () => setState(() {}),
+              child: const CmpsideMenuWidget(),
+            ),
+          ),
+        ),
         body: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
             Row(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Container(
-                  width: MediaQuery.sizeOf(context).width * 1.0,
-                  height: 175.0,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        const Color(0xFF94C0F2),
-                        FlutterFlowTheme.of(context).primaryBackground
-                      ],
-                      stops: const [0.0, 1.0],
-                      begin: const AlignmentDirectional(0.0, -1.0),
-                      end: const AlignmentDirectional(0, 1.0),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(7.0, 8.0, 0.0, 3.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.asset(
-                            'assets/images/MicrosoftTeams-image__3_-removebg-preview.png',
-                            width: 82.0,
-                            height: 64.0,
-                            fit: BoxFit.contain,
-                          ),
+                Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Container(
+                      width: MediaQuery.sizeOf(context).width * 1.0,
+                      height: 150.0,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            const Color(0xFF94C0F2),
+                            FlutterFlowTheme.of(context).primaryBackground
+                          ],
+                          stops: const [0.0, 1.0],
+                          begin: const AlignmentDirectional(0.0, -1.0),
+                          end: const AlignmentDirectional(0, 1.0),
                         ),
                       ),
-                      Text(
-                        'Editar Tarea',
-                        textAlign: TextAlign.start,
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'PT Sans',
-                              color: Colors.black,
-                              fontSize: 25.0,
-                              fontWeight: FontWeight.w600,
-                            ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            29.0, 0.0, 20.0, 0.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            await showModalBottomSheet(
-                              isScrollControlled: true,
-                              backgroundColor: Colors.transparent,
-                              context: context,
-                              builder: (context) {
-                                return GestureDetector(
-                                  onTap: () =>
-                                      _model.unfocusNode.canRequestFocus
-                                          ? FocusScope.of(context)
-                                              .requestFocus(_model.unfocusNode)
-                                          : FocusScope.of(context).unfocus(),
-                                  child: Padding(
-                                    padding: MediaQuery.viewInsetsOf(context),
-                                    child: SizedBox(
-                                      height:
-                                          MediaQuery.sizeOf(context).height *
-                                              0.3,
-                                      child: const SlideLateralWidget(),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Flexible(
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  15.0, 15.0, 15.0, 0.0),
+                              child: Container(
+                                width: MediaQuery.sizeOf(context).width * 0.9,
+                                height: 62.0,
+                                decoration: BoxDecoration(
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryBackground,
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      blurRadius: 0.0,
+                                      color: Color(0x33717171),
+                                      offset: Offset(0.0, 2.0),
+                                      spreadRadius: 0.0,
+                                    )
+                                  ],
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  shape: BoxShape.rectangle,
+                                ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Icon(
+                                      Icons.chevron_left_rounded,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      size: 45.0,
                                     ),
-                                  ),
-                                );
-                              },
-                            ).then((value) => safeSetState(() {}));
-                          },
-                          child: Icon(
-                            Icons.menu,
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                            size: 36.0,
+                                    Align(
+                                      alignment:
+                                          const AlignmentDirectional(-1.0, 0.0),
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            45.0, 10.0, 52.0, 10.0),
+                                        child: Text(
+                                          'Editar Tarea',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'PT Sans',
+                                                fontSize: 20.0,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          10.0, 10.0, 10.0, 10.0),
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          scaffoldKey.currentState!
+                                              .openEndDrawer();
+                                        },
+                                        child: Icon(
+                                          Icons.menu,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          size: 31.0,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -166,7 +194,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                         const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
-                      height: MediaQuery.sizeOf(context).height * 0.55,
+                      height: MediaQuery.sizeOf(context).height * 0.595,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.circular(25.0),
@@ -450,8 +478,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                       iconPadding:
                                           const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
+                                      color: const Color(0xFF222A72),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -520,7 +547,7 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                                           setState(() =>
                                               _model.switchValue = newValue);
                                         },
-                                        activeColor: const Color(0xFF009650),
+                                        activeColor: const Color(0xFF222A72),
                                         activeTrackColor:
                                             FlutterFlowTheme.of(context)
                                                 .accent1,
@@ -631,166 +658,65 @@ class _EditarTareaProfesorWidgetState extends State<EditarTareaProfesorWidget> {
                 ),
               ],
             ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Expanded(
-                  child: Align(
-                    alignment: const AlignmentDirectional(-1.0, 0.0),
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
-                      child: FFButtonWidget(
-                        onPressed: () async {
-                          context.safePop();
-                        },
-                        text: 'Cancelar',
-                        options: FFButtonOptions(
-                          width: MediaQuery.sizeOf(context).width * 0.27,
-                          height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              24.0, 0.0, 24.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0xFFCB1719),
-                          textStyle:
-                              FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
-                                  ),
-                          elevation: 3.0,
-                          borderSide: const BorderSide(
-                            color: Colors.transparent,
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Align(
-                    alignment: const AlignmentDirectional(1.0, 0.0),
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
-                      child: FFButtonWidget(
-                        onPressed: () async {
-                          await widget.tareas!.reference.update({
-                            ...createTareasRecordData(
-                              tNombre: _model.txtNombreTareaController.text,
-                              tDescripcion:
-                                  _model.txtDescripcionController.text,
-                              tFechaLimite: _model.datePicked,
-                              estado: _model.switchValue,
-                            ),
-                            ...mapToFirestore(
-                              {
-                                'Grupos': _model.dropDownValue,
-                              },
-                            ),
-                          });
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text(
-                                'Se actualizó la tarea exitosamente',
-                                style: TextStyle(
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                ),
-                              ),
-                              duration: const Duration(milliseconds: 4000),
-                              backgroundColor:
-                                  FlutterFlowTheme.of(context).secondary,
-                            ),
-                          );
-                          context.safePop();
-                        },
-                        text: 'Guardar',
-                        options: FFButtonOptions(
-                          width: MediaQuery.sizeOf(context).width * 0.27,
-                          height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              24.0, 0.0, 24.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0xFF009650),
-                          textStyle:
-                              FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
-                                  ),
-                          elevation: 3.0,
-                          borderSide: const BorderSide(
-                            color: Colors.transparent,
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const Expanded(
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
-                children: [],
-              ),
-            ),
-            Align(
-              alignment: const AlignmentDirectional(0.0, 1.0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Expanded(
-                    child: Container(
-                      width: 100.0,
-                      height: MediaQuery.sizeOf(context).height * 0.1,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                      ),
-                      child: Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  25.0, 0.0, 0.0, 0.0),
-                              child: FaIcon(
-                                FontAwesomeIcons.home,
-                                color: Color(0xDC1700FF),
-                                size: 26.0,
+                  Align(
+                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        await widget.tareas!.reference.update({
+                          ...createTareasRecordData(
+                            tNombre: _model.txtNombreTareaController.text,
+                            tDescripcion: _model.txtDescripcionController.text,
+                            tFechaLimite: _model.datePicked,
+                            estado: _model.switchValue,
+                          ),
+                          ...mapToFirestore(
+                            {
+                              'Grupos': _model.dropDownValue,
+                            },
+                          ),
+                        });
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(
+                              'Se actualizó la tarea exitosamente',
+                              style: TextStyle(
+                                color: FlutterFlowTheme.of(context).primaryText,
                               ),
                             ),
-                            const Icon(
-                              Icons.favorite,
-                              color: Color(0xFFFF0004),
-                              size: 26.0,
-                            ),
-                            Icon(
-                              Icons.logout,
-                              color: FlutterFlowTheme.of(context).secondaryText,
-                              size: 26.0,
-                            ),
-                            const Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 25.0, 0.0),
-                              child: FaIcon(
-                                FontAwesomeIcons.userCog,
-                                color: Colors.black,
-                                size: 26.0,
-                              ),
-                            ),
-                          ],
+                            duration: const Duration(milliseconds: 4000),
+                            backgroundColor:
+                                FlutterFlowTheme.of(context).secondary,
+                          ),
+                        );
+                        context.safePop();
+                      },
+                      text: 'Guardar',
+                      options: FFButtonOptions(
+                        width: MediaQuery.sizeOf(context).width * 0.27,
+                        height: 40.0,
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            24.0, 0.0, 24.0, 0.0),
+                        iconPadding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: const Color(0xFF222A72),
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Colors.white,
+                                ),
+                        elevation: 3.0,
+                        borderSide: const BorderSide(
+                          color: Colors.transparent,
+                          width: 1.0,
                         ),
+                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
                   ),
