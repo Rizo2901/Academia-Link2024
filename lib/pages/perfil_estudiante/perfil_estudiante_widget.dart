@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/components/cambiar_foto_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -31,33 +30,36 @@ class _PerfilEstudianteWidgetState extends State<PerfilEstudianteWidget> {
     super.initState();
     _model = createModel(context, () => PerfilEstudianteModel());
 
-    _model.txtCedulaController ??= TextEditingController(
-        text: valueOrDefault(currentUserDocument?.cedula, ''));
+    _model.txtCedulaController ??=
+        TextEditingController(text: widget.perfilEstudiantes?.eCedula);
     _model.txtCedulaFocusNode ??= FocusNode();
 
     _model.txtNombreController ??=
-        TextEditingController(text: currentUserDisplayName);
+        TextEditingController(text: widget.perfilEstudiantes?.eNombre);
     _model.txtNombreFocusNode ??= FocusNode();
 
-    _model.txtApellido1Controller ??= TextEditingController(
-        text: valueOrDefault(currentUserDocument?.apellido1, ''));
+    _model.txtApellido1Controller ??=
+        TextEditingController(text: widget.perfilEstudiantes?.eApellido1);
     _model.txtApellido1FocusNode ??= FocusNode();
 
-    _model.txtApellido2Controller ??= TextEditingController(
-        text: valueOrDefault(currentUserDocument?.apellido2, ''));
+    _model.txtApellido2Controller ??=
+        TextEditingController(text: widget.perfilEstudiantes?.eApellido2);
     _model.txtApellido2FocusNode ??= FocusNode();
 
-    _model.txtCorreoController ??=
-        TextEditingController(text: currentUserEmail);
+    _model.txtCorreoController ??= TextEditingController(
+        text: widget.perfilEstudiantes?.eCorreoElectronico);
     _model.txtCorreoFocusNode ??= FocusNode();
 
-    _model.txtGrupoController ??= TextEditingController(text: currentUserEmail);
+    _model.txtGrupoController ??=
+        TextEditingController(text: widget.perfilEstudiantes?.eGrupo);
     _model.txtGrupoFocusNode ??= FocusNode();
 
-    _model.txtGradoController ??= TextEditingController(text: currentUserEmail);
+    _model.txtGradoController ??= TextEditingController(
+        text: widget.perfilEstudiantes?.eGrado.toString());
     _model.txtGradoFocusNode ??= FocusNode();
 
-    _model.txtEdadController ??= TextEditingController(text: currentUserEmail);
+    _model.txtEdadController ??= TextEditingController(
+        text: widget.perfilEstudiantes?.eEdad.toString());
     _model.txtEdadFocusNode ??= FocusNode();
   }
 
@@ -200,18 +202,16 @@ class _PerfilEstudianteWidgetState extends State<PerfilEstudianteWidget> {
                     children: [
                       Stack(
                         children: [
-                          AuthUserStreamWidget(
-                            builder: (context) => Container(
-                              width: 120.0,
-                              height: 120.0,
-                              clipBehavior: Clip.antiAlias,
-                              decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                              ),
-                              child: Image.network(
-                                currentUserPhoto,
-                                fit: BoxFit.cover,
-                              ),
+                          Container(
+                            width: 120.0,
+                            height: 120.0,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.network(
+                              widget.perfilEstudiantes!.uImagenPerfil,
+                              fit: BoxFit.cover,
                             ),
                           ),
                           Padding(
@@ -303,67 +303,59 @@ class _PerfilEstudianteWidgetState extends State<PerfilEstudianteWidget> {
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 10.0),
-                                    child: AuthUserStreamWidget(
-                                      builder: (context) => TextFormField(
-                                        controller: _model.txtCedulaController,
-                                        focusNode: _model.txtCedulaFocusNode,
-                                        autofocus: true,
-                                        obscureText: false,
-                                        decoration: InputDecoration(
-                                          labelStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMedium,
-                                          hintStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMedium,
-                                          enabledBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
+                                    child: TextFormField(
+                                      controller: _model.txtCedulaController,
+                                      focusNode: _model.txtCedulaFocusNode,
+                                      autofocus: true,
+                                      obscureText: false,
+                                      decoration: InputDecoration(
+                                        labelStyle: FlutterFlowTheme.of(context)
+                                            .labelMedium,
+                                        hintStyle: FlutterFlowTheme.of(context)
+                                            .labelMedium,
+                                        enabledBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .alternate,
+                                            width: 2.0,
                                           ),
-                                          focusedBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                          errorBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .error,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                          focusedErrorBorder:
-                                              UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .error,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
-                                        validator: _model
-                                            .txtCedulaControllerValidator
-                                            .asValidator(context),
+                                        focusedBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            width: 2.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                        errorBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .error,
+                                            width: 2.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                        focusedErrorBorder:
+                                            UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .error,
+                                            width: 2.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
                                       ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium,
+                                      validator: _model
+                                          .txtCedulaControllerValidator
+                                          .asValidator(context),
                                     ),
                                   ),
                                   Row(
@@ -383,67 +375,59 @@ class _PerfilEstudianteWidgetState extends State<PerfilEstudianteWidget> {
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 10.0),
-                                    child: AuthUserStreamWidget(
-                                      builder: (context) => TextFormField(
-                                        controller: _model.txtNombreController,
-                                        focusNode: _model.txtNombreFocusNode,
-                                        autofocus: true,
-                                        obscureText: false,
-                                        decoration: InputDecoration(
-                                          labelStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMedium,
-                                          hintStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMedium,
-                                          enabledBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
+                                    child: TextFormField(
+                                      controller: _model.txtNombreController,
+                                      focusNode: _model.txtNombreFocusNode,
+                                      autofocus: true,
+                                      obscureText: false,
+                                      decoration: InputDecoration(
+                                        labelStyle: FlutterFlowTheme.of(context)
+                                            .labelMedium,
+                                        hintStyle: FlutterFlowTheme.of(context)
+                                            .labelMedium,
+                                        enabledBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .alternate,
+                                            width: 2.0,
                                           ),
-                                          focusedBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                          errorBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .error,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                          focusedErrorBorder:
-                                              UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .error,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
-                                        validator: _model
-                                            .txtNombreControllerValidator
-                                            .asValidator(context),
+                                        focusedBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            width: 2.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                        errorBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .error,
+                                            width: 2.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                        focusedErrorBorder:
+                                            UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .error,
+                                            width: 2.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
                                       ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium,
+                                      validator: _model
+                                          .txtNombreControllerValidator
+                                          .asValidator(context),
                                     ),
                                   ),
                                   Row(
@@ -463,68 +447,59 @@ class _PerfilEstudianteWidgetState extends State<PerfilEstudianteWidget> {
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 10.0),
-                                    child: AuthUserStreamWidget(
-                                      builder: (context) => TextFormField(
-                                        controller:
-                                            _model.txtApellido1Controller,
-                                        focusNode: _model.txtApellido1FocusNode,
-                                        autofocus: true,
-                                        obscureText: false,
-                                        decoration: InputDecoration(
-                                          labelStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMedium,
-                                          hintStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMedium,
-                                          enabledBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
+                                    child: TextFormField(
+                                      controller: _model.txtApellido1Controller,
+                                      focusNode: _model.txtApellido1FocusNode,
+                                      autofocus: true,
+                                      obscureText: false,
+                                      decoration: InputDecoration(
+                                        labelStyle: FlutterFlowTheme.of(context)
+                                            .labelMedium,
+                                        hintStyle: FlutterFlowTheme.of(context)
+                                            .labelMedium,
+                                        enabledBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .alternate,
+                                            width: 2.0,
                                           ),
-                                          focusedBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                          errorBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .error,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                          focusedErrorBorder:
-                                              UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .error,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
-                                        validator: _model
-                                            .txtApellido1ControllerValidator
-                                            .asValidator(context),
+                                        focusedBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            width: 2.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                        errorBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .error,
+                                            width: 2.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                        focusedErrorBorder:
+                                            UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .error,
+                                            width: 2.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
                                       ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium,
+                                      validator: _model
+                                          .txtApellido1ControllerValidator
+                                          .asValidator(context),
                                     ),
                                   ),
                                   Row(
@@ -544,68 +519,59 @@ class _PerfilEstudianteWidgetState extends State<PerfilEstudianteWidget> {
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 10.0),
-                                    child: AuthUserStreamWidget(
-                                      builder: (context) => TextFormField(
-                                        controller:
-                                            _model.txtApellido2Controller,
-                                        focusNode: _model.txtApellido2FocusNode,
-                                        autofocus: true,
-                                        obscureText: false,
-                                        decoration: InputDecoration(
-                                          labelStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMedium,
-                                          hintStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelMedium,
-                                          enabledBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
+                                    child: TextFormField(
+                                      controller: _model.txtApellido2Controller,
+                                      focusNode: _model.txtApellido2FocusNode,
+                                      autofocus: true,
+                                      obscureText: false,
+                                      decoration: InputDecoration(
+                                        labelStyle: FlutterFlowTheme.of(context)
+                                            .labelMedium,
+                                        hintStyle: FlutterFlowTheme.of(context)
+                                            .labelMedium,
+                                        enabledBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .alternate,
+                                            width: 2.0,
                                           ),
-                                          focusedBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                          errorBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .error,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                          focusedErrorBorder:
-                                              UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .error,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
-                                        validator: _model
-                                            .txtApellido2ControllerValidator
-                                            .asValidator(context),
+                                        focusedBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            width: 2.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                        errorBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .error,
+                                            width: 2.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                        focusedErrorBorder:
+                                            UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .error,
+                                            width: 2.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
                                       ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium,
+                                      validator: _model
+                                          .txtApellido2ControllerValidator
+                                          .asValidator(context),
                                     ),
                                   ),
                                   Row(
@@ -924,32 +890,18 @@ class _PerfilEstudianteWidgetState extends State<PerfilEstudianteWidget> {
                             return;
                           }
 
-                          await currentUserReference!
-                              .update(createUsersRecordData(
-                            cedula: _model.txtCedulaController.text,
-                            displayName: _model.txtNombreController.text,
-                            apellido1: _model.txtApellido1Controller.text,
-                            apellido2: _model.txtApellido2Controller.text,
-                            email: _model.txtCorreoController.text,
+                          await widget.perfilEstudiantes!.reference
+                              .update(createEstudiantesRecordData(
+                            eCedula: _model.txtCedulaController.text,
+                            eNombre: _model.txtNombreController.text,
+                            eApellido1: _model.txtApellido1Controller.text,
+                            eApellido2: _model.txtApellido2Controller.text,
+                            eEdad: int.tryParse(_model.txtEdadController.text),
+                            eCorreoElectronico: _model.txtCorreoController.text,
+                            eGrupo: _model.txtGrupoController.text,
+                            eGrado:
+                                int.tryParse(_model.txtGradoController.text),
                           ));
-                          if (_model.txtCorreoController.text.isEmpty) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text(
-                                  'Email required!',
-                                ),
-                              ),
-                            );
-                            return;
-                          }
-
-                          await authManager.updateEmail(
-                            email: _model.txtCorreoController.text,
-                            context: context,
-                          );
-                          setState(() {});
-
-                          Navigator.pop(context);
                           context.safePop();
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(

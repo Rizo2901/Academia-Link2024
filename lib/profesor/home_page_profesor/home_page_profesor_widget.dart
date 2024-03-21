@@ -477,83 +477,94 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 0.0),
-                              child: Container(
-                                width: MediaQuery.sizeOf(context).width * 0.35,
-                                height: 150.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4.0,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0.0, 2.0),
-                                    )
-                                  ],
-                                  borderRadius: BorderRadius.circular(25.0),
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      child: Row(
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed('ListaAlumnos');
+                                },
+                                child: Container(
+                                  width:
+                                      MediaQuery.sizeOf(context).width * 0.35,
+                                  height: 150.0,
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 4.0,
+                                        color: Color(0x33000000),
+                                        offset: Offset(0.0, 2.0),
+                                      )
+                                    ],
+                                    borderRadius: BorderRadius.circular(25.0),
+                                  ),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Expanded(
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Expanded(
+                                              child: Padding(
+                                                padding: const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        15.0, 10.0, 15.0, 0.0),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                  child: Image.asset(
+                                                    'assets/images/students.png',
+                                                    width: 300.0,
+                                                    height: 80.0,
+                                                    fit: BoxFit.contain,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Expanded(
-                                            child: Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      15.0, 10.0, 15.0, 0.0),
-                                              child: ClipRRect(
+                                            child: Container(
+                                              height: MediaQuery.sizeOf(context)
+                                                      .height *
+                                                  0.05,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
                                                 borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                                child: Image.asset(
-                                                  'assets/images/students.png',
-                                                  width: 300.0,
-                                                  height: 80.0,
-                                                  fit: BoxFit.contain,
-                                                ),
+                                                    BorderRadius.circular(25.0),
+                                              ),
+                                              alignment: const AlignmentDirectional(
+                                                  0.0, 0.0),
+                                              child: Text(
+                                                'Estudiantes',
+                                                textAlign: TextAlign.center,
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'PT Sans',
+                                                          fontSize: 20.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
                                               ),
                                             ),
                                           ),
                                         ],
                                       ),
-                                    ),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Expanded(
-                                          child: Container(
-                                            height: MediaQuery.sizeOf(context)
-                                                    .height *
-                                                0.05,
-                                            decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                              borderRadius:
-                                                  BorderRadius.circular(25.0),
-                                            ),
-                                            alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
-                                            child: Text(
-                                              'Estudiantes',
-                                              textAlign: TextAlign.center,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'PT Sans',
-                                                        fontSize: 20.0,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -567,83 +578,94 @@ class _HomePageProfesorWidgetState extends State<HomePageProfesorWidget> {
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 0.0),
-                              child: Container(
-                                width: MediaQuery.sizeOf(context).width * 0.35,
-                                height: 150.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 4.0,
-                                      color: Color(0x33000000),
-                                      offset: Offset(0.0, 2.0),
-                                    )
-                                  ],
-                                  borderRadius: BorderRadius.circular(25.0),
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      child: Row(
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed('ListaTareas');
+                                },
+                                child: Container(
+                                  width:
+                                      MediaQuery.sizeOf(context).width * 0.35,
+                                  height: 150.0,
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 4.0,
+                                        color: Color(0x33000000),
+                                        offset: Offset(0.0, 2.0),
+                                      )
+                                    ],
+                                    borderRadius: BorderRadius.circular(25.0),
+                                  ),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Expanded(
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Expanded(
+                                              child: Padding(
+                                                padding: const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        15.0, 10.0, 15.0, 0.0),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                  child: Image.asset(
+                                                    'assets/images/homework.png',
+                                                    width: 300.0,
+                                                    height: 80.0,
+                                                    fit: BoxFit.contain,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Expanded(
-                                            child: Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      15.0, 10.0, 15.0, 0.0),
-                                              child: ClipRRect(
+                                            child: Container(
+                                              height: MediaQuery.sizeOf(context)
+                                                      .height *
+                                                  0.05,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
                                                 borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                                child: Image.asset(
-                                                  'assets/images/homework.png',
-                                                  width: 300.0,
-                                                  height: 80.0,
-                                                  fit: BoxFit.contain,
-                                                ),
+                                                    BorderRadius.circular(25.0),
+                                              ),
+                                              alignment: const AlignmentDirectional(
+                                                  0.0, 0.0),
+                                              child: Text(
+                                                'Tareas',
+                                                textAlign: TextAlign.center,
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'PT Sans',
+                                                          fontSize: 20.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
                                               ),
                                             ),
                                           ),
                                         ],
                                       ),
-                                    ),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Expanded(
-                                          child: Container(
-                                            height: MediaQuery.sizeOf(context)
-                                                    .height *
-                                                0.05,
-                                            decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                              borderRadius:
-                                                  BorderRadius.circular(25.0),
-                                            ),
-                                            alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
-                                            child: Text(
-                                              'Tareas',
-                                              textAlign: TextAlign.center,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'PT Sans',
-                                                        fontSize: 20.0,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),

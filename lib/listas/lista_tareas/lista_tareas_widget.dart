@@ -69,13 +69,22 @@ class _ListaTareasWidgetState extends State<ListaTareasWidget> {
                       Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(7.0, 8.0, 0.0, 3.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.asset(
-                            'assets/images/MicrosoftTeams-image__3_-removebg-preview.png',
-                            width: 82.0,
-                            height: 64.0,
-                            fit: BoxFit.contain,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('HomePageProfesor');
+                          },
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.asset(
+                              'assets/images/MicrosoftTeams-image__3_-removebg-preview.png',
+                              width: 82.0,
+                              height: 64.0,
+                              fit: BoxFit.contain,
+                            ),
                           ),
                         ),
                       ),
@@ -621,13 +630,22 @@ class _ListaTareasWidgetState extends State<ListaTareasWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              const Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     25.0, 0.0, 0.0, 0.0),
-                                child: FaIcon(
-                                  FontAwesomeIcons.home,
-                                  color: Color(0xDC1700FF),
-                                  size: 26.0,
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.pushNamed('HomePageProfesor');
+                                  },
+                                  child: const FaIcon(
+                                    FontAwesomeIcons.home,
+                                    color: Color(0xDC1700FF),
+                                    size: 26.0,
+                                  ),
                                 ),
                               ),
                               const Icon(
