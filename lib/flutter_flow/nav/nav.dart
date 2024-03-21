@@ -73,13 +73,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const InicioWidget() : const ListaTareasWidget(),
+          appStateNotifier.loggedIn ? const InicioWidget() : const PerfilEstudianteWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? const InicioWidget() : const ListaTareasWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? const InicioWidget()
+              : const PerfilEstudianteWidget(),
         ),
         FFRoute(
           name: 'Inicio',
@@ -232,6 +233,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           },
           builder: (context, params) => ListaLikesWidget(
             dddd: params.getParam('dddd', ParamType.Document),
+          ),
+        ),
+        FFRoute(
+          name: 'PerfilEstudiante',
+          path: '/perfilEstudiante',
+          asyncParams: {
+            'perfilEstudiantes':
+                getDoc(['estudiantes'], EstudiantesRecord.fromSnapshot),
+          },
+          builder: (context, params) => PerfilEstudianteWidget(
+            perfilEstudiantes:
+                params.getParam('perfilEstudiantes', ParamType.Document),
           ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
@@ -399,7 +412,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/listaTareas';
+            return '/perfilEstudiante';
           }
           return null;
         },

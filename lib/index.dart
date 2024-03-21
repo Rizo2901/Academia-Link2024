@@ -36,3 +36,5 @@ export '/profesor/editar_usuario/editar_usuario_widget.dart'
 export '/profesor/editar_anuncios/editar_anuncios_widget.dart'
     show EditarAnunciosWidget;
 export '/listas/lista_likes/lista_likes_widget.dart' show ListaLikesWidget;
+export '/pages/perfil_estudiante/perfil_estudiante_widget.dart'
+    show PerfilEstudianteWidget;
